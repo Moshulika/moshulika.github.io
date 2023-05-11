@@ -182,7 +182,7 @@
 {
 
     max-width: 30vw;
-    max-height: 30vh;
+    max-height: 30vw;
 
 }
 
@@ -390,7 +390,7 @@
     position: fixed;
     bottom: 10px;
     max-width: 700px;
-    max-height: 30vh;
+    max-height: 7vh;
     background-color: #bde0fe;
     border-radius: 20px;
 
@@ -400,13 +400,14 @@
 {
     position: relative;
     margin: auto;
+    padding: 1vh;
 }
 
 #cookie button
 {
 
     position: relative;
-    margin: auto;
+    margin-top: 1vh;
 
 }
 
