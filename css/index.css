@@ -431,6 +431,28 @@
     }
 
 
+}
+
+#linie
+{
+    display: inline;
+}
+
+@media screen and (min-width: 993px) {
+
+    hr
+    {
+        display: inline;
+    }
+
+    #linie
+    {
+        display: none;
+    }
+
+
+
+
 
 }
 
