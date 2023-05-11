@@ -165,8 +165,7 @@
 #telefoane
 {
 
-    max-width: 60vw;
-    max-height: 60vh;
+    width: 100%;
 
 }
 
@@ -178,11 +177,17 @@
 
 }
 
+.main-row h2
+{
+
+    padding: 2vh;
+
+}
+
 #consola
 {
 
-    max-width: 30vw;
-    max-height: 30vw;
+    width: 100%;
 
 }
 
