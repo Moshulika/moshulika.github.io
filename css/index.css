@@ -422,4 +422,16 @@
     margin-bottom: 5vh;
 }
 
+@media screen and (max-width: 577px) {
+
+
+    #cookie
+    {
+        display: none;
+    }
+
+
+
+}
+
 
