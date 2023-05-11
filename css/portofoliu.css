@@ -1,0 +1,41 @@
+
+
+.display-mockup
+{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.mockup-row
+{
+
+    align-items: center;
+    align-content: center;
+    margin-top: 5vh;
+
+}
+
+.text-mockup p
+{
+
+    align-items: center;
+    align-content: center;
+
+}
+
+.display-mockup img
+{
+
+    max-width: 40vh;
+    max-height: 40vh;
+
+}
+
+.screenshot img
+{
+
+    border-radius: 20px;
+
+}

@@ -1,0 +1,419 @@
+::selection {
+    background: rgba(96, 190, 235, 0.7);
+}
+
+.navbar
+{
+
+    background-color: rgba(255,255,255, 0);
+
+}
+
+
+.navbar-container
+{
+    /*padding-left: 38vw;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.fa-solid
+{
+    position: relative;
+    padding-right: 5px;
+}
+
+.material-symbols-outlined
+{
+    top: 5px;
+    position: relative;
+}
+
+.menu
+{
+    margin-left: 1vw;
+}
+
+.nav-item a
+{
+
+    font-size: 18px;
+
+}
+
+.nav-link
+{
+    padding-left: 30px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+}
+
+.nav-link:hover
+{
+
+    background-color: #d9ecfc;
+
+
+}
+
+.navbar-toggler
+{
+
+    border-style: none;
+
+}
+
+.navbar-toggler:focus,.navbar-toggler:active, #nav-search input:active, #nav-search input:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.navbar-toggler-icon:hover
+{
+
+    color: white;
+    transition: 0.3s;
+    transform: rotate(180deg);
+
+}
+
+.nav-item a:hover
+{
+
+    transition: 0.3s;
+    color: #4fafff;
+
+}
+
+#nav-search input
+{
+
+    border-radius: 30px;
+
+}
+
+#nav-search button
+{
+
+    border-style: none;
+    border-radius: 30px;
+    background-color: #4fafff;
+    color: white;
+
+}
+
+#nav-search button:hover
+{
+    transition: 0.3s;
+    background-color: #bde0fe;
+}
+
+.offcanvas
+{
+
+    background-image: linear-gradient(#fefeff, #c1dcfb, #c3cbee, #bde0fe);
+
+}
+
+.offcanvas-header h5
+{
+    position: relative;
+    margin:auto;
+}
+
+#offcanvas-logos
+{
+
+    position: relative;
+    bottom: 10px;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+#offcanvas-logos i
+{
+
+    color: #4fafff;
+    padding: 8px;
+    margin-right: 10px;
+
+}
+
+#offcanvas-logos i:hover
+{
+
+    color: #d9ecfc;
+    transition: 0.3s;
+
+}
+
+.nav-item i
+{
+    margin-left: 5px;
+}
+
+.active
+{
+
+    background-color: #bde0fe;
+    border-radius: 30px;
+
+}
+
+#telefoane
+{
+
+    max-width: 60vw;
+    max-height: 60vh;
+
+}
+
+#text_telefoane
+{
+
+    margin-top: 20vh;
+
+}
+
+#consola
+{
+
+    margin-bottom: 5vh;
+    max-width: 30vw;
+    max-height: 30vh;
+
+}
+
+#change_theme
+{
+    margin-right: 10px;
+}
+
+#picture
+{
+
+    margin-top: 10vh;
+    display: flex;
+
+}
+
+#picture img
+{
+
+    width: 10vh;
+    height: 10vh;
+    border-radius: 100px;
+    margin-right: 20px;
+
+}
+
+.buton i, .buton_left i
+{
+
+    position: relative;
+    margin: auto;
+
+}
+
+.buton
+{
+    margin: auto;
+}
+
+.buton, .buton_left
+{
+
+    border-style: none;
+    padding: 10px;
+    display: flex;
+    position: relative;
+    border-radius: 24px;
+
+}
+
+.buton:hover, .buton_left:hover
+{
+    background: #bde0fe;
+    color: white;
+    transition: 0.3s;
+}
+
+
+#button-div
+{
+
+    position: relative;
+    align-content: center;
+    align-items: center;
+
+
+}
+
+.row h1
+{
+    text-align: center;
+}
+
+#code h1, #code p
+{
+
+    padding: 20px;
+
+}
+
+#trusted
+{
+    margin-top: 10vh;
+}
+
+.trusted-image-container
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.trusted-image-container img
+{
+
+
+    max-height: 20vh;
+    max-width: 20vw;
+
+}
+
+.footer-text
+{
+
+    display: flex;
+    justify-content: left;
+    margin-bottom: 5vh;
+
+}
+
+.footer-icons
+{
+
+    display: flex;
+    justify-content: right;
+    margin-bottom: 5vh;
+
+}
+
+.footer-icons i
+{
+
+    color: gray;
+    text-decoration: none;
+    margin-left: 15px;
+
+}
+
+.footer-icons i:hover
+{
+
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-text a
+{
+
+    text-decoration: none;
+    color: gray;
+    margin-right: 15px;
+
+}
+
+.footer-text a:hover
+{
+
+    color: white;
+    transition: 0.3s;
+
+
+}
+
+#before-footer
+{
+
+    margin-top: 10vh;
+
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    -webkit-border-radius: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #bde0fe;
+    -webkit-border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #bde0fe;
+    -webkit-border-radius: 20px;
+}
+
+.github i, .paypal i
+{
+    margin-right: 5px;
+}
+
+#cookie-container
+{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+#cookie
+{
+
+    position: fixed;
+    bottom: 10px;
+    max-width: 700px;
+    max-height: 5vh;
+    background-color: #bde0fe;
+    border-radius: 20px;
+
+}
+
+#cookie p
+{
+    padding: 10px;
+    overflow: hidden;
+}
+
+#cookie button
+{
+
+    margin-top: 10px;
+    margin-right: 10px;
+
+}
+
+#text-columns
+{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+
