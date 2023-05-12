@@ -449,6 +449,16 @@ html
 
 }
 
+@media screen and (max-width: 760px) {
+
+    iframe
+    {
+        display: none;
+    }
+
+
+}
+
 #linie
 {
     display: inline;
