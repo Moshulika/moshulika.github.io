@@ -1,6 +1,6 @@
 function github()
 {
-    window.location.href = 'https://github.com/Moshulika';
+    window.open("https://github.com/Moshulika", "_blank");
 }
 
 function skills()
@@ -17,5 +17,6 @@ function hideCookies()
 
 function paypal()
 {
-    window.location.href = 'https://paypal.me/moshudev';
+    window.open("https://paypal.me/moshudev", "_blank");
+
 }
