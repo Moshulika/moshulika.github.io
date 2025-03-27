@@ -1,0 +1,55 @@
+.code
+{
+    margin-bottom: 5vh;
+}
+
+code
+{
+    border-radius: 10px;
+    max-height: 600px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.dual-code-container
+{
+
+}
+
+.category-title
+{
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+.library-pills
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+}
+
+.library-pill
+{
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-family: Exo;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: 0.3s;
+}
+
+.library-pill:hover, .library-pill:focus
+{
+    background-color: rgba(255,255,255, 0.8);
+    cursor: pointer;
+}
+
+.mt-5
+{
+    margin-top: 2vh !important;
+}

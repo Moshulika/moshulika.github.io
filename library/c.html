@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/ef590a2fdb.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/library.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+    <link rel="stylesheet" href="css/dracula.css">
+
+    <title>Library</title>
+
+    <style>
+
+        body {
+            background-image: url('assets/blurry_background.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+    </style>
+
+    <style>
+        .card {
+            color: white;
+            margin-bottom: 1.5rem;
+            background-color: #282a36;
+            border-radius: 10px;
+        }
+
+        .card-title {
+            font-weight: bold;
+        }
+        .important {
+            color: #d63384;
+            font-weight: bold;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+    </style>
+
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: #f8f9fa;
+        }
+        .content-card {
+            background-color: rgba(255,255,255,0.5);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+
+        }
+        .section-title {
+            border-bottom: 2px solid black;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            color: black;
+        }
+        .code-example {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #0d6efd;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .content-card:hover
+        {
+            background-color: white;
+        }
+
+        .note {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .function-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar sticky-top">
+
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--
+        <form id="nav-search" class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Type something.." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><strong>Search</strong></button>
+        </form>
+        -->
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><strong>Menu</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i> <strong>Home</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fa-solid fa-phone"></i> <strong>Contact</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html"><i class="fa-solid fa-gears"></i> <strong>Skills</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="portofoliu.html"><i class="fa-solid fa-book"></i> <strong>Portfolio</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="library.html"><i class="fa-solid fa-code"></i> <strong>Library</strong></a>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+
+            <div id="offcanvas-logos">
+
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row" id="socials-row">
+
+        <div class="col-xs-12 col-lg-6 animate__animated animate__fadeIn" id="picture2">
+
+            <img src="assets/eu.jpg">
+            <div id="text">
+
+                <h1>My simple library</h1>
+                <h4>..of useful code</h4>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <br>
+    <br>
+
+
+    <div class="container">
+
+        <div class="row">
+            <h1>Chapters</h1>
+        </div>
+
+        <div class="library-pills">
+            <a href="https://localhost:8080/library.html#design" class="library-pill">OOP Design Principles</a>
+            <a href="https://localhost:8080/library.html#concepts"class="library-pill">OOP Concepts</a>
+            <a href="https://localhost:8080/library.html#exceptions" class="library-pill">Exceptions</a>
+            <a href="multithreading.html#multithreading" class="library-pill">Multithreading</a>
+            <a href="multithreading.html#final" class="library-pill">Final Keyword</a>
+            <a href="strings.html#strings" class="library-pill">Strings</a>
+            <a href="strings.html#regex" class="library-pill">Regex</a>
+            <a href="files.html#io" class="library-pill">I/O</a>
+            <a href="files.html#files" class="library-pill">Files</a>
+            <a href="https://localhost:8080/library.html#lambda" class="library-pill">Lambda</a>
+            <a href="jdbc.html" class="library-pill">JDBC</a>
+            <a href="networking.html#networking" class="library-pill">Networking</a>
+            <a href="networking.html#json" class="library-pill">JSON</a>
+            <a href="memory.html#memory" class="library-pill">Java Memory</a>
+            <a href="structures.html" class="library-pill">Java Data Structures</a>
+            <a href="mysql.html" class="library-pill">MySQL</a>
+            <a href="c.html" class="library-pill">C/C++</a>
+        </div>
+
+        <div class="row category-title" id="c">
+            <h1>C/C++ Data Structures Implementation</h1>
+        </div>
+
+
+        <div class="container">
+
+            <div class="content-card">
+                <h2 class="section-title">Linked List</h2>
+
+                <div class="code-example">
+                    <div class="function-title">Node Creation</div>
+                    <pre><code class="language-c">/* functie creare a unui nod */
+struct NOD * creare_nod(){
+    struct NOD * nod;
+
+    /* alocare memorie nod*/
+    nod = (struct NOD * ) malloc(sizeof(struct NOD));
+
+    if (nod == NULL) {
+        printf("Eroare: memoria nu a putut fi alocata!\n");
+        return NULL;
+    }
+
+    /* citire valori nod */
+    printf("\nIntroduceti cuvant:");
+    scanf("%s", nod -> cuvant);
+
+    nod -> next = NULL;
+
+    return nod;
+}</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <div class="function-title">List Population</div>
+                    <pre><code class="language-c">/* functie populare lista cu n cuvinte */
+struct NOD * populare_lista(struct NOD * head, int n){
+    int i;
+    for (i = 0; i < n; i++){
+        head = adaugare_nod_sfarsit_lista(head);
+    }
+    return head;
+}</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <div class="function-title">List Display</div>
+                    <pre><code class="language-c">/* functie afisare lista cuvinte */
+void afisare_lista(struct NOD * head){
+    int i = 0;
+    struct NOD * nod_curent;
+
+    if (head == NULL) {
+        printf("Atentie, lista este goala!\n");
+        return;
+    }
+
+    nod_curent = head;
+
+    while (nod_curent != NULL) {
+        /* afisare valoare curenta si pozitionare nod urmator */
+        printf("%d: %s\n", i++, nod_curent -> cuvant);
+        nod_curent = nod_curent -> next;
+    }
+}</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <div class="function-title">Add Node at End</div>
+                    <pre><code class="language-c">/* functie adaugare cuvant la sfarsitul listei */
+struct NOD * adaugare_nod_sfarsit_lista(struct NOD * head) {
+    int i = 0;
+    struct NOD * nod_curent, * nod_nou;
+
+    if (head == NULL) {
+        printf("Atentie: lista este goala.");
+        head = creare_nod();
+        printf("Cuvantul a fost adaugat.\n");
+        return head;
+    }
+
+    /*parcurge lista element cu element pentru a ajunge la ultimul nod*/
+    nod_curent = head;
+
+    while (nod_curent != NULL) {
+        if (nod_curent -> next == NULL) {
+            /* creare si inserare nod nou in lista */
+            nod_nou = creare_nod();
+            nod_curent -> next = nod_nou;
+
+            printf("Cuvantul a fost adaugat.\n");
+            return head;
+        }
+        nod_curent = nod_curent -> next;
+    }
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Sorted Linked List</h2>
+
+                <div class="code-example">
+                    <div class="function-title">List Structure</div>
+                    <pre><code class="language-c">typedef struct llist
+{
+    char nume[256];
+    int loc;
+    struct llist* next;
+
+} list;
+
+typedef struct con
+{
+    int x;
+    int y;
+} configuratie;</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <div class="function-title">Add to Sorted List</div>
+                    <pre><code class="language-c">list* addToSortedList(list* head, char* name, int loca)
+{
+    if(head == NULL)
+    {
+        return create(name, loca);
+    }
+
+    list* cur = head;
+    list* newEl = (list*) malloc(sizeof(list));
+    list* prev;
+    list* aux;
+
+    strcpy(newEl->nume, name);
+    newEl->loc = loca;
+    newEl->next = NULL;
+
+    int i = 0;
+
+    while(cur != NULL)
+    {
+        if(loca < cur->loc)
+        {
+            //Daca e mai mic decat head
+            if(i == 0)
+            {
+                newEl->next = head;
+                return newEl;
+            }
+            //Daca e mai mic ca urmatoru numar
+            else
+            {
+                prev = get(head, i - 1);
+                prev->next = newEl;
+                newEl->next = cur;
+                return head;
+            }
+        }
+        else
+        {
+            if(getLastElement(head) == cur)
+            {
+                cur->next = newEl;
+                return head;
+            }
+            //Locu e mai mare decat ala dinaintea lui
+            else
+            {
+                //Locu e mai mic decat urmatoru
+                if(loca < (cur->next)->loc)
+                {
+                    aux = cur->next;
+                    cur->next = newEl;
+                    newEl->next = aux;
+                    return head;
+                }
+            }
+        }
+
+        cur = cur->next;
+        if(cur == NULL) break;
+        i++;
+    }
+
+    return head;
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Hash Table</h2>
+
+                <div class="code-example">
+                    <div class="function-title">Hash Table Structure</div>
+                    <pre><code class="language-c">typedef struct nod{
+    char key[30];
+    struct nod * next;
+} lista;
+
+struct hashtable{
+    struct nod** entries;
+    int size; // dimensiunea maxima a vectorului de hash-uri
+    int count; // numarul de elemente continute de hash table
+};</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <div class="function-title">Hashing Function</div>
+                    <pre><code class="language-c">int hashing(char* c)
+{
+    int i = 0;
+    int suma = 0;
+
+    while(*(c+i) != '\0')
+    {
+        suma += *(c+i);
+    }
+
+    return suma % 7;
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Binary Search Tree</h2>
+
+                <div class="code-example">
+                    <div class="function-title">Node Creation</div>
+                    <pre><code class="language-c">/*functie creare nod nou */
+struct NOD* creare_nod(int x)
+{
+    struct NOD * nod_nou;
+
+    /*alocare memorie nod*/
+    nod_nou = (struct NOD *) malloc(sizeof(struct NOD));
+
+    if (nod_nou == NULL)
+    {
+        printf("Eroare: Memoria nu a putut fi alocata! \n");
+        return NULL;
+    }
+
+    /*initializare informatii */
+    nod_nou->x = x;
+    nod_nou->NOD_stanga = NULL;
+    nod_nou->NOD_dreapta = NULL;
+
+    return nod_nou;
+}</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <div class="function-title">Node Insertion</div>
+                    <pre><code class="language-c">/*inserare nod in arbore */
+struct NOD* inserare_nod(struct NOD *prim, int x)
+{
+    struct NOD *nod_nou, *nod_curent, *nod_parinte;
+
+    nod_nou = creare_nod(x);
+
+    if (prim == NULL)
+    {
+        /*arborele este vid */
+        prim = nod_nou;
+        printf("A fost adaugat primul nod: %d. \n", prim->x);
+        return prim;
+    }
+    else
+    {
+        /*pozitionare in arbore pe parintele nodului nou */
+        nod_curent = prim;
+
+        while (nod_curent != NULL)
+        {
+            nod_parinte = nod_curent;
+
+            if (x < nod_curent->x) /*parcurgere spre stanga */
+                nod_curent = nod_curent->NOD_stanga;
+            else /*parcurgere spre dreapta */
+                nod_curent = nod_curent->NOD_dreapta;
+        }
+
+        /*creare legatura nod parinte cu nodul nou */
+        if (x < nod_parinte->x)
+        {
+            /*se insereaza la stanga nodului parinte */
+            nod_parinte->NOD_stanga = nod_nou;
+            printf("Nodul %d a fost inserat la stanga nodului %d. \n", x, nod_parinte->x);
+        }
+        else
+        {
+            /*se insereaza la dreapta nodului parinte */
+            nod_parinte->NOD_dreapta = nod_nou;
+            printf("Nodul %d a fost inserat la dreapta nodului %d.\n",
+                x, nod_parinte->x);
+        }
+
+        return prim;
+    }
+}</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <div class="function-title">Tree Traversals</div>
+                    <pre><code class="language-c">/*parcurgere arbore in preordine */
+void afisare_preordine(struct NOD *prim)
+{
+    if (prim != NULL)
+    {
+        /*parcurgere radacina, stanga, dreapta */
+        printf("%d \n", prim->x);
+        afisare_preordine(prim->NOD_stanga);
+        afisare_preordine(prim->NOD_dreapta);
+    }
+}
+
+/*parcurgere arbore in inordine */
+void afisare_inordine(struct NOD *prim)
+{
+    if (prim != NULL)
+    {
+        /*parcurgere stanga, radacina, dreapta */
+        afisare_inordine(prim->NOD_stanga);
+        printf("%d \n", prim->x);
+        afisare_inordine(prim->NOD_dreapta);
+    }
+}
+
+/*parcurgere arbore in postordine */
+void afisare_postordine(struct NOD *prim)
+{
+    if (prim != NULL)
+    {
+        /*parcurgere stanga, dreapta, radacina */
+        afisare_postordine(prim->NOD_stanga);
+        afisare_postordine(prim->NOD_dreapta);
+        printf("%d \n", prim->x);
+    }
+}</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <div class="function-title">Tree Deletion</div>
+                    <pre><code class="language-c">/*stergerea unui arbore sau subarbore */
+struct NOD* stergere_arbore(struct NOD *tmp)
+{
+    if (tmp != NULL)
+    {
+        stergere_arbore(tmp->NOD_stanga);
+        stergere_arbore(tmp->NOD_dreapta);
+        free(tmp);
+    }
+
+    return NULL;
+}</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <div class="function-title">Node Search</div>
+                    <pre><code class="language-c">/*cautarea unui nod dorit */
+struct NOD* cauta_nod(struct NOD *tmp, int x)
+{
+    if (tmp != NULL)
+    {
+        if (x == tmp->x)
+        {
+            printf("Nodul a fost gasit. \n");
+            return tmp;
+        }
+        else if (x < tmp->x)
+            return cauta_nod(tmp->NOD_stanga, x);
+        else
+            return cauta_nod(tmp->NOD_dreapta, x);
+    }
+    else
+    {
+        printf("Nodul dorit nu exista in arbore.\n");
+        return NULL;
+    }
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Sorted Tree</h2>
+
+                <div class="code-example">
+                    <div class="function-title">Tree Structure</div>
+                    <pre><code class="language-c">typedef struct arb
+{
+    int x;
+    struct arb* stanga;
+    struct arb* dreapta;
+} arbore;</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <div class="function-title">Node Creation</div>
+                    <pre><code class="language-c">arbore* create(int val)
+{
+    arbore* a = (arbore*) malloc(sizeof(arbore));
+    a->x = val;
+    a->stanga = NULL;
+    a->dreapta = NULL;
+    return a;
+}</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <div class="function-title">Add to Tree</div>
+                    <pre><code class="language-c">arbore* addToTree(arbore* root, int val)
+{
+    arbore* current;
+
+    if(root == NULL)
+    {
+        create(val);
+    }
+    else
+    {
+        current = root;
+
+        while(current != NULL)
+        {
+            root = current;
+
+            //Mergem spre stanga
+            if(val < current->val)
+            {
+                current = current->stanga;
+            }
+            else
+            {
+                current = current->dreapta;
+            }
+        }
+
+        //Acum current e null, deci apelam la root-ul lui
+        if(val < root->x)
+        {
+            root->stanga = create(val);
+        }
+        else
+        {
+            root->dreapta = create(val);
+        }
+    }
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Search Tree</h2>
+
+                <div class="code-example">
+                    <div class="function-title">Tree Structure</div>
+                    <pre><code class="language-c">typedef struct arb
+{
+    struct arb *stanga;
+    struct arb *dreapta;
+    int val;
+} arbore;</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <div class="function-title">Node Search</div>
+                    <pre><code class="language-c">arbore* search(arbore *root, int val)
+{
+    if(root != NULL)
+    {
+        if(root->val == val)
+        {
+            return root;
+        }
+        else if(val < root->val)
+        {
+            return search(root->stanga, val);
+        }
+        else
+        {
+            return search(root->dreapta, val);
+        }
+    }
+}</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <div class="function-title">Tree Removal</div>
+                    <pre><code class="language-c">arbore* remove(arbore* root)
+{
+    if(root != NULL)
+    {
+        remove(root->stanga);
+        remove(root->dreapta);
+        free(root);
+    }
+
+    return NULL;
+}</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <div class="function-title">Node Addition</div>
+                    <pre><code class="language-c">arbore* add(arbore *root, int val)
+{
+    if(root == NULL)
+    {
+        return create(val);
+    }
+    else
+    {
+        arbore *current;
+        arbore *parent;
+
+        current = root;
+
+        while(current != NULL)
+        {
+            parent = current;
+
+            if(val < current->val)
+            {
+                current = current->stanga;
+            }
+            else
+            {
+                current = current->dreapta;
+            }
+        }
+
+        if(val < parent->val)
+        {
+            parent->stanga = create(val);
+        }
+        else
+        {
+            parent->dreapta = create(val);
+        }
+
+        return root;
+    }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <footer class="container">
+
+        <hr id="before-footer">
+        <div class="row">
+
+            <div class="col footer-text">
+
+                <a href="contact.html">Contact</a>
+
+
+            </div>
+
+            <div class="col footer-icons">
+
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+</div>
+
+<style>
+    /* Scroll to top button styles */
+    .scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #0d6efd;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: none; /* Hidden by default */
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .scroll-to-top:hover {
+        background-color: #0b5ed7;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .scroll-to-top:active {
+        transform: translateY(0);
+    }
+
+    .scroll-to-top svg {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+    }
+
+    /* Show the button when user scrolls down */
+    .scroll-to-top.visible {
+        display: flex;
+    }
+</style>
+
+<button class="scroll-to-top" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+    </svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script>
+    hljs.highlightAll();
+
+</script>
+<script>
+    // Show/hide scroll to top button based on scroll position
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopButton.classList.add('visible');
+        } else {
+            scrollToTopButton.classList.remove('visible');
+        }
+    });
+
+    // Scroll to top when button is clicked
+    scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+<!--
+<div class="code-container">
+
+            <div class="code-description"></div>
+            <div class="code">
+
+                <pre><code></code></pre>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h1>OOP Design principles</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h1>1. Don't repeat yourself</h1>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+        </div>
+-->
+
+</body>
+</html>

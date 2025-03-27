@@ -1,0 +1,67 @@
+#socials
+{
+
+    font-size: 24px;
+    position: relative;
+    margin: auto;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+#socials-row
+{
+
+    margin-top: 10vh;
+
+}
+
+form button
+{
+
+    margin-bottom: 3vh;
+
+}
+
+
+#picture2
+{
+
+    display: flex;
+
+}
+
+#picture2 img
+{
+
+    width: 10vh;
+    height: 10vh;
+    border-radius: 100px;
+    margin-right: 20px;
+
+}
+
+#socials i
+{
+
+    margin-right: 10px;
+    color: #214361;
+    padding: 10px;
+}
+
+#socials i:hover
+{
+
+    color: #73bcfa;
+    transition: 0.3s;
+
+}
+
+.under-photo-desc
+{
+    margin-top: 10px;
+}

@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/ef590a2fdb.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/library.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+    <link rel="stylesheet" href="css/dracula.css">
+
+    <title>Library</title>
+
+    <style>
+
+        body {
+            background-image: url('assets/blurry_background.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .content-card {
+            background-color: rgba(255,255,255, 0.5);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+        .content-card:hover {
+            background-color: rgba(255,255,255, 1);
+        }
+        .section-title {
+            border-bottom: 2px solid black;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            color: black;
+        }
+        .code-example {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #0d6efd;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .note {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .feature-list {
+            margin-bottom: 20px;
+        }
+        .feature-list li {
+            margin-bottom: 8px;
+        }
+        .comparison-table {
+            margin-bottom: 30px;
+        }
+        img {
+
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar sticky-top">
+
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--
+        <form id="nav-search" class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Type something.." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><strong>Search</strong></button>
+        </form>
+        -->
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><strong>Menu</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i> <strong>Home</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fa-solid fa-phone"></i> <strong>Contact</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html"><i class="fa-solid fa-gears"></i> <strong>Skills</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="portofoliu.html"><i class="fa-solid fa-book"></i> <strong>Portfolio</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="library.html"><i class="fa-solid fa-code"></i> <strong>Library</strong></a>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+
+            <div id="offcanvas-logos">
+
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row" id="socials-row">
+
+        <div class="col-xs-12 col-lg-6 animate__animated animate__fadeIn" id="picture2">
+
+            <img src="assets/eu.jpg">
+            <div id="text">
+
+                <h1>My simple library</h1>
+                <h4>..of useful code</h4>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <br>
+    <br>
+
+
+    <div class="container">
+
+        <div class="row">
+            <h1>Chapters</h1>
+        </div>
+
+        <div class="library-pills">
+            <a href="library.html#design" class="library-pill">OOP Design Principles</a>
+            <a href="library.html#concepts"class="library-pill">OOP Concepts</a>
+            <a href="library.html#exceptions" class="library-pill">Exceptions</a>
+            <a href="library/multithreading.html#multithreading" class="library-pill">Multithreading</a>
+            <a href="library/multithreading.html#final" class="library-pill">Final Keyword</a>
+            <a href="library/strings.html#strings" class="library-pill">Strings</a>
+            <a href="library/strings.html#regex" class="library-pill">Regex</a>
+            <a href="library/files.html#io" class="library-pill">I/O</a>
+            <a href="library/files.html#files" class="library-pill">Files</a>
+            <a href="library.html#lambda" class="library-pill">Lambda</a>
+            <a href="library/jdbc.html" class="library-pill">JDBC</a>
+            <a href="library/networking.html#networking" class="library-pill">Networking</a>
+            <a href="library/networking.html#json" class="library-pill">JSON</a>
+            <a href="library/memory.html#memory" class="library-pill">Java Memory</a>
+            <a href="library/structures.html" class="library-pill">Java Data Structures</a>
+            <a href="library/mysql.html" class="library-pill">MySQL</a>
+            <a href="library/c.html" class="library-pill">C/C++</a>
+        </div>
+
+        <div class="row category-title" id="design">
+            <h1>OOP Design principles</h1>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-12">
+                <h2>1. Don't repeat yourself</h2>
+                <p>DRY is an acronym for Don’t Repeat Yourself. As the name suggests this principle focuses on reducing the duplication of the same code throughout the program. If you have the same block of code, performing the same tasks in multiple parts of the program, then it means that you are not following the DRY principle. The DRY principle can be implemented by refactoring the code such that it removes duplication and redundancy by creating a single reuseable code in the form of abstraction, or a function.</p>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code>public class GFG {
+    public static void main(String[] args)
+    {
+        // cerate 4x4 matrix with values
+        int[][] matrix = { { 1, 2, 3, 4 },
+                           { 5, 6, 7, 8 },
+                           { 9, 10, 11, 12 },
+                           { 13, 14, 15, 16 } };
+        // print matrix
+        System.out.println("Matrix1: ");
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        // create 5x5 matrix with values
+        int[][] matrix2 = { { 1, 2, 3, 4, 5 },
+                            { 6, 7, 8, 9, 10 },
+                            { 11, 12, 13, 14, 15 },
+                            { 16, 17, 18, 19, 20 },
+                            { 21, 22, 23, 24, 25 } };
+        // print matrix
+        System.out.println("Matrix2: ");
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(matrix2[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}</code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code>public class GFG {
+
+    // print matrix method
+    private void printMatrix(int[][] matrix)
+    {
+        int n = matrix.length;
+        int m = matrix[0].length;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        GFG obj = new GFG();
+
+        // cerate 4x4 matrix with values
+        int[][] matrix = { { 1, 2, 3, 4 },
+                           { 5, 6, 7, 8 },
+                           { 9, 10, 11, 12 },
+                           { 13, 14, 15, 16 } };
+        // print matrix
+        System.out.println("Matrix1: ");
+        obj.printMatrix(matrix);
+
+        // create 5x5 matrix with values
+        int[][] matrix2 = { { 1, 2, 3, 4, 5 },
+                            { 6, 7, 8, 9, 10 },
+                            { 11, 12, 13, 14, 15 },
+                            { 16, 17, 18, 19, 20 },
+                            { 21, 22, 23, 24, 25 } };
+
+        // print matrix
+        System.out.println("Matrix2: ");
+        obj.printMatrix(matrix2);
+    }
+}</code></pre>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h2>2. Open-Closed principle</h2>
+                <p>OCP is an acronym for Open Closed Principle, it is also considered as a basic principle of OOPs. According to this principle, all the entities, like classes, methods, etc, should be open for extensions but closed for modifications. This means that you have to keep your code open for extending the behavior, but it should not allow modification of the existing source code.</p>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code>class Calculator {
+    public double calculate(double a, double b,
+                            char operator)
+    {
+        switch (operator) {
+        case '+':
+            return a + b;
+        case '-':
+            return a - b;
+        }
+        return 0.0;
+    }
+}
+public class GFG {
+    public static void main(String args[])
+    {
+        Calculator obj = new Calculator();
+        System.out.println(obj.calculate(10, 20, '+'));
+        System.out.println(obj.calculate(10, 20, '-'));
+    }
+}</code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code>interface Arithmetic {
+    double perform(double a, double b);
+}
+
+// using arithmetic interface to implement addition
+class Addition implements Arithmetic {
+    public double perform(double a, double b)
+    {
+        return a + b;
+    }
+}
+
+// using arithmetic interface to implement substraction
+class Substraction implements Arithmetic {
+    public double perform(double a, double b)
+    {
+        return a - b;
+    }
+}
+
+class Calculator {
+    public double calculate(Arithmetic arithmetic, double a,
+                            double b)
+    {
+        return arithmetic.perform(a, b);
+    }
+}
+
+public class GFG {
+    public static void main(String[] args)
+    {
+        Calculator obj = new Calculator();
+        System.out.println(
+            obj.calculate(new Addition(), 10, 20));
+        System.out.println(
+            obj.calculate(new Substraction(), 10, 20));
+    }
+}</code></pre>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h2>3. Single Responsibility Principle</h2>
+                <p>SRP is an acronym for Single Responsibility Principle. This principle suggests that a `Class` should have only one reason to change. This means that a `Class` should only implement one functionality and only change when there is a need to change the functionality. If a class has too many responsibilities, it becomes difficult to manage in the long run. With SRP the classes become more modular and focused, leading to a more maintainable and flexible code.</p>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code>class User {
+    String name;
+    String email;
+
+    public User(String name, String email)
+    {
+        this.name = name;
+        this.email = email;
+    }
+
+    public void showUser()
+    {
+        System.out.println("Name: " + this.name);
+        System.out.println("Email: " + this.email);
+    }
+
+    public void sendEmail(String message)
+    {
+        System.out.println("Email sent to " + this.email
+                           + " with message: " + message);
+    }
+
+    public void saveToFile()
+    {
+        System.out.println("Saving user to file...");
+    }
+}
+
+// driver code
+public class GFG {
+    public static void main(String[] args)
+    {
+        User user1 = new User("John Doe", "john@gfg.com");
+        user1.showUser();
+        user1.sendEmail("Hello John");
+        user1.saveToFile();
+    }
+}</code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code>class User {
+    String name;
+    String email;
+
+    public User(String name, String email)
+    {
+        this.name = name;
+        this.email = email;
+    }
+
+    public void showUser()
+    {
+        System.out.println("Name: " + this.name);
+        System.out.println("Email: " + this.email);
+    }
+}
+
+// email service class to send email
+class EmailService {
+    public void sendEmail(User user, String message)
+    {
+        System.out.println("Email sent to " + user.email
+                           + " with message: " + message);
+    }
+}
+
+// file service class to save to file
+class FileService {
+    public void saveToFile(User user)
+    {
+        System.out.println("Saving user to file...");
+    }
+}
+
+// driver code
+public class GFG {
+    public static void main(String[] args)
+    {
+        User user = new User("John Doe", "john@gfg.com");
+        user.showUser();
+
+        EmailService emailService = new EmailService();
+        emailService.sendEmail(user, "Hello John");
+
+        FileService fileService = new FileService();
+        fileService.saveToFile(user);
+    }
+}</code></pre>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h2>4. Interface Segregation Principle</h2>
+                <p>ISP is an acronym for Interface Segregation Principle. The principle states that clients should not forcefully implement an Interface if it does not use that. This means that the class should not implement an interface if the methods declared by the interface are not used by the class. Similar to SRP, this principle states that one should focus on creating multiple client interfaces responsible for a particular task, rather than having a one-fat interface. </p>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code>interface Animal{
+   public void breath();
+    public void fly();
+    public void swim();
+}
+
+class Fish implements Animal{
+    public void swim(){
+        System.out.println("Fish swims");
+    }
+    public void fly(){
+        // Fish cannot fly
+    }
+}</code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code>interface Animal {
+    // only method common in all animal implementations
+    public void breath();
+}
+
+// rather than Animal interface, we use waterAnimal and
+// AirAnimal interface
+interface WaterAnimal {
+    public void swim();
+}
+interface AirAnimal {
+    public void fly();
+}
+
+class Fish implements WaterAnimal {
+    public void swim() {
+      System.out.println("Fish swims");
+    }
+}</code></pre>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h2>5. Interface Segregation Principle</h2>
+                <p>LSP is an acronym for Liskov Substitution Principle. According to the principle, Derived classes must be substitutable for their base classes. This indicates that superclass objects in the program should be interchangeable by instances of their subclasses without compromising the program’s correctness. It guarantees that any child class of a parent class can be used in place of their parent without causing any unexpected behavior.</p>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code>class Rectangle {
+    int length;
+    int width;
+    void setLength(int l) {
+        length = l;
+    }
+    void setWidth(int w) {
+        width = w;
+    }
+    int area() {
+        return length * width;
+    }
+}
+
+// square class inherited from rectangle
+class Square extends Rectangle {
+    void setLength(int l) {
+        length = l;
+        width = l;
+    }
+    void setWidth(int w) {
+        length = w;
+        width = w;
+    }
+}
+
+// driver code
+public class GFG {
+    public static void main(String[] args) {
+        Rectangle obj = new Square();
+        obj.setLength(5);
+        obj.setWidth(10);
+        System.out.println(obj.area());
+    }
+} </code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code>interface Shape{
+    void setLength(int l);
+    void setWidth(int w);
+    int area();
+}
+
+class Rectangle implements Shape{
+    int length;
+    int width;
+    public void setLength(int l) {
+        length = l;
+    }
+    public void setWidth(int w) {
+        width = w;
+    }
+    public int area() {
+        return length * width;
+    }
+}
+
+public class GFG {
+    public static void main(String[] args) {
+        Shape obj = new Rectangle();
+        obj.setLength(5);
+        obj.setWidth(10);
+        System.out.println(obj.area());
+    }
+} </code></pre>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h2>6. Dependency Inversion Principle</h2>
+                <p>DIP is an acronym for Dependency Inversion Principle. The principle states that high-level classes should not depend on low-level classes, instead, both should depend on Abstractions. In other words, the modules/classes should depend on Abstractions, (interfaces and abstract classes) rather than concrete implementation. By introducing an abstract layer, DIP aims in reducing the coupling between the classes and hence make the application more easier to test and maintain. </p>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code>class Computer {
+    public void boot() {
+        System.out.println("Booting the computer...");
+    }
+}
+
+class User {
+    public void startComputer() {
+        Computer computer = new Computer();
+        computer.boot();
+    }
+}
+public class GFG {
+    public static void main(String[] args) {
+        User user = new User();
+        user.startComputer();
+    }
+} </code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code>interface IComputer {
+    void boot();
+}
+
+class Computer implements IComputer {
+    public void boot()
+    {
+        System.out.println("Booting the computer...");
+    }
+}
+
+class User {
+    public void startComputer(IComputer computer)
+    {
+        computer.boot();
+    }
+}
+public class GFG {
+    public static void main(String[] args)
+    {
+        User user = new User();
+        Computer computer = new Computer();
+        user.startComputer(computer);
+    }
+}</code></pre>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h2>7. Composition Over Inheritance</h2>
+                <p>COI is an acronym for Composition Over Inheritance. As the name implies, this principle emphasizes using Composition instead of Inheritance to achieve code reusability. Inheritance allows a subclass to inherit its superclass’s properties and behavior, but this approach can lead to a rigid class hierarchy that is difficult to modify and maintain. In contrast, Composition enables greater flexibility and modularity in class design by constructing objects from other objects and combining their behaviors. Additionally, the fact that Java doesn’t support multiple inheritances can be another reason to favor Composition over Inheritance.</p>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code>class Musician {
+    public void play() {
+        System.out.println("play");
+    }
+}
+
+class Singer extends Musician {
+    public void sing() {
+        System.out.println("sing");
+    }
+}
+
+class Drummer extends Musician {
+    public void drum() {
+        System.out.println("drum");
+    }
+} </code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code>class Singer {
+    public void sing() {
+        System.out.println("sing");
+    }
+}
+
+class Drummer {
+    public void drum() {
+        System.out.println("drum");
+    }
+}
+
+class SingerDrummer {
+    Singer singer = new Singer();
+    Drummer drummer = new Drummer();
+
+    public void play() {
+        singer.sing();
+        drummer.drum();
+    }
+} </code></pre>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container" id="concepts">
+            <br>
+            <br>
+            <h1 class="text-center mb-4">Java Object-Oriented Programming Concepts</h1>
+
+            <!-- 1. Data Abstraction -->
+            <div class="content-card">
+                <h2 class="section-title">1. Data Abstraction</h2>
+                <p>Data Abstraction is the property by virtue of which only the essential details are displayed to the user. The trivial or non-essential units are not displayed to the user. Ex: A car is viewed as a car rather than its individual components.</p>
+                <p>Data Abstraction may also be defined as the process of identifying only the required characteristics of an object, ignoring the irrelevant details. The properties and behaviors of an object differentiate it from other objects of similar type and also help in classifying/grouping the object.</p>
+
+                <div class="note">
+                    <h4>Key Points about Abstract Classes:</h4>
+                    <ul class="feature-list">
+                        <li>An abstract method is a method that is declared without implementation.</li>
+                        <li>An abstract class may or may not have all abstract methods. Some of them can be concrete methods.</li>
+                        <li>A abstract method must always be redefined in the subclass, thus making overriding compulsory or making the subclass itself abstract.</li>
+                        <li>Any class that contains one or more abstract methods must also be declared with an abstract keyword.</li>
+                        <li>There can be no object of an abstract class. That is, an abstract class can not be directly instantiated with the new operator.</li>
+                        <li>An abstract class can have parameterized constructors and the default constructor is always present in an abstract class.</li>
+                    </ul>
+                </div>
+
+                <div class="code-example">
+                <pre><code class="language-java">abstract class Geeks {
+    abstract void turnOn();
+    abstract void turnOff();
+}
+
+// Concrete class implementing the abstract methods
+class TVRemote extends Geeks {
+    @Override
+    void turnOn() {
+        System.out.println("TV is turned ON.");
+    }
+
+    @Override
+    void turnOff() {
+        System.out.println("TV is turned OFF.");
+    }
+}
+
+// Main class to demonstrate abstraction
+public class Main {
+    public static void main(String[] args) {
+        Geeks remote = new TVRemote();
+        remote.turnOn();
+        remote.turnOff();
+    }
+}</code></pre>
+                </div>
+
+                <br>
+
+                <h4>Abstract class</h4>
+                <ul class="feature-list">
+                    <li>Supports abstract and non-abstract methods</li>
+                    <li>Doesn't support multiple inheritance</li>
+                    <li>Can be extended by Java classes and multiple interfaces</li>
+                    <li>Class members can be private, protected, etc</li>
+                </ul>
+
+                <h4>Interface</h4>
+                <ul class="feature-list">
+                    <li>Can have abstract methods, default methods and static methods</li>
+                    <li>Supports multiple inheritance</li>
+                    <li>Can be extended by Java interface only</li>
+                    <li>Interfaces are public by default</li>
+                </ul>
+
+            </div>
+
+            <!-- Interfaces -->
+            <div class="content-card">
+                <h2 class="section-title">Interfaces</h2>
+
+                <div class="note">
+                    <h4>Key Points about Interfaces:</h4>
+                    <ul class="feature-list">
+                        <li>We can't create an instance (interface can't be instantiated) of the interface but we can make the reference of it that refers to the Object of its implementing class.</li>
+                        <li>A class can implement more than one interface.</li>
+                        <li>An interface can extend to another interface or interface (more than one interface).</li>
+                        <li>A class that implements the interface must implement all the methods in the interface.</li>
+                        <li>All the methods are public and abstract. All the fields are public, static, and final.</li>
+                        <li>It is used to achieve multiple inheritances.</li>
+                        <li>It is used to achieve loose coupling.</li>
+                        <li>Inside the Interface not possible to declare instance variables because by default variables are public static final.</li>
+                        <li>Inside the Interface, constructors are not allowed.</li>
+                        <li>Inside the interface main method is not allowed.</li>
+                        <li>Inside the interface, static, final, and private methods declaration are not possible.</li>
+                    </ul>
+                </div>
+
+                <div class="code-example">
+                <pre><code class="language-java">interface testInterface {
+    // public, static and final
+    final int a = 10;
+
+    // public and abstract
+    void display();
+}</code></pre>
+                </div>
+
+                <h3>Multiple Inheritance with Interfaces</h3>
+                <div class="code-example">
+                <pre><code class="language-java">// Add interface
+interface Add {
+    int add(int a, int b);
+}
+
+// Sub interface
+interface Sub {
+    int sub(int a, int b);
+}
+
+// Calculator class implementing Add and Sub
+class Cal implements Add, Sub {
+    // Method to add two numbers
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // Method to sub two numbers
+    public int sub(int a, int b) {
+        return a - b;
+    }
+}</code></pre>
+                </div>
+
+                <h3>Default Methods</h3>
+                <div class="code-example">
+                <pre><code class="language-java">interface TestInterface {
+    final int a = 10;
+
+    default void display() {
+        System.out.println("hello");
+    }
+}</code></pre>
+                </div>
+
+                <h3>Static Methods</h3>
+                <div class="code-example">
+                <pre><code class="language-java">interface TestInterface {
+    final int a = 10;
+
+    static void display() {
+        System.out.println("hello");
+    }
+}</code></pre>
+                </div>
+
+                <h3>Extending Interfaces</h3>
+                <div class="code-example">
+                <pre><code class="language-java">interface A {
+    void method1();
+    void method2();
+}
+
+// B now includes method1 and method2
+interface B extends A {
+    void method3();
+}</code></pre>
+                </div>
+
+                <h3>Development Process with Interfaces and Abstract Classes</h3>
+                <p>In general, the development process is step by step:</p>
+                <ol class="feature-list">
+                    <li><strong>Level 1 - interfaces</strong>: It contains the service details.</li>
+                    <li><strong>Level 2 - abstract classes</strong>: It contains partial implementation.</li>
+                    <li><strong>Level 3 - implementation classes</strong>: It contains all implementations.</li>
+                    <li><strong>Level 4 - Final Code / Main Method</strong>: It have access of all interfaces data.</li>
+                </ol>
+
+                <div class="code-example">
+                <pre><code class="language-java">// Level 1
+interface Bank {
+    void deposit();
+    void withdraw();
+    void loan();
+    void account();
+}
+
+// Level 2
+abstract class Dev1 implements Bank {
+    public void deposit() {
+        System.out.println("Your deposit Amount :" + 100);
+    }
+}
+
+abstract class Dev2 extends Dev1 {
+    public void withdraw() {
+        System.out.println("Your withdraw Amount :" + 50);
+    }
+}
+
+// Level 3
+class Dev3 extends Dev2 {
+    public void loan() {}
+    public void account() {}
+}
+
+// Level 4
+class Main {
+    public static void main(String[] args) {
+        Dev3 d = new Dev3();
+        d.account();
+        d.loan();
+        d.deposit();
+        d.withdraw();
+    }
+}</code></pre>
+                </div>
+
+                <div class="comparison-table">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Interface</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>In class, you can instantiate variables and create an object.</td>
+                            <td>In an interface, you must initialize variables as they are final but you can't create an object.</td>
+                        </tr>
+                        <tr>
+                            <td>A class can contain concrete (with implementation) methods</td>
+                            <td>The interface cannot contain concrete (with implementation) methods.</td>
+                        </tr>
+                        <tr>
+                            <td>The access specifiers used with classes are private, protected, and public.</td>
+                            <td>In Interface only one specifier is used- Public.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 2. Encapsulation -->
+            <div class="content-card">
+                <h2 class="section-title">2. Encapsulation</h2>
+                <p>It is defined as the wrapping up of data under a single unit. It is the mechanism that binds together the code and the data it manipulates. Another way to think about encapsulation is that it is a protective shield that prevents the data from being accessed by the code outside this shield.</p>
+
+                <p>Technically, in encapsulation, the variables or the data in a class is hidden from any other class and can be accessed only through any member function of the class in which they are declared. In encapsulation, the data in a class is hidden from other classes, which is similar to what data-hiding does. So, the terms "encapsulation" and "data-hiding" are used interchangeably.</p>
+
+                <p>Encapsulation can be achieved by declaring all the variables in a class as private and writing public methods in the class to set and get the values of the variables.</p>
+
+                <div class="code-example">
+                <pre><code class="language-java">class Employee {
+    private int empid;
+    private String ename;
+
+    // Setter methods
+    public void set_id(int empid) {
+        this.empid = empid;
+    }
+
+    public void set_name(String ename) {
+        this.ename = ename;
+    }
+
+    // Getter methods
+    public int get_id() {
+        return empid;
+    }
+
+    public String get_name() {
+        return ename;
+    }
+}</code></pre>
+                </div>
+            </div>
+
+            <!-- 3. Inheritance -->
+            <div class="content-card">
+                <h2 class="section-title">3. Inheritance</h2>
+                <p>Inheritance is an important pillar of OOP (Object Oriented Programming). It is the mechanism in Java by which one class is allowed to inherit the features (fields and methods) of another class. We are achieving inheritance by using extends keyword. Inheritance is also known as "is-a" relationship.</p>
+
+                <h3>Key Terminologies:</h3>
+                <ul class="feature-list">
+                    <li><strong>Superclass</strong>: The class whose features are inherited is known as superclass (also known as base or parent class).</li>
+                    <li><strong>Subclass</strong>: The class that inherits the other class is known as subclass (also known as derived or extended or child class). The subclass can add its own fields and methods in addition to the superclass fields and methods.</li>
+                    <li><strong>Reusability</strong>: Inheritance supports the concept of "reusability", i.e. when we want to create a new class and there is already a class that includes some of the code that we want, we can derive our new class from the existing class. By doing this, we are reusing the fields and methods of the existing class.</li>
+                </ul>
+
+                <div class="code-example">
+                <pre><code class="language-java">class Bicycle {
+    // the Bicycle class has two fields
+    public int gear;
+    public int speed;
+
+    // the Bicycle class has one constructor
+    public Bicycle(int gear, int speed) {
+        this.gear = gear;
+        this.speed = speed;
+    }
+
+    // the Bicycle class has three methods
+    public void applyBrake(int decrement) {
+        speed -= decrement;
+    }
+
+    public void speedUp(int increment) {
+        speed += increment;
+    }
+
+    // toString() method to print info of Bicycle
+    public String toString() {
+        return ("No of gears are " + gear + "\n"
+                + "speed of bicycle is " + speed);
+    }
+}
+
+// derived class
+class MountainBike extends Bicycle {
+    // the MountainBike subclass adds one more field
+    public int seatHeight;
+
+    // the MountainBike subclass has one constructor
+    public MountainBike(int gear, int speed, int startHeight) {
+        // invoking base-class(Bicycle) constructor
+        super(gear, speed);
+        seatHeight = startHeight;
+    }
+
+    // the MountainBike subclass adds one more method
+    public void setHeight(int newValue) {
+        seatHeight = newValue;
+    }
+
+    // overriding toString() method of Bicycle to print more info
+    @Override public String toString() {
+        return (super.toString() + "\nseat height is " + seatHeight);
+    }
+}</code></pre>
+                </div>
+
+                <div class="note">
+                    <h4>Disadvantages of Inheritance in Java:</h4>
+                    <ul class="feature-list">
+                        <li><strong>Complexity</strong>: Inheritance can make the code more complex and harder to understand. This is especially true if the inheritance hierarchy is deep or if multiple inheritances is used.</li>
+                        <li><strong>Tight Coupling</strong>: Inheritance creates a tight coupling between the superclass and subclass, making it difficult to make changes to the superclass without affecting the subclass.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4. Polymorphism -->
+            <div class="content-card">
+                <h2 class="section-title">4. Polymorphism</h2>
+                <p>It refers to the ability of object-oriented programming languages to differentiate between entities with the same name efficiently. This is done by Java with the help of the signature and declaration of these entities. The ability to appear in many forms is called polymorphism.</p>
+
+                <div class="code-example">
+                <pre><code class="language-java">sleep(1000); //millis
+sleep(1000, 2000); //millis,nanos</code></pre>
+                </div>
+
+                <h3>1. Method Overloading</h3>
+                <p>Also, known as compile-time polymorphism, is the concept of Polymorphism where more than one method share the same name with different signature(Parameters) in a class. The return type of these methods can or cannot be same.</p>
+
+                <h3>2. Method Overriding</h3>
+                <p>Also, known as run-time polymorphism, is the concept of Polymorphism where method in the child class has the same name, return-type and parameters as in parent class. The child class provides the implementation in the method already written.</p>
+
+                <div class="code-example">
+                <pre><code class="language-java">class Parent {
+    // Can't be overridden
+    final void show() {}
+}
+
+class Child extends Parent {
+    // This would produce error
+    void show() {}
+}</code></pre>
+                </div>
+
+                <div class="code-example">
+                <pre><code class="language-java">class Parent {
+    // Static method in base class which will be hidden in subclass
+    static void m1() {
+        System.out.println("From parent static m1()");
+    }
+
+    // Non-static method which will be overridden in derived class
+    void m2() {
+        System.out.println("From parent non-static(instance) m2()");
+    }
+}
+
+class Child extends Parent {
+    // This method hides m1() in Parent
+    static void m1() {
+        System.out.println("From child static m1()");
+    }
+
+    // This method overrides m2() in Parent
+    @Override public void m2() {
+        System.out.println("From child non-static(instance) m2()");
+    }
+}
+
+// Driver class
+class Geeks {
+    public static void main(String[] args) {
+        Parent obj1 = new Child();
+
+        // here parents m1 called because static method cannot be overridden
+        obj1.m1();
+
+        // Here overriding works and Child's m2() is called
+        obj1.m2();
+    }
+}
+
+/* Output:
+From parent static m1()
+From child non-static(instance) m2() */
+</code></pre>
+                </div>
+
+                <div class="note">
+                    <p>Private methods cannot be overridden as they are bonded during compile time. Therefore we can't even override private methods in a subclass.</p>
+                </div>
+
+                <h3>Calling Parent Class Method</h3>
+                <p>We can call the parent class method in the overriding method using the super keyword.</p>
+
+                <div class="code-example">
+                <pre><code class="language-java">class Parent {
+    void show() { System.out.println("Parent's show()"); }
+}
+
+// Inherited class
+class Child extends Parent {
+    // This method overrides show() of Parent
+    @Override void show() {
+        super.show();
+        System.out.println("Child's show()");
+    }
+}
+
+// Driver class
+class Geeks {
+    public static void main(String[] args) {
+        Parent o = new Child();
+        o.show();
+    }
+}</code></pre>
+                </div>
+
+                <h3>Overriding and Exception-handling</h3>
+                <div class="code-example">
+                <pre><code class="language-java">// Java program to demonstrate overriding when
+// superclass method does not declare an exception
+
+class Parent {
+    void m1() { System.out.println("From parent m1()"); }
+    void m2() { System.out.println("From parent m2()"); }
+}
+
+class Child extends Parent {
+    @Override
+    // no issue while throwing unchecked exception
+    void m1() throws ArithmeticException {
+        System.out.println("From child m1()");
+    }
+
+    @Override
+    // compile-time error
+    // issue while throwing checked exception
+    void m2() throws Exception {
+        System.out.println("From child m2");
+    }
+}</code></pre>
+                </div>
+
+                <div class="note">
+                    <p>If the superclass overridden method does throw an exception, the subclass overriding method can only throw the same, subclass exception. Throwing parent exceptions in the Exception hierarchy will lead to compile time error. Also, there is no issue if the subclass overridden method does not throw any exception.</p>
+                </div>
+            </div>
+
+            <!-- Exceptions -->
+            <div class="content-card" id="exceptions">
+                <h2 class="section-title">Exceptions</h2>
+                <p>An Exception is an unwanted or unexpected event that occurs during the execution of a program (i.e., at runtime) and disrupts the normal flow of the program's instructions. It occurs when something unexpected things happen, like accessing an invalid index, dividing by zero, or trying to open a file that does not exist.</p>
+
+                <h3>Java Exception Hierarchy</h3>
+                <img src="library/assets/hie.png" alt="Java Exception Hierarchy">
+
+                <p>All exception and error types are subclasses of the class Throwable, which is the base class of the hierarchy. One branch is headed by Exception. This class is used for exceptional conditions that user programs should catch. NullPointerException is an example of such an exception. Another branch, Error is used by the Java run-time system(JVM) to indicate errors having to do with the run-time environment itself(JRE). StackOverflowError is an example of such an error.</p>
+
+                <div class="note">
+                    <p>Errors represent irrecoverable conditions such as Java virtual machine (JVM) running out of memory, memory leaks, stack overflow errors, library incompatibility, infinite recursion, etc. Errors are usually beyond the control of the programmer, and we should not try to handle errors.</p>
+                </div>
+
+                <h3>1.1 Checked Exceptions</h3>
+                <p>Checked exceptions are called compile-time exceptions because these exceptions are checked at compile-time by the compiler. Examples of Checked Exception are listed below:</p>
+                <ul class="feature-list">
+                    <li><strong>ClassNotFoundException</strong>: Throws when the program tries to load a class at runtime but the class is not found because its not present in the correct location or it is missing from the project.</li>
+                    <li><strong>InterruptedException</strong>: Thrown when a thread is paused and another thread interrupts it.</li>
+                    <li><strong>IOException</strong>: Throws when input/output operation fails</li>
+                    <li><strong>InstantiationException</strong>: Thrown when the program tries to create an object of a class but fails because the class is abstract, an interface, or has no default constructor.</li>
+                    <li><strong>SQLException</strong>: Throws when there's an error with the database.</li>
+                    <li><strong>FileNotFoundException</strong>: Thrown when the program tries to open a file that doesn't exist</li>
+                </ul>
+
+                <h3>1.2 Unchecked Exceptions</h3>
+                <p>The unchecked exceptions are just opposite to the checked exceptions. The compiler will not check these exceptions at compile time. In simple words, if a program throws an unchecked exception, and even if we didn't handle or declare it, the program would not give a compilation error. Examples of Unchecked Exception are listed below:</p>
+                <ul class="feature-list">
+                    <li><strong>ArithmeticException</strong>: It is thrown when there's an illegal math operation.</li>
+                    <li><strong>ClassCastException</strong>: It is thrown when you try to cast an object to a class it does not belongs to.</li>
+                    <li><strong>NullPointerException</strong>: It is thrown when you try to use a null object (e.g. accessing its methods or fields)</li>
+                    <li><strong>ArrayIndexOutOfBoundsException</strong>: It occurs when we try to access an array element with an invalid index.</li>
+                    <li><strong>ArrayStoreException</strong>: It happens when you store an object of the wrong type in an array.</li>
+                    <li><strong>IllegalThreadStateException</strong>: It is thrown when a thread operation is not allowed in its current state</li>
+                </ul>
+
+                <div class="comparison-table">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Checked Exception</th>
+                            <th>Unchecked Exception</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Behaviour</td>
+                            <td>Checked exceptions are checked at compile time.</td>
+                            <td>Unchecked exceptions are checked at run time.</td>
+                        </tr>
+                        <tr>
+                            <td>Base class</td>
+                            <td>Derived from Exception</td>
+                            <td>Derived from RuntimeException</td>
+                        </tr>
+                        <tr>
+                            <td>Cause</td>
+                            <td>External factors like file I/O and database connection cause the checked Exception.</td>
+                            <td>Programming bugs like logical Errors cause the unchecked Exception.</td>
+                        </tr>
+                        <tr>
+                            <td>Handling Requirement</td>
+                            <td>checked exception must be handled using try-catch block or must be declared using throw keyword</td>
+                            <td>No handling is required</td>
+                        </tr>
+                        <tr>
+                            <td>Examples</td>
+                            <td>IOException, SQLException, FileNotFoundException.</td>
+                            <td>NullPointerException, ArrayIndexOutOfBoundsException,</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="comparison-table">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Error</th>
+                            <th>Exception</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Definition</td>
+                            <td>An Error indicates a serious problem that a reasonable application should not try to catch.</td>
+                            <td>Exception indicates conditions that a reasonable application might try to catch</td>
+                        </tr>
+                        <tr>
+                            <td>Cause</td>
+                            <td>Caused by issues with the JVM or hardware.</td>
+                            <td>Caused by conditions in the program such as invalid input or logic errors.</td>
+                        </tr>
+                        <tr>
+                            <td>Examples</td>
+                            <td>OutOfMemoryError StackOverFlowError</td>
+                            <td>IOException NullPointerException</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Default Exception Handling</h3>
+                <p>When an Exception occurs, the JVM Creates an exception object containing the error name, description, and program state. Creating the Exception Object and handling it in the run-time system is called throwing an Exception. There might be a list of the methods that had been called to get to the method where an exception occurred. This ordered list of methods is called Call Stack. Now the following procedure will happen.</p>
+
+                <ol class="feature-list">
+                    <li>The run-time system searches the call stack for an Exception handler</li>
+                    <li>It starts searching from the method where the exception occurred and proceeds backward through the call stack.</li>
+                    <li>If a handler is found, the exception is passed to it.</li>
+                    <li>If no handler is found, the default exception handler terminates the program and prints the stack trace.</li>
+                </ol>
+
+                <img src="library/assets/exc.png" alt="Exception Handling Flow">
+
+                <div class="comparison-table">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>printStackTrace()</td>
+                            <td>Prints the full stack trace of the exception, including the name, message, and location of the error.</td>
+                        </tr>
+                        <tr>
+                            <td>toString()</td>
+                            <td>Prints exception information in the format of the Name of the exception.</td>
+                        </tr>
+                        <tr>
+                            <td>getMessage()</td>
+                            <td>Prints the description of the exception.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="code-example">
+                <pre><code class="language-java">class DivideByZeroException extends RuntimeException {
+    public DivideByZeroException(String m) {
+        super(m);
+    }
+}</code></pre>
+                </div>
+
+                <div class="comparison-table">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>throw</th>
+                            <th>throws</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Definition</td>
+                            <td>It is used to explicitly throw an exception.</td>
+                            <td>It is used to declare that a method might throw one or more exceptions.</td>
+                        </tr>
+                        <tr>
+                            <td>Location</td>
+                            <td>It is used inside a method or a block of code.</td>
+                            <td>It is used in the method signature.</td>
+                        </tr>
+                        <tr>
+                            <td>Usage</td>
+                            <td>It can throw both checked and unchecked exceptions.</td>
+                            <td>It is only used for checked exceptions. Unchecked exceptions do not require throws.</td>
+                        </tr>
+                        <tr>
+                            <td>Responsibility</td>
+                            <td>The method or block throws the exception.</td>
+                            <td>The method's caller is responsible for handling the exception.</td>
+                        </tr>
+                        <tr>
+                            <td>Flow of Execution</td>
+                            <td>Stops the current flow of execution immediately.</td>
+                            <td>It forces the caller to handle the declared exceptions.</td>
+                        </tr>
+                        <tr>
+                            <td>Example</td>
+                            <td>throw new ArithmeticException("Error");</td>
+                            <td>public void myMethod() throws IOException {}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+
+            <!-- Lambda Expressions -->
+            <div class="content-card" id="lambda">
+                <h2 class="section-title">Lambda Expressions</h2>
+                <p>You can implement interfaces with lambda</p>
+
+                <div class="code-example">
+                <pre><code class="language-java">interface FuncInterface {
+    // An abstract function
+    void abstractFun(int x);
+
+    // A non-abstract (or default) function
+    default void normalFun() {
+        System.out.println("Hello");
+    }
+}
+
+class Test {
+    public static void main(String args[]) {
+        // lambda expression to implement above
+        // functional interface. This interface
+        // by default implements abstractFun()
+        FuncInterface fobj = (int x)->System.out.println(2*x);
+
+        // This calls above lambda expression and prints 10.
+        fobj.abstractFun(5);
+    }
+}</code></pre>
+                </div>
+
+                <div class="code-example">
+                <pre><code class="language-java">arraylist.forEach(n -> System.out.println(n));
+
+arraylist.forEach(n -> {
+    if (n % 2 == 0)
+        System.out.println(n);
+});</code></pre>
+                </div>
+
+                <div class="code-example">
+                <pre><code class="language-java">@FunctionalInterface
+interface Functional {
+    int operation(int a, int b);
+}
+
+public class Test {
+    public static void main(String[] args) {
+        // Using lambda expressions to define the operations
+        Functional add = (a, b) -> a + b;
+        Functional multiply = (a, b) -> a * b;
+
+        // Using the operations
+        System.out.println(add.operation(6, 3));  // Output: 9
+        System.out.println(multiply.operation(4, 5));  // Output: 20
+    }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <footer class="container">
+
+        <hr id="before-footer">
+        <div class="row">
+
+            <div class="col footer-text">
+
+                <a href="contact.html">Contact</a>
+
+
+            </div>
+
+            <div class="col footer-icons">
+
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+</div>
+
+<style>
+    /* Scroll to top button styles */
+    .scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #0d6efd;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: none; /* Hidden by default */
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .scroll-to-top:hover {
+        background-color: #0b5ed7;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .scroll-to-top:active {
+        transform: translateY(0);
+    }
+
+    .scroll-to-top svg {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+    }
+
+    /* Show the button when user scrolls down */
+    .scroll-to-top.visible {
+        display: flex;
+    }
+</style>
+
+<button class="scroll-to-top" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+    </svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script>
+    hljs.highlightAll();
+
+</script>
+
+<script>
+    // Show/hide scroll to top button based on scroll position
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopButton.classList.add('visible');
+        } else {
+            scrollToTopButton.classList.remove('visible');
+        }
+    });
+
+    // Scroll to top when button is clicked
+    scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
+<!--
+<div class="code-container">
+
+            <div class="code-description"></div>
+            <div class="code">
+
+                <pre><code></code></pre>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h1>OOP Design principles</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h1>1. Don't repeat yourself</h1>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+        </div>
+-->
+
+</body>
+</html>

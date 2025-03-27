@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/ef590a2fdb.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/library.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+    <link rel="stylesheet" href="css/dracula.css">
+
+    <title>Library</title>
+
+    <style>
+
+        body {
+            background-image: url('assets/blurry_background.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+    </style>
+
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: #f8f9fa;
+        }
+        .content-card {
+            background-color: rgba(255,255,255, 0.5);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+
+        .content-card:hover
+        {
+            background-color: rgba(255,255,255, 1);
+        }
+
+
+        .section-title {
+            border-bottom: 2px solid black;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            color: black;
+        }
+        .code-example {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #0d6efd;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .note {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .feature-list {
+            margin-bottom: 20px;
+        }
+        .feature-list li {
+            margin-bottom: 8px;
+        }
+        .comparison-table {
+            margin-bottom: 30px;
+        }
+        .comparison-table th {
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar sticky-top">
+
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--
+        <form id="nav-search" class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Type something.." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><strong>Search</strong></button>
+        </form>
+        -->
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><strong>Menu</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i> <strong>Home</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fa-solid fa-phone"></i> <strong>Contact</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html"><i class="fa-solid fa-gears"></i> <strong>Skills</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="portofoliu.html"><i class="fa-solid fa-book"></i> <strong>Portfolio</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="library.html"><i class="fa-solid fa-code"></i> <strong>Library</strong></a>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+
+            <div id="offcanvas-logos">
+
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row" id="socials-row">
+
+        <div class="col-xs-12 col-lg-6 animate__animated animate__fadeIn" id="picture2">
+
+            <img src="assets/eu.jpg">
+            <div id="text">
+
+                <h1>My simple library</h1>
+                <h4>..of useful code</h4>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <br>
+    <br>
+
+
+    <div class="container">
+
+        <div class="row">
+            <h1>Chapters</h1>
+        </div>
+
+        <div class="library-pills">
+            <a href="https://localhost:8080/library.html#design" class="library-pill">OOP Design Principles</a>
+            <a href="https://localhost:8080/library.html#concepts"class="library-pill">OOP Concepts</a>
+            <a href="https://localhost:8080/library.html#exceptions" class="library-pill">Exceptions</a>
+            <a href="multithreading.html#multithreading" class="library-pill">Multithreading</a>
+            <a href="multithreading.html#final" class="library-pill">Final Keyword</a>
+            <a href="strings.html#strings" class="library-pill">Strings</a>
+            <a href="strings.html#regex" class="library-pill">Regex</a>
+            <a href="files.html#io" class="library-pill">I/O</a>
+            <a href="files.html#files" class="library-pill">Files</a>
+            <a href="https://localhost:8080/library.html#lambda" class="library-pill">Lambda</a>
+            <a href="jdbc.html" class="library-pill">JDBC</a>
+            <a href="networking.html#networking" class="library-pill">Networking</a>
+            <a href="networking.html#json" class="library-pill">JSON</a>
+            <a href="memory.html#memory" class="library-pill">Java Memory</a>
+            <a href="structures.html" class="library-pill">Java Data Structures</a>
+            <a href="mysql.html" class="library-pill">MySQL</a>
+            <a href="c.html" class="library-pill">C/C++</a>
+        </div>
+
+        <div class="row category-title" id="memory">
+            <h1>JVM Memory Areas</h1>
+        </div>
+
+
+        <div class="container">
+
+            <div class="content-card">
+                <p>JVM defines various runtime data areas which are used during execution of a program. Some of the areas are created by the JVM whereas some are created by the threads that are used in a program. However, the memory area created by JVM is destroyed only when the JVM exits. The data areas of thread are created during instantiation and destroyed when the thread exits. These areas include:</p>
+                <ul>
+                    <li>Heap Area</li>
+                    <li>Method Area</li>
+                    <li>JVM Stacks</li>
+                    <li>Native Method Stacks</li>
+                    <li>Program Counter (PC) Registers</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">1. Heap Area</h2>
+                <p>Heap is a shared runtime data area where objects and arrays are stored. It is created when the JVM starts.</p>
+                <ul class="feature-list">
+                    <li>The memory in the heap is allocated for all the class instances and arrays.</li>
+                    <li>Heap can be of fixed or dynamic size depending upon the system's configuration.</li>
+                    <li>JVM allows user to adjust the heap size.</li>
+                    <li>When the <code>new</code> keyword is used the object is allocated in the heap and its reference is stored in the stack.</li>
+                    <li>There exists one and only one heap for a running JVM process.</li>
+                </ul>
+
+                <div class="code-example">
+                    <pre><code class="language-java">Scanner sc = new Scanner(System.in);</code></pre>
+                    <p>Here, the Scanner object is stored in the heap and the reference <code>sc</code> is stored in the stack.</p>
+                </div>
+
+                <div class="note">
+                    <p><strong>Note:</strong> Garbage collection in heap area is mandatory.</p>
+                </div>
+
+                <h3>Heap Memory Characteristics</h3>
+                <ul class="feature-list">
+                    <li>Heap memory is allocated dynamically during program execution.</li>
+                    <li>Unlike stack memory, heap memory is not freed automatically when a function ends.</li>
+                    <li>The name heap has no relation to the heap data structure; it simply refers to a large pool of memory available for dynamic allocation.</li>
+                    <li>Heap allocation is less safe than stack allocation because heap data is accessible by multiple threads.</li>
+                </ul>
+
+                <h3>Key Features of Heap Allocation</h3>
+                <ul class="feature-list">
+                    <li>If heap memory is full, JVM throws an error: <code>java.lang.OutOfMemoryError</code>.</li>
+                    <li>Automatic deallocation does not happen; a garbage collector is needed to free unused memory.</li>
+                    <li>Slower than stack memory due to manual allocation and garbage collection.</li>
+                    <li>Less thread-safe, as heap memory is shared among all threads.</li>
+                    <li>Typically larger in size compared to stack memory.</li>
+                    <li>Heap memory persists as long as the entire application is running.</li>
+                </ul>
+
+                <h3>Heap Memory Regions</h3>
+                <ul class="feature-list">
+                    <li><strong>Young Generation:</strong> The area within the heap where new objects are generally allocated.</li>
+                    <li><strong>Old Generation:</strong> The area within the heap where long-lived objects are stored after surviving multiple garbage collection cycles.</li>
+                    <li><strong>Permanent Generation:</strong> Stores metadata about classes and methods (Note: Removed in Java 8, replaced with Metaspace).</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">2. Method Area</h2>
+                <ul class="feature-list">
+                    <li>Method area is a logical part of the heap and it is created when the JVM starts.</li>
+                    <li>Method area is used to store class-level information such as class structures, Method bytecode, Static variables, Constant pool, Interfaces.</li>
+                    <li>Method area can be of fixed or dynamic size depending on the system's configuration.</li>
+                </ul>
+
+                <div class="note">
+                    <p><strong>Note:</strong> Though method area is logically a part of heap, it may or may not be garbage collected even if garbage collection is compulsory in heap area.</p>
+                </div>
+
+                <div class="code-example">
+                <pre><code class="language-java">class Geeks {
+    // static variables are stored in the Method Area
+    static int v = 100;
+
+    // instance variables are stored in the Heap
+    int i = 10;
+
+    public void Display()
+    {
+        // local variables are stored in the Stack
+        int s = 20;
+
+        System.out.println(v);
+        System.out.println(s);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Geeks g = new Geeks();
+
+        // Calling the Display method
+        g.Display();
+    }
+}</code></pre>
+                    <ul class="feature-list">
+                        <li>Static variables are stored in the Method Area.</li>
+                        <li>Instance variables are stored in the Heap.</li>
+                        <li>Local Variables are stored Stack.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">3. JVM Stacks</h2>
+                <ul class="feature-list">
+                    <li>A stack is created when a thread is created, and the JVM stack is used to store method execution data, including local variables, method arguments, and return addresses.</li>
+                    <li>Each Thread has its own stack, ensuring thread safety.</li>
+                    <li>Stacks size can be either fixed or dynamic, and it can be set when the stack is created.</li>
+                    <li>The memory for stack needs not to be contiguous.</li>
+                    <li>Once a method completes execution, its associated stack frame is removed automatically.</li>
+                </ul>
+
+                <h3>How Stack Allocation Works</h3>
+                <ul class="feature-list">
+                    <li>Memory is allocated in contiguous blocks within the call stack.</li>
+                    <li>The size of memory required is already known before execution.</li>
+                    <li>When a function is called, its local variables are allocated on the stack.</li>
+                    <li>Once the function finishes execution, the allocated memory is automatically freed.</li>
+                    <li>The programmer does not need to handle allocation or deallocation.</li>
+                    <li>Since stack memory is freed when a function completes, it is also called temporary memory allocation.</li>
+                </ul>
+
+                <h3>Key Features of Stack Allocation</h3>
+                <ul class="feature-list">
+                    <li>Memory is available only while the function is running.</li>
+                    <li>Automatic deallocation occurs when the function ends.</li>
+                    <li>If the stack memory is full, an error like <code>java.lang.StackOverflowError</code> occurs in Java.</li>
+                    <li>Safer than heap memory, as data can only be accessed by the owner thread.</li>
+                    <li>Faster than heap allocation due to automatic memory management.</li>
+                </ul>
+
+                <div class="note">
+                    <p><strong>Note:</strong></p>
+                    <ul>
+                        <li>Stack memory stores references to objects not the object themselves.</li>
+                        <li>Each thread in Java application has its own stack.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">4. Native Method Stacks</h2>
+                <ul class="feature-list">
+                    <li>Native method stack is also known as C stacks.</li>
+                    <li>Native method stacks are not written in Java language.</li>
+                    <li>This memory is allocated for each thread when it is created and can have either a fixed or dynamic size.</li>
+                    <li>Native method stacks handle the execution of native methods that interact with the Java code.</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Garbage Collector</h2>
+                <h3>Working of a Garbage Collector</h3>
+                <ul class="feature-list">
+                    <li>The Garbage collector in Java automatically removes the unused objects that are no longer needed. It runs in the background to free up memory.</li>
+                    <li>Garbage collector finds objects that are no longer needed by the program.</li>
+                    <li>It removes those unused objects to free up the memory and making space for new objects.</li>
+                    <li>New objects are collected more frequently than older objects, which helps improve efficiency.</li>
+                    <li>You can request garbage collection using <code>System.gc()</code>, but the JVM ultimately decides when it should run.</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Object Structure in Java</h2>
+                <p>In Java, an object consists of three main parts:</p>
+                <ul class="feature-list">
+                    <li><strong>Object header:</strong> It contains metadata like the object's class and lock information for synchronization.</li>
+                    <li><strong>Instance data:</strong> It refers to the actual fields or variables that belongs to an object.</li>
+                    <li><strong>Padding:</strong> It refers to the extra memory to align the object size to the word size for better performance.</li>
+                </ul>
+
+                <h3>The object header includes:</h3>
+                <ul class="feature-list">
+                    <li><strong>Class Pointer:</strong> This is a reference to the object's class.</li>
+                    <li><strong>Lock Information:</strong> This is used for synchronization in multithreaded programs.</li>
+                    <li><strong>GC-related Information:</strong> It is used by the garbage collector for managing the object lifecycle.</li>
+                </ul>
+
+                <h3>Finalize method</h3>
+                <ul class="feature-list">
+                    <li>Method of object class</li>
+                    <li>Used to perform cleanup operations before an object is garbage collected</li>
+                    <li>Affects objects, specifically by overriding the method in a class</li>
+                    <li>Called by the garbage collector when an object is about to be deleted, but it's not guaranteed to run</li>
+                </ul>
+
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Stack vs Heap Memory Comparison</h2>
+                <div class="table-responsive comparison-table">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>STACK</th>
+                            <th>HEAP</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Basic</td>
+                            <td>Memory is allocated in a contiguous block.</td>
+                            <td>Memory is allocated in any random order.</td>
+                        </tr>
+                        <tr>
+                            <td>Allocation and De-allocation</td>
+                            <td>Automatic by compiler instructions.</td>
+                            <td>Manual by the programmer (in C or C++ and garbage collector in Java or Python)</td>
+                        </tr>
+                        <tr>
+                            <td>Cost</td>
+                            <td>Less</td>
+                            <td>More</td>
+                        </tr>
+                        <tr>
+                            <td>Implementation</td>
+                            <td>Easy</td>
+                            <td>Hard</td>
+                        </tr>
+                        <tr>
+                            <td>Main Issue</td>
+                            <td>Shortage of memory</td>
+                            <td>Memory fragmentation</td>
+                        </tr>
+                        <tr>
+                            <td>Locality of reference</td>
+                            <td>Excellent</td>
+                            <td>Adequate</td>
+                        </tr>
+                        <tr>
+                            <td>Safety</td>
+                            <td>Thread safe, data stored can only be accessed by the owner</td>
+                            <td>Not Thread safe, data stored visible to all threads</td>
+                        </tr>
+                        <tr>
+                            <td>Flexibility</td>
+                            <td>Fixed-size</td>
+                            <td>Resizing is possible</td>
+                        </tr>
+                        <tr>
+                            <td>Data type structure</td>
+                            <td>Linear</td>
+                            <td>Hierarchical</td>
+                        </tr>
+                        <tr>
+                            <td>Preferred</td>
+                            <td>Static memory allocation is preferred in an array.</td>
+                            <td>Heap memory allocation is preferred in the linked list.</td>
+                        </tr>
+                        <tr>
+                            <td>Size</td>
+                            <td>Smaller than heap memory.</td>
+                            <td>Larger than stack memory.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <footer class="container">
+
+        <hr id="before-footer">
+        <div class="row">
+
+            <div class="col footer-text">
+
+                <a href="contact.html">Contact</a>
+
+
+            </div>
+
+            <div class="col footer-icons">
+
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+</div>
+
+<style>
+    /* Scroll to top button styles */
+    .scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #0d6efd;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: none; /* Hidden by default */
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .scroll-to-top:hover {
+        background-color: #0b5ed7;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .scroll-to-top:active {
+        transform: translateY(0);
+    }
+
+    .scroll-to-top svg {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+    }
+
+    /* Show the button when user scrolls down */
+    .scroll-to-top.visible {
+        display: flex;
+    }
+</style>
+
+<button class="scroll-to-top" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+    </svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script>
+    hljs.highlightAll();
+
+</script>
+<script>
+    // Show/hide scroll to top button based on scroll position
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopButton.classList.add('visible');
+        } else {
+            scrollToTopButton.classList.remove('visible');
+        }
+    });
+
+    // Scroll to top when button is clicked
+    scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+<!--
+<div class="code-container">
+
+            <div class="code-description"></div>
+            <div class="code">
+
+                <pre><code></code></pre>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h1>OOP Design principles</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h1>1. Don't repeat yourself</h1>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+        </div>
+-->
+
+</body>
+</html>

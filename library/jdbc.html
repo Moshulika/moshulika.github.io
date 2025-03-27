@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/ef590a2fdb.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/library.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+    <link rel="stylesheet" href="css/dracula.css">
+
+    <title>Library</title>
+
+    <style>
+
+        body {
+            background-image: url('assets/blurry_background.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+    </style>
+
+    <style>
+        .card {
+            color: white;
+            margin-bottom: 1.5rem;
+            background-color: #282a36;
+            border-radius: 10px;
+        }
+
+        .card-title {
+            font-weight: bold;
+        }
+        .important {
+            color: #d63384;
+            font-weight: bold;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+    </style>
+
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: #f8f9fa;
+        }
+        .content-card {
+            background-color: rgba(255,255,255,0.5);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+
+        .content-card:hover
+        {
+            background-color: rgba(255,255,255, 1);
+        }
+
+        .section-title {
+            border-bottom: 2px solid black;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            color: black;
+        }
+        .code-example {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #0d6efd;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .note {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .function-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #0d6efd;
+        }
+        .comparison-table {
+            margin-bottom: 30px;
+        }
+        .comparison-table th {
+
+            color: white;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar sticky-top">
+
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--
+        <form id="nav-search" class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Type something.." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><strong>Search</strong></button>
+        </form>
+        -->
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><strong>Menu</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i> <strong>Home</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fa-solid fa-phone"></i> <strong>Contact</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html"><i class="fa-solid fa-gears"></i> <strong>Skills</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="portofoliu.html"><i class="fa-solid fa-book"></i> <strong>Portfolio</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="library.html"><i class="fa-solid fa-code"></i> <strong>Library</strong></a>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+
+            <div id="offcanvas-logos">
+
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row" id="socials-row">
+
+        <div class="col-xs-12 col-lg-6 animate__animated animate__fadeIn" id="picture2">
+
+            <img src="assets/eu.jpg">
+            <div id="text">
+
+                <h1>My simple library</h1>
+                <h4>..of useful code</h4>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <br>
+    <br>
+
+
+    <div class="container">
+
+        <div class="row">
+            <h1>Chapters</h1>
+        </div>
+
+        <div class="library-pills">
+            <a href="https://localhost:8080/library.html#design" class="library-pill">OOP Design Principles</a>
+            <a href="https://localhost:8080/library.html#concepts"class="library-pill">OOP Concepts</a>
+            <a href="https://localhost:8080/library.html#exceptions" class="library-pill">Exceptions</a>
+            <a href="multithreading.html#multithreading" class="library-pill">Multithreading</a>
+            <a href="multithreading.html#final" class="library-pill">Final Keyword</a>
+            <a href="strings.html#strings" class="library-pill">Strings</a>
+            <a href="strings.html#regex" class="library-pill">Regex</a>
+            <a href="files.html#io" class="library-pill">I/O</a>
+            <a href="files.html#files" class="library-pill">Files</a>
+            <a href="https://localhost:8080/library.html#lambda" class="library-pill">Lambda</a>
+            <a href="jdbc.html" class="library-pill">JDBC</a>
+            <a href="networking.html#networking" class="library-pill">Networking</a>
+            <a href="networking.html#json" class="library-pill">JSON</a>
+            <a href="memory.html#memory" class="library-pill">Java Memory</a>
+            <a href="structures.html" class="library-pill">Java Data Structures</a>
+            <a href="mysql.html" class="library-pill">MySQL</a>
+            <a href="c.html" class="library-pill">C/C++</a>
+        </div>
+
+        <div class="row category-title" id="multithreading">
+            <h1>JDBC Programming Guide</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="content-card">
+                <h2 class="section-title">Basic JDBC Example</h2>
+
+                <div class="code-example">
+                <pre><code class="language-java">// Java program to implement a simple JDBC application
+import java.sql.*;
+
+public class Geeks {
+    public static void main(String[] args)
+    {
+        // Database URL, username, and password
+        String url = "jdbc:mysql://localhost:3306/your_database";
+        String username = "your_username";
+        String password = "your_password";
+
+        String query = "INSERT INTO students (id, name) VALUES (109, 'bhatt')";
+
+        // Establish JDBC Connection
+        try {
+            // Load Type-4 Driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // Establish connection
+            Connection c = DriverManager.getConnection(url, username, password);
+
+            // Create a statement
+            Statement st = c.createStatement();
+
+            // Execute the query
+            int count = st.executeUpdate(query);
+            System.out.println("Number of rows affected by this query: " + count);
+
+            // Close the connection
+            st.close();
+            c.close();
+            System.out.println("Connection closed.");
+        }
+        catch (ClassNotFoundException e) {
+            System.err.println("JDBC Driver not found: " + e.getMessage());
+        }
+        catch (SQLException e) {
+            System.err.println("SQL Error: " + e.getMessage());
+        }
+    }
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">1. Statement</h2>
+                <p>A Statement object is used for general-purpose access to databases and is useful for executing static SQL statements at runtime.</p>
+
+                <div class="code-example">
+                    <div class="function-title">Syntax</div>
+                    <pre><code class="language-java">Statement statement = connection.createStatement();</code></pre>
+                </div>
+
+                <h3>Implementation</h3>
+                <p>Once the Statement object is created, there are three ways to execute it:</p>
+                <ul>
+                    <li><strong>execute(String SQL):</strong> Executes any SQL statements (like SELECT, INSERT, UPDATE or DELETE). Returns true if a ResultSet object is retrieved, false otherwise.</li>
+                    <li><strong>executeUpdate(String SQL):</strong> Executes SQL statements (like INSERT, UPDATE or DELETE). Returns the number of rows affected by the SQL statement.</li>
+                    <li><strong>ResultSet executeQuery(String SQL):</strong> Executes the SELECT query. Returns a ResultSet object that contains the data retrieved by the query.</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">2. Prepared Statement</h2>
+                <p>A PreparedStatement represents a precompiled SQL statement that can be executed multiple times. It accepts parameterized SQL queries, with ? as placeholders for parameters, which can be set dynamically.</p>
+
+                <div class="code-example">
+                    <div class="function-title">Example</div>
+                    <pre><code class="language-java">String query = "INSERT INTO people(name, age) VALUES(?, ?)";
+PreparedStatement pstmt = con.prepareStatement(query);
+pstmt.setString(1,"Ayan");
+ptstmt.setInt(2,25);</code></pre>
+                </div>
+
+                <h3>Implementation</h3>
+                <p>Once the PreparedStatement object is created, there are three ways to execute it:</p>
+                <ul>
+                    <li><strong>execute():</strong> Returns a boolean value and executes a static SQL statement that is present in the prepared statement object.</li>
+                    <li><strong>executeQuery():</strong> Returns a ResultSet from the current prepared statement.</li>
+                    <li><strong>executeUpdate():</strong> Returns the number of rows affected by the DML statements such as INSERT, DELETE, and more that is present in the current Prepared Statement.</li>
+                </ul>
+
+                <br>
+
+                <div class="code-example">
+                    <div class="function-title">Complete Example</div>
+                    <pre><code class="language-java">// Java Program illustrating Prepared Statement in JDBC
+import java.sql.*;
+import java.util.Scanner;
+
+class Geeks {
+    public static void main(String[] args) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Scanner sc = new Scanner(System.in);
+
+            System.out.println("What age do you want to search?? ");
+            int age = sc.nextInt();
+
+            Connection con = DriverManager.getConnection(
+                "jdbc:mysql:///world", "root", "12345");
+
+            PreparedStatement ps = con.prepareStatement(
+                "select name from world.people where age = ?");
+
+            ps.setInt(1, age);
+            ResultSet res = ps.executeQuery();
+
+            while (res.next()) {
+                System.out.println("Name : " + res.getString(1));
+            }
+        }
+        catch (SQLException e) {
+            System.out.println(e);
+        }
+        catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">3. Callable Statement</h2>
+                <p>A CallableStatement is used to execute stored procedures in the database. Stored procedures are precompiled SQL statements that can be called with parameters. They are useful for executing complex operations that involve multiple SQL statements.</p>
+
+                <div class="code-example">
+                    <div class="function-title">Syntax</div>
+                    <pre><code class="language-java">CallableStatement cstmt = con.prepareCall("{call ProcedureName(?, ?)}");</code></pre>
+                    <p><code>{call ProcedureName(?, ?)}:</code> Calls a stored procedure named ProcedureName with placeholders ? for input parameters.</p>
+                </div>
+
+                <h3>Methods to Execute</h3>
+                <ul>
+                    <li><strong>execute():</strong> Executes the stored procedure and returns a boolean indicating whether the result is a ResultSet (true) or an update count (false).</li>
+                    <li><strong>executeQuery():</strong> Executes a stored procedure that returns a ResultSet.</li>
+                    <li><strong>executeUpdate():</strong> Executes a stored procedure that performs an update and returns the number of rows affected.</li>
+                </ul>
+
+                <br>
+
+                <div class="code-example">
+                    <div class="function-title">Example</div>
+                    <pre><code class="language-java">// Java Program illustrating Callable Statement in JDBC
+import java.sql.*;
+
+public class Geeks {
+    public static void main(String[] args) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager
+              .getConnection("jdbc:mysql:///world", "root", "12345");
+
+            CallableStatement cs = con.prepareCall("{call GetPeopleInfo()}");
+            ResultSet res = cs.executeQuery();
+
+            while (res.next()) {
+                System.out.println("Name : " + res.getString("name"));
+                System.out.println("Age : " + res.getInt("age"));
+            }
+
+            res.close();
+            cs.close();
+            con.close();
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">JDBC Classes and Interfaces</h2>
+                <div class="table-responsive comparison-table">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                        <tr>
+                            <th>Class/Interfaces</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>DriverManager</td>
+                            <td>Manages JDBC drivers and establishes database connections.</td>
+                        </tr>
+                        <tr>
+                            <td>Connection</td>
+                            <td>Represents a session with a specific database.</td>
+                        </tr>
+                        <tr>
+                            <td>Statement</td>
+                            <td>Used to execute static SQL queries.</td>
+                        </tr>
+                        <tr>
+                            <td>PreparedStatement</td>
+                            <td>Precompiled SQL statement, used for dynamic queries with parameters.</td>
+                        </tr>
+                        <tr>
+                            <td>CallableStatement</td>
+                            <td>Used to execute stored procedures in the database.</td>
+                        </tr>
+                        <tr>
+                            <td>ResultSet</td>
+                            <td>Represents the result set of a query, allowing navigation through the rows.</td>
+                        </tr>
+                        <tr>
+                            <td>SQLException</td>
+                            <td>Handles SQL-related exceptions during database operations.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <footer class="container">
+
+        <hr id="before-footer">
+        <div class="row">
+
+            <div class="col footer-text">
+
+                <a href="contact.html">Contact</a>
+
+
+            </div>
+
+            <div class="col footer-icons">
+
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+</div>
+
+<style>
+    /* Scroll to top button styles */
+    .scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #0d6efd;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: none; /* Hidden by default */
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .scroll-to-top:hover {
+        background-color: #0b5ed7;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .scroll-to-top:active {
+        transform: translateY(0);
+    }
+
+    .scroll-to-top svg {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+    }
+
+    /* Show the button when user scrolls down */
+    .scroll-to-top.visible {
+        display: flex;
+    }
+</style>
+
+<button class="scroll-to-top" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+    </svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script>
+    hljs.highlightAll();
+
+</script>
+<script>
+    // Show/hide scroll to top button based on scroll position
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopButton.classList.add('visible');
+        } else {
+            scrollToTopButton.classList.remove('visible');
+        }
+    });
+
+    // Scroll to top when button is clicked
+    scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+<!--
+<div class="code-container">
+
+            <div class="code-description"></div>
+            <div class="code">
+
+                <pre><code></code></pre>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h1>OOP Design principles</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h1>1. Don't repeat yourself</h1>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+        </div>
+-->
+
+</body>
+</html>

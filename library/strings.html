@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/ef590a2fdb.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/library.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+    <link rel="stylesheet" href="css/dracula.css">
+
+    <title>Library</title>
+
+    <style>
+
+        body {
+            background-image: url('assets/blurry_background.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar sticky-top">
+
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--
+        <form id="nav-search" class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Type something.." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><strong>Search</strong></button>
+        </form>
+        -->
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><strong>Menu</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i> <strong>Home</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fa-solid fa-phone"></i> <strong>Contact</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html"><i class="fa-solid fa-gears"></i> <strong>Skills</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="portofoliu.html"><i class="fa-solid fa-book"></i> <strong>Portfolio</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="library.html"><i class="fa-solid fa-code"></i> <strong>Library</strong></a>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+
+            <div id="offcanvas-logos">
+
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row" id="socials-row">
+
+        <div class="col-xs-12 col-lg-6 animate__animated animate__fadeIn" id="picture2">
+
+            <img src="assets/eu.jpg">
+            <div id="text">
+
+                <h1>My simple library</h1>
+                <h4>..of useful code</h4>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <br>
+    <br>
+
+
+    <div class="container">
+
+        <div class="row">
+            <h1>Chapters</h1>
+        </div>
+
+        <div class="library-pills">
+            <a href="https://localhost:8080/library.html#design" class="library-pill">OOP Design Principles</a>
+            <a href="https://localhost:8080/library.html#concepts"class="library-pill">OOP Concepts</a>
+            <a href="https://localhost:8080/library.html#exceptions" class="library-pill">Exceptions</a>
+            <a href="multithreading.html#multithreading" class="library-pill">Multithreading</a>
+            <a href="multithreading.html#final" class="library-pill">Final Keyword</a>
+            <a href="strings.html#strings" class="library-pill">Strings</a>
+            <a href="strings.html#regex" class="library-pill">Regex</a>
+            <a href="files.html#io" class="library-pill">I/O</a>
+            <a href="files.html#files" class="library-pill">Files</a>
+            <a href="https://localhost:8080/library.html#lambda" class="library-pill">Lambda</a>
+            <a href="jdbc.html" class="library-pill">JDBC</a>
+            <a href="networking.html#networking" class="library-pill">Networking</a>
+            <a href="networking.html#json" class="library-pill">JSON</a>
+            <a href="memory.html#memory" class="library-pill">Java Memory</a>
+            <a href="structures.html" class="library-pill">Java Data Structures</a>
+            <a href="mysql.html" class="library-pill">MySQL</a>
+            <a href="c.html" class="library-pill">C/C++</a>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h2 id="strings">Strings</h2>
+                <p>For more info check out the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" target="_blank">String</a> java docs</p>
+            </div>
+
+            <div class="col-xs-12">
+                <div class="code">
+
+                <pre><code>StringBuffer demoString = new StringBuffer(“GeeksforGeeks”);
+StringBuilder demoString = new StringBuilder(); demoString.append(“GFG”);
+
+String demoString = “Geeks”; //In String constant pool
+String demoString = new String(“Geeks”); //Stored in heapp</code></pre>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+                <h2 id="regex">Regex</h2>
+                <p>For a quick regex builder click <a href="https://regexr.com/" target="_blank">here</a></p>
+
+            <div class="row">
+
+                <div class="col-xs-12">
+
+                <div class="container mt-5">
+                    <table class="table table-dark table-striped">
+                        <caption>Regex classes</caption>
+                        <thead>
+                        <tr>
+                            <th scope="col">Class/Interface</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><strong>Pattern Class</strong></td>
+                            <td>Used for defining patterns</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Matcher Class</strong></td>
+                            <td>Used for performing match operations on text using patterns</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PatternSyntaxException Class</strong></td>
+                            <td>Used for indicating syntax error in a regular expression pattern</td>
+                        </tr>
+                        <tr>
+                            <td><strong>MatchResult Interface</strong></td>
+                            <td>Used for representing the result of a match operation</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                </div>
+
+
+                <div class="col-xs-12 col-lg-6">
+                    <div class="container mt-5">
+                        <table class="table table-dark table-striped">
+                            <caption>Pattern class</caption>
+                            <thead>
+                            <tr>
+                                <th scope="col">Method</th>
+                                <th scope="col">Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><p href="#">compile(String regex)</p></td>
+                                <td>It is used to compile the given regular expression into a pattern.</td>
+                            </tr>
+                            <tr>
+                                <td><p href="#">compile(String regex, int flags)</p></td>
+                                <td>It is used to compile the given regular expression into a pattern with the given flags.</td>
+                            </tr>
+                            <tr>
+                                <td><p href="#">matcher(CharSequence input)</p></td>
+                                <td>It is used to create a matcher that will match the given input against this pattern.</td>
+                            </tr>
+                            <tr>
+                                <td><p href="#">matches(String regex, CharSequence input)</p></td>
+                                <td>It is used to compile the given regular expression and attempts to match the given input against it.</td>
+                            </tr>
+                            <tr>
+                                <td><p href="#">pattern()</p></td>
+                                <td>It is used to return the regular expression from which this pattern was compiled.</td>
+                            </tr>
+                            <tr>
+                                <td><p href="#">quote(String s)</p></td>
+                                <td>It is used to return a literal pattern String for the specified String.</td>
+                            </tr>
+                            <tr>
+                                <td><p href="#">split(CharSequence input)</p></td>
+                                <td>It is used to split the given input sequence around matches of this pattern.</td>
+                            </tr>
+                            <tr>
+                                <td><p href="#">split(CharSequence input, int limit)</p></td>
+                                <td>It is used to split the given input sequence around matches of this pattern. The limit parameter controls the number of times the pattern is applied.</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-lg-6">
+                    <div class="container mt-5">
+                        <table class="table table-dark table-striped">
+                            <caption>Matcher class</caption>
+                            <thead>
+                            <tr>
+                                <th scope="col">Method</th>
+                                <th scope="col">Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><p href="#">find()</p></td>
+                                <td>It is mainly used for searching multiple occurences of the regex in the text</td>
+                            </tr>
+                            <tr>
+                                <td><p href="#">find(int start)</p></td>
+                                <td>Used for searching uccurences of the regex in the text starting form the given index</td>
+                            </tr>
+                            <tr>
+                                <td><p href="#">start()</p></td>
+                                <td>Used for getting the start index of a match that is being found using find() method</td>
+                            </tr>
+                            <tr>
+                                <td><p href="#">end()</p></td>
+                                <td>Used for getting the end index of a match that is being found using find() method. Returns the index of th char next to the last matching char</td>
+                            </tr>
+                            <tr>
+                                <td><p href="#">groupCount()</p></td>
+                                <td>Used to find the total number of the matched subsequence</td>
+                            </tr>
+                            <tr>
+                                <td><p href="#">group()</p></td>
+                                <td>Used to find the matched subsequence</td>
+                            </tr>
+                            <tr>
+                                <td><p href="#">matches()</p></td>
+                                <td>Used to test whether the regex matches the pattern</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-xs-12 col-lg-6">
+                    <div class="container mt-5">
+                        <div class="table-responsive">
+                            <table class="table table-dark table-striped table-bordered text-center">
+                                <caption>Regex Character Classes</caption>
+                                <thead>
+                                <tr>
+                                    <th>Character Class</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><code>[xyz]</code></td>
+                                    <td>x, y, or z</td>
+                                </tr>
+                                <tr>
+                                    <td><code>[^xyz]</code></td>
+                                    <td>Any characters other than x, y, or z</td>
+                                </tr>
+                                <tr>
+                                    <td><code>[a-zA-Z]</code></td>
+                                    <td>Characters from range a to z or A to Z</td>
+                                </tr>
+                                <tr>
+                                    <td><code>[a-f[m-t]]</code></td>
+                                    <td>Union of a to f and m to t</td>
+                                </tr>
+                                <tr>
+                                    <td><code>[a-z && p-y]</code></td>
+                                    <td>All the range of elements intersection between two ranges</td>
+                                </tr>
+                                <tr>
+                                    <td><code>[a-z && [^bc]]</code></td>
+                                    <td>a to z union with except b and c</td>
+                                </tr>
+                                <tr>
+                                    <td><code>[a-z && [^m-p]]</code></td>
+                                    <td>a to z union with except range m to p</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-lg-6">
+                    <div class="container mt-5">
+                        <div class="table-responsive">
+                            <table class="table table-dark table-striped table-bordered text-center">
+                                <caption>Regex Quantifiers</caption>
+                                <thead>
+                                <tr>
+                                    <th>Regex</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><code>X?</code></td>
+                                    <td>X appears once or not</td>
+                                </tr>
+                                <tr>
+                                    <td><code>X+</code></td>
+                                    <td>X appears once or more than once</td>
+                                </tr>
+                                <tr>
+                                    <td><code>X*</code></td>
+                                    <td>X appears zero times or more</td>
+                                </tr>
+                                <tr>
+                                    <td><code>X{n}</code></td>
+                                    <td>X appears exactly n times</td>
+                                </tr>
+                                <tr>
+                                    <td><code>X{n,}</code></td>
+                                    <td>X appears n times or more</td>
+                                </tr>
+                                <tr>
+                                    <td><code>X{n,m}</code></td>
+                                    <td>X appears at least n times and at most m times</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+
+                <div class="container mt-5">
+                    <div class="table-responsive">
+                        <table class="table table-dark table-striped table-bordered text-center">
+                            <caption>Character classes</caption>
+                            <thead>
+                            <tr>
+                                <th>Regex</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><code>.</code></td>
+                                <td>Any character</td>
+                            </tr>
+                            <tr>
+                                <td><code>\d</code></td>
+                                <td>Any digits [0-9]</td>
+                            </tr>
+                            <tr>
+                                <td><code>\D</code></td>
+                                <td>Any non-digit [^0-9]</td>
+                            </tr>
+                            <tr>
+                                <td><code>\s</code></td>
+                                <td>White space character [\t\n\x0B\f\r]</td>
+                            </tr>
+                            <tr>
+                                <td><code>\S</code></td>
+                                <td>Non whitespace character</td>
+                            </tr>
+                            <tr>
+                                <td><code>\w</code></td>
+                                <td>Word character [a-zA-Z_0-9]</td>
+                            </tr>
+                            <tr>
+                                <td><code>\W</code></td>
+                                <td>Non Word character [^a-zA-Z_0-9]</td>
+                            </tr>
+                            <tr>
+                                <td><code>\b</code></td>
+                                <td>Word boundary</td>
+                            </tr>
+                            <tr>
+                                <td><code>\B</code></td>
+                                <td>Non word boundary</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <footer class="container">
+
+        <hr id="before-footer">
+        <div class="row">
+
+            <div class="col footer-text">
+
+                <a href="contact.html">Contact</a>
+
+
+            </div>
+
+            <div class="col footer-icons">
+
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+</div>
+
+<style>
+    /* Scroll to top button styles */
+    .scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #0d6efd;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: none; /* Hidden by default */
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .scroll-to-top:hover {
+        background-color: #0b5ed7;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .scroll-to-top:active {
+        transform: translateY(0);
+    }
+
+    .scroll-to-top svg {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+    }
+
+    /* Show the button when user scrolls down */
+    .scroll-to-top.visible {
+        display: flex;
+    }
+</style>
+
+<button class="scroll-to-top" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+    </svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script>
+    hljs.highlightAll();
+
+</script>
+<script>
+    // Show/hide scroll to top button based on scroll position
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopButton.classList.add('visible');
+        } else {
+            scrollToTopButton.classList.remove('visible');
+        }
+    });
+
+    // Scroll to top when button is clicked
+    scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+<!--
+<div class="code-container">
+
+            <div class="code-description"></div>
+            <div class="code">
+
+                <pre><code></code></pre>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h1>OOP Design principles</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h1>1. Don't repeat yourself</h1>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+        </div>
+-->
+
+</body>
+</html>

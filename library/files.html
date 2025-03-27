@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/ef590a2fdb.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/library.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+    <link rel="stylesheet" href="css/dracula.css">
+
+    <title>Library</title>
+
+    <style>
+
+        body {
+            background-image: url('assets/blurry_background.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+    </style>
+
+    <style>
+        .card {
+            color: white;
+            margin-bottom: 1.5rem;
+            background-color: #282a36;
+            border-radius: 10px;
+        }
+
+        .card-title {
+            font-weight: bold;
+        }
+        .important {
+            color: #d63384;
+            font-weight: bold;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+    </style>
+
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: #f8f9fa;
+        }
+        .content-card {
+            background-color: rgba(255,255,255,0.5);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+
+        .content-card:hover
+        {
+            background-color: rgba(255,255,255, 1);
+        }
+
+        .section-title {
+            border-bottom: 2px solid black;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            color: black;
+        }
+        .code-example {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #0d6efd;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .note {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .function-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #0d6efd;
+        }
+        .comparison-table {
+            margin-bottom: 30px;
+        }
+        .comparison-table th {
+
+            color: white;
+        }
+
+        .console-output {
+            background-color: #212529;
+            color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin-bottom: 20px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar sticky-top">
+
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--
+        <form id="nav-search" class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Type something.." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><strong>Search</strong></button>
+        </form>
+        -->
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><strong>Menu</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i> <strong>Home</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fa-solid fa-phone"></i> <strong>Contact</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html"><i class="fa-solid fa-gears"></i> <strong>Skills</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="portofoliu.html"><i class="fa-solid fa-book"></i> <strong>Portfolio</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="library.html"><i class="fa-solid fa-code"></i> <strong>Library</strong></a>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+
+            <div id="offcanvas-logos">
+
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row" id="socials-row">
+
+        <div class="col-xs-12 col-lg-6 animate__animated animate__fadeIn" id="picture2">
+
+            <img src="assets/eu.jpg">
+            <div id="text">
+
+                <h1>My simple library</h1>
+                <h4>..of useful code</h4>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <br>
+    <br>
+
+
+    <div class="container">
+
+        <div class="row">
+            <h1>Chapters</h1>
+        </div>
+
+        <div class="library-pills">
+            <a href="https://localhost:8080/library.html#design" class="library-pill">OOP Design Principles</a>
+            <a href="https://localhost:8080/library.html#concepts"class="library-pill">OOP Concepts</a>
+            <a href="https://localhost:8080/library.html#exceptions" class="library-pill">Exceptions</a>
+            <a href="multithreading.html#multithreading" class="library-pill">Multithreading</a>
+            <a href="multithreading.html#final" class="library-pill">Final Keyword</a>
+            <a href="strings.html#strings" class="library-pill">Strings</a>
+            <a href="strings.html#regex" class="library-pill">Regex</a>
+            <a href="files.html#io" class="library-pill">I/O</a>
+            <a href="files.html#files" class="library-pill">Files</a>
+            <a href="https://localhost:8080/library.html#lambda" class="library-pill">Lambda</a>
+            <a href="jdbc.html" class="library-pill">JDBC</a>
+            <a href="networking.html#networking" class="library-pill">Networking</a>
+            <a href="networking.html#json" class="library-pill">JSON</a>
+            <a href="memory.html#memory" class="library-pill">Java Memory</a>
+            <a href="structures.html" class="library-pill">Java Data Structures</a>
+            <a href="mysql.html" class="library-pill">MySQL</a>
+            <a href="c.html" class="library-pill">C/C++</a>
+        </div>
+
+        <div class="row category-title" id="io">
+            <h1>Java I/O Operations</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="content-card">
+                <h2 class="section-title">Byte Stream</h2>
+                <p>This is used to process data byte by byte (8 bits). Though it has many classes, the FileInputStream and the FileOutputStream are the most popular ones. The FileInputStream is used to read from the source and FileOutputStream is used to write to the destination.</p>
+
+                <div class="code-example">
+                <pre><code class="language-java">public class BStream {
+    public static void main(String[] args) throws IOException {
+        FileInputStream sourceStream = null;
+        FileOutputStream targetStream = null;
+
+        try {
+            sourceStream = new FileInputStream("sorcefile.txt");
+            targetStream = new FileOutputStream("targetfile.txt");
+
+            // Reading source file and writing content to target file byte by byte
+            int temp;
+            while ((temp = sourceStream.read()) != -1)
+                targetStream.write((byte)temp);
+        }
+        finally {
+            if (sourceStream != null)
+                sourceStream.close();
+            if (targetStream != null)
+                targetStream.close();
+        }
+    }
+}</code></pre>
+                </div>
+
+                <h3>Stream Classes</h3>
+                <div class="table-responsive comparison-table">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>BufferedInputStream</td>
+                            <td>It is used for Buffered Input Stream.</td>
+                        </tr>
+                        <tr>
+                            <td>DataInputStream</td>
+                            <td>It contains method for reading java standard datatypes.</td>
+                        </tr>
+                        <tr>
+                            <td>FileInputStream</td>
+                            <td>This is used to reads from a file.</td>
+                        </tr>
+                        <tr>
+                            <td>InputStream</td>
+                            <td>This is an abstract class that describes stream input.</td>
+                        </tr>
+                        <tr>
+                            <td>PrintStream</td>
+                            <td>This contains the most used print() and println() method.</td>
+                        </tr>
+                        <tr>
+                            <td>BufferedOutputStream</td>
+                            <td>This is used for Buffered Output Stream.</td>
+                        </tr>
+                        <tr>
+                            <td>DataOutputStream</td>
+                            <td>This contains method for writing java standard data types.</td>
+                        </tr>
+                        <tr>
+                            <td>FileOutputStream</td>
+                            <td>This is used to write to a file.</td>
+                        </tr>
+                        <tr>
+                            <td>OutputStream</td>
+                            <td>This is an abstract class that describe stream output.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Character Stream</h2>
+                <p>In Java, characters are stored using Unicode conventions. Character stream automatically allows us to read/write data character by character. Though it has many classes, the FileReader and the FileWriter are the most popular ones. FileReader and FileWriter are character streams used to read from the source and write to the destination respectively.</p>
+
+                <div class="code-example">
+                <pre><code class="language-java">public class Geeks {
+    public static void main(String[] args) throws IOException {
+        FileReader sourceStream = null;
+
+        try {
+            sourceStream = new FileReader("test.txt");
+
+            // Reading sourcefile and writing content character by character
+            int temp;
+            while ((temp = sourceStream.read()) != -1)
+                System.out.println((char)temp);
+        }
+        finally {
+            // Closing stream as no longer in use
+            if (sourceStream != null)
+                sourceStream.close();
+        }
+    }
+}</code></pre>
+                </div>
+
+                <h3>Reader/Writer Classes</h3>
+                <div class="table-responsive comparison-table">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>BufferedReader</td>
+                            <td>It is used to handle buffered input stream.</td>
+                        </tr>
+                        <tr>
+                            <td>FileReader</td>
+                            <td>This is an input stream that reads from file.</td>
+                        </tr>
+                        <tr>
+                            <td>InputStreamReader</td>
+                            <td>This input stream is used to translate byte to character.</td>
+                        </tr>
+                        <tr>
+                            <td>OutputStreamReader</td>
+                            <td>This output stream is used to translate character to byte.</td>
+                        </tr>
+                        <tr>
+                            <td>Reader</td>
+                            <td>This is an abstract class that define character stream input.</td>
+                        </tr>
+                        <tr>
+                            <td>PrintWriter</td>
+                            <td>This contains the most used print() and println() method.</td>
+                        </tr>
+                        <tr>
+                            <td>Writer</td>
+                            <td>This is an abstract class that define character stream output.</td>
+                        </tr>
+                        <tr>
+                            <td>BufferedWriter</td>
+                            <td>This is used to handle buffered output stream.</td>
+                        </tr>
+                        <tr>
+                            <td>FileWriter</td>
+                            <td>This is used to output stream that writes to file.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Reader Class Implementation</h2>
+                <p>Some of the implementations of Reader classes in Java are mentioned below:</p>
+                <ul>
+                    <li>BufferedReader</li>
+                    <li>CharArrayReader</li>
+                    <li>FilterReader</li>
+                    <li>InputStreamReader</li>
+                    <li>PipedReader</li>
+                    <li>StringReader</li>
+                </ul>
+
+                <br>
+
+                <h3>Key Features of Reader Class</h3>
+                <ul>
+                    <li><strong>Character-Based Reading:</strong> Reader class is used for reading text which handles binary data.</li>
+                    <li><strong>Abstract class:</strong> We cannot create a Reader object directly, we need to use subclasses like BufferedReader or FileReader.</li>
+                    <li><strong>Unicode Support:</strong> It can read and process Unicode.</li>
+                </ul>
+
+                <div class="code-example">
+                <pre><code class="language-java">public class Geeks {
+    public static void main(String[] args) throws IOException {
+        // Open a file reader
+        Reader r = new FileReader("file.txt");
+        PrintStream out = System.out;
+
+        // Create a character array and CharBuffer
+        char[] buffer = new char[10];
+        CharBuffer charBuffer = CharBuffer.wrap(buffer);
+
+        // Check if the reader supports marking
+        if (r.markSupported()) {
+            r.mark(100); // Mark the current position
+            out.println("mark method is supported");
+        }
+
+        // Skip 5 characters in the stream
+        r.skip(5);
+
+        // Check if the stream is ready to read
+        if (r.ready()) {
+            // Read 10 characters into the buffer
+            r.read(buffer, 0, 10);
+            out.println("Buffer after reading 10 chars: " + Arrays.toString(buffer));
+
+            // Read characters into the CharBuffer
+            r.read(charBuffer);
+            out.println("CharBuffer contents: " + Arrays.toString(charBuffer.array()));
+
+            // Read a single character
+            out.println("Next character: " + (char)r.read());
+        }
+
+        // Close the reader
+        r.close();
+    }
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Writer Class</h2>
+                <p>Java writer class is an abstract class in the java.io package. It is designed for writing character streams. Writer class in Java provides methods for writing characters, arrays of characters, and strings. Since it is an abstract class, we cannot create an instance of it directly. Instead, we will use one of its concrete subclasses such as FileWriter, BufferedWriter, or PrintWriter.</p>
+
+                <div class="code-example">
+                <pre><code class="language-java">public class Main {
+    public static void main(String[] args) throws IOException {
+        // Writer to output to the console
+        Writer w = new PrintWriter(System.out);
+
+        System.out.println("Example 1: append(char)");
+        // Appending Characters
+        w.append('G');
+        w.append('e');
+        w.append('e');
+        w.append('k');
+        w.append('s');
+        w.flush();
+
+        System.out.println();
+        System.out.println("Example 2: append(CharSequence)");
+        CharSequence t = "Hello, Geeks!";
+        // Appending entire CharSequence
+        w.append(t);
+        w.flush();
+
+        System.out.println();
+        System.out.println("Example 3: append(CharSequence, start, end)");
+        // Appending substring "Hello"
+        w.append(t, 0, 5);
+        w.append(" ");
+        // Appending substring "Geeks"
+        w.append(t, 7, 12);
+        w.flush();
+
+        System.out.println();
+        // Close the writer
+        w.close();
+    }
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Reading from Console</h2>
+
+                <h3>1. Using BufferedReader</h3>
+                <div class="code-example">
+                <pre><code class="language-java">// Enter data using BufferReader
+BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
+
+// Reading data using readLine
+String s = r.readLine();</code></pre>
+                </div>
+
+                <h3>2. Using Scanner</h3>
+                <div class="code-example">
+                <pre><code class="language-java">Scanner s = new Scanner(System.in);
+String s1 = s.nextLine();</code></pre>
+                </div>
+
+                <h3>3. Using Command Line Arguments</h3>
+                <div class="code-example">
+                <pre><code class="language-java">public static void main(String[] args) {
+    // check if length of args array is greater than 0
+    if (args.length > 0) {
+        System.out.println("The command line arguments are:");
+        // iterating the args array and printing the command line arguments
+        for (String val : args)
+            System.out.println(val);
+    }
+    else
+        System.out.println("No command line arguments found.");
+}</code></pre>
+                </div>
+
+                <div class="console-output">
+                <pre>C:\Users\GFG0574\IdeaProjects\Codes\src>java Main Hello world
+Current working directory: C:\Users\GFG0574\IdeaProjects\Codes\src
+The command line arguments are:
+Hello
+world
+
+C:\Users\GFG0574\IdeaProjects\Codes\src></pre>
+                </div>
+
+                <h3>4. Using DataInputStream</h3>
+                <div class="code-example">
+                <pre><code class="language-java">DataInputStream r = new DataInputStream(System.in);
+
+// Reading integers
+System.out.print("Enter an integer: ");
+int i = Integer.parseInt(r.readLine());</code></pre>
+                </div>
+
+                <h3>Scanner vs BufferedReader</h3>
+                <div class="table-responsive comparison-table">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Scanner</th>
+                            <th>BufferedReader</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Package</td>
+                            <td>It is a part of java.util package.</td>
+                            <td>It is a part of java.io package.</td>
+                        </tr>
+                        <tr>
+                            <td>Key use</td>
+                            <td>Simple parsing of primitive types and strings</td>
+                            <td>High-performance text reading</td>
+                        </tr>
+                        <tr>
+                            <td>Performance</td>
+                            <td>Performance is slower due to parsing overhead and tokenization</td>
+                            <td>Performance is faster due to efficient buffering</td>
+                        </tr>
+                        <tr>
+                            <td>Buffer Size</td>
+                            <td>Buffer Size is smaller</td>
+                            <td>Buffer Size is larger</td>
+                        </tr>
+                        <tr>
+                            <td>Thread-safe</td>
+                            <td>It is not thread-safe</td>
+                            <td>It is thread-safe</td>
+                        </tr>
+                        <tr>
+                            <td>Error Handling</td>
+                            <td>Throws Exception like InputMismatchException</td>
+                            <td>Throws Exception like IOException</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title" id="files">File Operations</h2>
+
+                <h3>Creating a File</h3>
+                <div class="code-example">
+                <pre><code class="language-java">public class CreateFile {
+    public static void main(String[] args) {
+        try {
+            File Obj = new File("myfile.txt");
+            // Creating File
+            if (Obj.createNewFile()) {
+                System.out.println("File created: " + Obj.getName());
+            }
+            else {
+                System.out.println("File already exists.");
+            }
+        }
+        catch (IOException e) {
+            System.out.println("An error has occurred.");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                </div>
+
+                <h3>Deleting a File</h3>
+                <div class="code-example">
+                <pre><code class="language-java">public class DeleteFile {
+    public static void main(String[] args) {
+        File Obj = new File("myfile.txt");
+        // Deleting File
+        if (Obj.delete()) {
+            System.out.println("The deleted file is : " + Obj.getName());
+        }
+        else {
+            System.out.println("Failed in deleting the file.");
+        }
+    }
+}</code></pre>
+                </div>
+
+                <h3>Creating a Folder</h3>
+                <div class="code-example">
+                <pre><code class="language-java">public class CreateFolder {
+    public static void main(String[] args) {
+        File folder = new File("myDirectory");
+        if (!folder.exists()) {
+            if (folder.mkdir()) {
+                System.out.println("Folder created successfully!");
+            } else {
+                System.out.println("Failed to create folder.");
+            }
+        } else {
+            System.out.println("Folder already exists.");
+        }
+    }
+}</code></pre>
+                </div>
+
+                <h3>Creating Nested Folders</h3>
+                <div class="code-example">
+                <pre><code class="language-java">public class CreateNestedFolders {
+    public static void main(String[] args) {
+        File folders = new File("parentDir/childDir");
+        if (!folders.exists()) {
+            if (folders.mkdirs()) {
+                System.out.println("Nested folders created successfully!");
+            } else {
+                System.out.println("Failed to create nested folders.");
+            }
+        } else {
+            System.out.println("Folders already exist.");
+        }
+    }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <footer class="container">
+
+        <hr id="before-footer">
+        <div class="row">
+
+            <div class="col footer-text">
+
+                <a href="contact.html">Contact</a>
+
+
+            </div>
+
+            <div class="col footer-icons">
+
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+</div>
+
+<style>
+    /* Scroll to top button styles */
+    .scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #0d6efd;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: none; /* Hidden by default */
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .scroll-to-top:hover {
+        background-color: #0b5ed7;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .scroll-to-top:active {
+        transform: translateY(0);
+    }
+
+    .scroll-to-top svg {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+    }
+
+    /* Show the button when user scrolls down */
+    .scroll-to-top.visible {
+        display: flex;
+    }
+</style>
+
+<button class="scroll-to-top" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+    </svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script>
+    hljs.highlightAll();
+
+</script>
+<script>
+    // Show/hide scroll to top button based on scroll position
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopButton.classList.add('visible');
+        } else {
+            scrollToTopButton.classList.remove('visible');
+        }
+    });
+
+    // Scroll to top when button is clicked
+    scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+<!--
+<div class="code-container">
+
+            <div class="code-description"></div>
+            <div class="code">
+
+                <pre><code></code></pre>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h1>OOP Design principles</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h1>1. Don't repeat yourself</h1>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+        </div>
+-->
+
+</body>
+</html>

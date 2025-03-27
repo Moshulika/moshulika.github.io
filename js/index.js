@@ -17,6 +17,11 @@ function hideCookies()
 
 function paypal()
 {
-    window.open("https://paypal.me/moshudev", "_blank");
+    window.open("https://paypal.me/moshulika", "_blank");
 
+}
+
+function library()
+{
+    window.location.href = 'library.html';
 }

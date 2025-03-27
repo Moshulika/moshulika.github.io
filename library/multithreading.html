@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/ef590a2fdb.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/library.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+    <link rel="stylesheet" href="css/dracula.css">
+
+    <title>Library</title>
+
+    <style>
+
+        body {
+            background-image: url('assets/blurry_background.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+    </style>
+
+    <style>
+        .card {
+            color: white;
+            margin-bottom: 1.5rem;
+            background-color: #282a36;
+            border-radius: 10px;
+        }
+
+        .card-title {
+            font-weight: bold;
+        }
+        .important {
+            color: #d63384;
+            font-weight: bold;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+    </style>
+
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .content-card {
+            background-color: rgba(255,255,255, 0.5);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+
+        .content-card:hover
+        {
+            background-color: rgba(255,255,255, 1);
+        }
+
+
+        .section-title {
+            border-bottom: 2px solid black;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            color: black;
+        }
+        .code-example {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #0d6efd;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .note {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .feature-list {
+            margin-bottom: 20px;
+        }
+        .feature-list li {
+            margin-bottom: 8px;
+        }
+        .comparison-table {
+            margin-bottom: 30px;
+        }
+        .comparison-table th {
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar sticky-top">
+
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--
+        <form id="nav-search" class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Type something.." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><strong>Search</strong></button>
+        </form>
+        -->
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><strong>Menu</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i> <strong>Home</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fa-solid fa-phone"></i> <strong>Contact</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html"><i class="fa-solid fa-gears"></i> <strong>Skills</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="portofoliu.html"><i class="fa-solid fa-book"></i> <strong>Portfolio</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="library.html"><i class="fa-solid fa-code"></i> <strong>Library</strong></a>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+
+            <div id="offcanvas-logos">
+
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row" id="socials-row">
+
+        <div class="col-xs-12 col-lg-6 animate__animated animate__fadeIn" id="picture2">
+
+            <img src="assets/eu.jpg">
+            <div id="text">
+
+                <h1>My simple library</h1>
+                <h4>..of useful code</h4>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <br>
+    <br>
+
+
+    <div class="container">
+
+        <div class="row">
+            <h1>Chapters</h1>
+        </div>
+
+        <div class="library-pills">
+            <a href="https://localhost:8080/library.html#design" class="library-pill">OOP Design Principles</a>
+            <a href="https://localhost:8080/library.html#concepts"class="library-pill">OOP Concepts</a>
+            <a href="https://localhost:8080/library.html#exceptions" class="library-pill">Exceptions</a>
+            <a href="multithreading.html#multithreading" class="library-pill">Multithreading</a>
+            <a href="multithreading.html#final" class="library-pill">Final Keyword</a>
+            <a href="strings.html#strings" class="library-pill">Strings</a>
+            <a href="strings.html#regex" class="library-pill">Regex</a>
+            <a href="files.html#io" class="library-pill">I/O</a>
+            <a href="files.html#files" class="library-pill">Files</a>
+            <a href="https://localhost:8080/library.html#lambda" class="library-pill">Lambda</a>
+            <a href="jdbc.html" class="library-pill">JDBC</a>
+            <a href="networking.html#networking" class="library-pill">Networking</a>
+            <a href="networking.html#json" class="library-pill">JSON</a>
+            <a href="memory.html#memory" class="library-pill">Java Memory</a>
+            <a href="structures.html" class="library-pill">Java Data Structures</a>
+            <a href="mysql.html" class="library-pill">MySQL</a>
+            <a href="c.html" class="library-pill">C/C++</a>
+        </div>
+
+        <div class="row category-title" id="multithreading">
+            <h1>Java Multithreading Concepts</h1>
+        </div>
+
+
+        <div class="container">
+
+            <br>
+            <div class="content-card">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="code-example">
+                            <h4>Multiprocessing</h4>
+                            <p>Process-based multitasking is a heavyweight process and occupies different address spaces in memory. Hence, while switching from one process to another, it will require some time (be it very small), causing a lag because of switching. This happens as registers will be loaded in memory maps and the list will be updated.</p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12">
+                        <div class="code-example">
+                        <h4>Multithreading</h4>
+                        <p>Thread-based multitasking is a lightweight process and occupies the same address space. Hence, while switching, the cost of communication will be very less.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Creating Threads</h2>
+                <p>There are two ways to create threads in Java:</p>
+                <ol>
+                    <li>Extending the Thread class</li>
+                    <li>Implementing the Runnable interface</li>
+                </ol>
+
+                <br>
+
+                <h4>Example: Extending Thread class</h4>
+                <pre><code class="language-java">class MyThread extends Thread {
+    // run() method to transit thread from runnable to run state
+    public void run() {
+        // Printing the current running thread via getName()
+        System.out.println("Running Thread: " + currentThread().getName());
+
+        // Print the priority of current thread
+        System.out.println("Running Thread Priority: " + currentThread().getPriority());
+    }
+}
+
+class GFG {
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        MyThread t2 = new MyThread();
+
+        t1.setPriority(Thread.NORM_PRIORITY); // Default priority (5)
+        t2.setPriority(Thread.NORM_PRIORITY);
+
+        t1.start();
+        t2.start();
+    }
+}</code></pre>
+
+                <div class="note">
+                    <strong>Note:</strong> You can also create a thread using <code>new Thread(class implementing Runnable)</code>.
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Daemon Threads</h2>
+                <p>Characteristics of Daemon threads:</p>
+                <ul>
+                    <li>It is only a service provider thread, not responsible for interpretation in user threads.</li>
+                    <li>It is a low-priority thread.</li>
+                    <li>It is a dependent thread as it has no existence on its own.</li>
+                    <li>JVM terminates the thread as soon as user threads are terminated and comes back into play when user threads start.</li>
+                    <li>The most popular example is the garbage collector in Java. Some other examples include 'finalizer'.</li>
+                </ul>
+                <p>If the main thread finishes, the daemon thread does not complete its execution and stops abruptly.</p>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">ReentrantLock</h2>
+                <pre><code class="language-java">class Geeks {
+    // counter value shared across the threads
+    private static int c = 0;
+
+    // Lock object
+    private static ReentrantLock lock = new ReentrantLock();
+
+    public static void increment() {
+        // acquire the lock
+        lock.lock();
+        try {
+            c++;
+            System.out.println(Thread.currentThread().getName() +
+                             " incremented counter to: " + c);
+        } finally {
+            // release the lock
+            lock.unlock();
+        }
+    }
+
+    public static void main(String[] args) {
+        Runnable task = () -> {
+            for (int i = 1; i < 3; i++) {
+                increment();
+            }
+        };
+
+        Thread t1 = new Thread(task, "Thread-1");
+        Thread t2 = new Thread(task, "Thread-2");
+
+        t1.start();
+        t2.start();
+    }
+}</code></pre>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Synchronized Blocks</h2>
+                <p>A synchronized block in Java is synchronized on some object. Synchronized blocks in Java are marked with the synchronized keyword. All synchronized blocks synchronize on the same object and can only have one thread executed inside them at a time. All other threads attempting to enter the synchronized block are blocked until the thread inside the synchronized block exits the block.</p>
+
+                <h4>Method-level synchronization:</h4>
+                <pre><code class="language-java">public synchronized void inc() {
+    c++;
+}</code></pre>
+
+                <h4>Block-level synchronization:</h4>
+                <pre><code class="language-java">synchronized(dataType) {
+    dataType.doSomething();
+}</code></pre>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Wait/Notify Mechanism</h2>
+                <p><strong>What is Polling, and what are the problems with it?</strong></p>
+                <p>The process of testing a condition repeatedly till it becomes true is known as polling. Polling is usually implemented with the help of loops to check whether a particular condition is true or not. If it is true, a certain action is taken. This wastes many CPU cycles and makes the implementation inefficient.</p>
+
+                <p>To avoid polling, Java uses three methods: wait(), notify(), and notifyAll(). All these methods belong to object class as final so that all classes have them. They must be used within a synchronized block only.</p>
+
+                <ul>
+                    <li><strong>wait():</strong> It tells the calling thread to give up the lock and go to sleep until some other thread enters the same monitor and calls notify().</li>
+                    <li><strong>notify():</strong> It wakes up one single thread called wait() on the same object. It should be noted that calling notify() does not give up a lock on a resource.</li>
+                    <li><strong>notifyAll():</strong> It wakes up all the threads called wait() on the same object.</li>
+                </ul>
+
+                <br>
+
+                <h4>Producer-Consumer Example:</h4>
+                <pre><code class="language-java">// Shared queue used by both producer and consumer
+private static final Queue<Integer> queue = new LinkedList<>();
+// Maximum capacity of the queue
+private static final int CAPACITY = 10;
+
+// Producer task
+private static final Runnable producer = new Runnable() {
+    public void run() {
+        while (true) {
+            synchronized (queue) {
+                // Wait if the queue is full
+                while (queue.size() == CAPACITY) {
+                    try {
+                        System.out.println("Queue is at max capacity");
+                        queue.wait(); // Release the lock and wait
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                // Add item to the queue
+                queue.add(10);
+                System.out.println("Added 10 to the queue");
+                queue.notifyAll(); // Notify all waiting consumers
+                try {
+                    Thread.sleep(2000); // Simulate some delay in production
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+};
+
+// Consumer task
+private static final Runnable consumer = new Runnable() {
+    public void run() {
+        while (true) {
+            synchronized (queue) {
+                // Wait if the queue is empty
+                while (queue.isEmpty()) {
+                    try {
+                        System.out.println("Queue is empty, waiting");
+                        queue.wait(); // Release the lock and wait
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                // Remove item from the queue
+                System.out.println("Removed " + queue.remove() + " from the queue");
+                queue.notifyAll(); // Notify all waiting producers
+                try {
+                    Thread.sleep(2000); // Simulate some delay in consumption
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+};
+
+public static void main(String[] args) {
+    System.out.println("Main thread started");
+    // Create and start the producer thread
+    Thread producerThread = new Thread(producer, "Producer");
+    // Create and start the consumer thread
+    Thread consumerThread = new Thread(consumer, "Consumer");
+    producerThread.start();
+    consumerThread.start();
+    System.out.println("Main thread exiting");
+}</code></pre>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Volatile vs Synchronized</h2>
+                <p>Two important features of locks and synchronization:</p>
+                <ul>
+                    <li><strong>Mutual Exclusion:</strong> Only one thread or process can execute a block of code (critical section) at a time.</li>
+                    <li><strong>Visibility:</strong> Changes made by one thread to shared data are visible to other threads.</li>
+                </ul>
+
+                <p>Java's synchronized keyword guarantees both mutual exclusion and visibility. If we make the blocks of threads that modify the value of the shared variable synchronized, only one thread can enter the block and changes made by it will be reflected in the main memory.</p>
+
+                <p>In some cases, we may only desire visibility and not atomicity. The use of synchronized in such a situation is overkill and may cause scalability problems. Here volatile comes to the rescue. Volatile variables have the visibility features of synchronized but not the atomicity features. The values of the volatile variable will never be cached and all writes and reads will be done to and from the main memory.</p>
+
+                <h4>Volatile Example:</h4>
+                <pre><code class="language-java">public class VolatileTest {
+    private static final Logger LOGGER = MyLoggerFactory.getSimplestLogger();
+    private static volatile int MY_INT = 0;
+
+    public static void main(String[] args) {
+        new ChangeListener().start();
+        new ChangeMaker().start();
+    }
+
+    static class ChangeListener extends Thread {
+        @Override public void run() {
+            int local_value = MY_INT;
+            while (local_value < 5) {
+                if (local_value != MY_INT) {
+                    LOGGER.log(Level.INFO, "Got Change for MY_INT: {0}", MY_INT);
+                    local_value = MY_INT;
+                }
+            }
+        }
+    }
+
+    static class ChangeMaker extends Thread {
+        @Override public void run() {
+            int local_value = MY_INT;
+            while (MY_INT < 5) {
+                LOGGER.log(Level.INFO, "Incrementing MY_INT to {0}", local_value + 1);
+                MY_INT = ++local_value;
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+}</code></pre>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Atomic Classes</h2>
+                <p>Java provides atomic classes such as AtomicInteger, AtomicLong, AtomicBoolean and AtomicReference. Objects of these classes represent the atomic variable of int, long, boolean, and object reference respectively.</p>
+
+                <p>These classes contain the following methods:</p>
+                <ul>
+                    <li><code>set(int value)</code>: Sets to the given value</li>
+                    <li><code>get()</code>: Gets the current value</li>
+                    <li><code>lazySet(int value)</code>: Eventually sets to the given value</li>
+                    <li><code>compareAndSet(int expect, int update)</code>: Atomically sets the value to the given updated value if the current value == the expected value</li>
+                    <li><code>addAndGet(int delta)</code>: Atomically adds the given value to the current value</li>
+                    <li><code>decrementAndGet()</code>: Atomically decrements by one the current value</li>
+                </ul>
+
+                <br>
+
+                <h4>Example:</h4>
+                <pre><code class="language-java">class Counter extends Thread {
+    // Atomic counter Variable
+    AtomicInteger count;
+
+    // Constructor of class
+    Counter() {
+        count = new AtomicInteger();
+    }
+
+    public void run() {
+        int max = 1_000_00_000;
+
+        // incrementing counter total of max times
+        for (int i = 0; i < max; i++) {
+            count.addAndGet(1);
+        }
+    }
+}
+
+public class AtomicCounter {
+    public static void main(String[] args) throws InterruptedException {
+        // Instance of Counter Class
+        Counter c = new Counter();
+
+        // Defining Two different threads
+        Thread first = new Thread(c, "First");
+        Thread second = new Thread(c, "Second");
+
+        // Threads start executing
+        first.start();
+        second.start();
+
+        // main thread will wait for both threads to complete execution
+        first.join();
+        second.join();
+
+        // Printing final value of count variable
+        System.out.println(c.count);
+    }
+}</code></pre>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Mutex (Mutual Exclusion)</h2>
+                <ul>
+                    <li>At any time, only one process is allowed to enter its critical section.</li>
+                    <li>The solution is implemented purely in software on a machine.</li>
+                    <li>A process remains inside its critical section for a bounded time only.</li>
+                    <li>No assumption can be made about the relative speeds of asynchronous concurrent processes.</li>
+                    <li>A process cannot prevent any other process from entering into a critical section.</li>
+                    <li>A process must not be indefinitely postponed from entering its critical section.</li>
+                </ul>
+
+                <br>
+
+                <h3>What is a race condition?</h3>
+                <p>A race condition occurs when multiple processes or threads access shared data concurrently, and the final outcome of the program depends on the relative timing of their execution. This can lead to unexpected and undesired results, such as data corruption, incorrect calculations, or program crashes.</p>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title">Semaphores</h2>
+                <p>A semaphore can be seen as a lock that allows multiple threads to coexist in a certain critical region at a given time. The semaphore uses a counter that determines how many threads can still enter. Once it reaches the semaphore, a thread is only allowed to enter if the number of threads in the critical section is less than the maximum number of threads set when creating the semaphore. The respective thread announces that it has exited via a release call.</p>
+
+                <p>When a semaphore is initialized with a positive value x, you can think that x threads are allowed to enter the critical section. As a thread does acquire(), x is decremented. When it reaches 0, other possible threads that want to access the critical region will have to wait until the semaphore's value increases to a positive value (i.e., until one of the threads in the critical region exits).</p>
+
+                <p>Complementary, when a semaphore is initialized with a negative value such as -1, it is expected that at least two threads will first do release() (for the semaphore's value to increase from -1 to 1), before a critical region can be accessed (i.e., another thread can do acquire()). You can imagine that a third thread is waiting "at the semaphore" for two other threads to give it a signal by calling release() when they have "finished their work".</p>
+
+                <p>Semaphores in Java are represented by the Semaphore class. When creating semaphore objects, we can use the following constructors:</p>
+                <ul>
+                    <li><code>Semaphore(int permits)</code></li>
+                    <li><code>Semaphore(int permits, boolean fair)</code></li>
+                </ul>
+
+                <p>We pass the following to the constructor:</p>
+                <ul>
+                    <li><code>int permits</code> - the initial and maximum value of the counter. In other words, this parameter determines how many threads can access the shared resource simultaneously.</li>
+                    <li><code>boolean fair</code> - establishes the order in which threads will have access. If fair is true, then access is granted to waiting threads in the order in which they requested it. If false, then the order is determined by the thread scheduler.</li>
+                </ul>
+
+                <br>
+
+                <h4>Dining Philosophers Example:</h4>
+                <pre><code class="language-java">class Philosopher extends Thread {
+    private Semaphore sem;
+    private boolean full = false;
+    private String name;
+
+    Philosopher(Semaphore sem, String name) {
+        this.sem = sem;
+        this.name = name;
+    }
+
+    public void run() {
+        try {
+            if (!full) {
+                sem.acquire();
+                System.out.println(name + " takes a seat at the table");
+
+                sleep(300);
+                full = true;
+
+                System.out.println(name + " has eaten! He leaves the table");
+                sem.release();
+
+                sleep(300);
+            }
+        } catch(InterruptedException e) {
+            System.out.println("Something went wrong!");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Semaphore sem = new Semaphore(2);
+        new Philosopher(sem, "Socrates").start();
+        new Philosopher(sem, "Plato").start();
+        new Philosopher(sem, "Aristotle").start();
+        new Philosopher(sem, "Thales").start();
+        new Philosopher(sem, "Pythagoras").start();
+    }
+}</code></pre>
+
+                <h4>Output:</h4>
+                <pre><code class="language-plaintext">Socrates takes a seat at the table
+Plato takes a seat at the table
+Socrates has eaten! He leaves the table
+Plato has eaten! He leaves the table
+Aristotle takes a seat at the table
+Pythagoras takes a seat at the table
+Aristotle has eaten! He leaves the table
+Pythagoras has eaten! He leaves the table
+Thales takes a seat at the table
+Thales has eaten! He leaves the table</code></pre>
+            </div>
+
+            <div class="content-card">
+                <h2 class="section-title" id="final">Final Keyword</h2>
+                <pre><code class="language-java">static final double EULERCONSTANT;
+final int CAPACITY;
+
+// instance initializer block for initializing CAPACITY
+{
+    CAPACITY = 25;
+}
+
+static {
+    EULERCONSTANT = 2.3;
+}</code></pre>
+                <p>Final variables can also be initialized in the constructor. Final classes cannot be extended.</p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <footer class="container">
+
+        <hr id="before-footer">
+        <div class="row">
+
+            <div class="col footer-text">
+
+                <a href="contact.html">Contact</a>
+
+
+            </div>
+
+            <div class="col footer-icons">
+
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+</div>
+
+<style>
+    /* Scroll to top button styles */
+    .scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #0d6efd;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: none; /* Hidden by default */
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .scroll-to-top:hover {
+        background-color: #0b5ed7;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .scroll-to-top:active {
+        transform: translateY(0);
+    }
+
+    .scroll-to-top svg {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+    }
+
+    /* Show the button when user scrolls down */
+    .scroll-to-top.visible {
+        display: flex;
+    }
+</style>
+
+<button class="scroll-to-top" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+    </svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script>
+    hljs.highlightAll();
+
+</script>
+<script>
+    // Show/hide scroll to top button based on scroll position
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopButton.classList.add('visible');
+        } else {
+            scrollToTopButton.classList.remove('visible');
+        }
+    });
+
+    // Scroll to top when button is clicked
+    scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+<!--
+<div class="code-container">
+
+            <div class="code-description"></div>
+            <div class="code">
+
+                <pre><code></code></pre>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h1>OOP Design principles</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h1>1. Don't repeat yourself</h1>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+        </div>
+-->
+
+</body>
+</html>
