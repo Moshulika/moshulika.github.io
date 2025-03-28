@@ -31,6 +31,54 @@
             background-size: cover;
         }
 
+        .content-card {
+            background-color: rgba(255,255,255, 0.5);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+
+        .content-card:hover
+        {
+            background-color: rgba(255,255,255, 1);
+        }
+
+
+        .section-title {
+            border-bottom: 2px solid black;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            color: black;
+        }
+        .code-example {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #0d6efd;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .note {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .feature-list {
+            margin-bottom: 20px;
+        }
+        .feature-list li {
+            margin-bottom: 8px;
+        }
+        .comparison-table {
+            margin-bottom: 30px;
+        }
+        .comparison-table th {
+
+        }
+
     </style>
 
 </head>
@@ -134,16 +182,16 @@
         </div>
 
         <div class="library-pills">
-            <a href="https://localhost:8080/library.html#design" class="library-pill">OOP Design Principles</a>
-            <a href="https://localhost:8080/library.html#concepts"class="library-pill">OOP Concepts</a>
-            <a href="https://localhost:8080/library.html#exceptions" class="library-pill">Exceptions</a>
+            <a href="https://moshulika.github.io/library.html#design" class="library-pill">OOP Design Principles</a>
+            <a href="https://moshulika.github.io/library.html#concepts"class="library-pill">OOP Concepts</a>
+            <a href="https://moshulika.github.io/library.html#exceptions" class="library-pill">Exceptions</a>
             <a href="multithreading.html#multithreading" class="library-pill">Multithreading</a>
             <a href="multithreading.html#final" class="library-pill">Final Keyword</a>
             <a href="strings.html#strings" class="library-pill">Strings</a>
             <a href="strings.html#regex" class="library-pill">Regex</a>
             <a href="files.html#io" class="library-pill">I/O</a>
             <a href="files.html#files" class="library-pill">Files</a>
-            <a href="https://localhost:8080/library.html#lambda" class="library-pill">Lambda</a>
+            <a href="https://moshulika.github.io/library.html#lambda" class="library-pill">Lambda</a>
             <a href="jdbc.html" class="library-pill">JDBC</a>
             <a href="networking.html#networking" class="library-pill">Networking</a>
             <a href="networking.html#json" class="library-pill">JSON</a>
@@ -153,7 +201,7 @@
             <a href="c.html" class="library-pill">C/C++</a>
         </div>
 
-        <div class="row">
+        <div class="content-card">
 
             <div class="col-12">
                 <h2 id="strings">Strings</h2>
@@ -175,14 +223,12 @@ String demoString = new String(“Geeks”); //Stored in heapp</code></pre>
 
         </div>
 
-        <div class="row">
+        <div class="content-card">
 
                 <h2 id="regex">Regex</h2>
                 <p>For a quick regex builder click <a href="https://regexr.com/" target="_blank">here</a></p>
 
             <div class="row">
-
-                <div class="col-xs-12">
 
                 <div class="container mt-5">
                     <table class="table table-dark table-striped">
@@ -213,201 +259,175 @@ String demoString = new String(“Geeks”); //Stored in heapp</code></pre>
                         </tbody>
                     </table>
                 </div>
-
+                <div class="container mt-5">
+                    <table class="table table-dark table-striped">
+                        <caption>Pattern class</caption>
+                        <thead>
+                        <tr>
+                            <th scope="col">Method</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><p href="#">compile(String regex)</p></td>
+                            <td>It is used to compile the given regular expression into a pattern.</td>
+                        </tr>
+                        <tr>
+                            <td><p href="#">compile(String regex, int flags)</p></td>
+                            <td>It is used to compile the given regular expression into a pattern with the given flags.</td>
+                        </tr>
+                        <tr>
+                            <td><p href="#">matcher(CharSequence input)</p></td>
+                            <td>It is used to create a matcher that will match the given input against this pattern.</td>
+                        </tr>
+                        <tr>
+                            <td><p href="#">matches(String regex, CharSequence input)</p></td>
+                            <td>It is used to compile the given regular expression and attempts to match the given input against it.</td>
+                        </tr>
+                        <tr>
+                            <td><p href="#">pattern()</p></td>
+                            <td>It is used to return the regular expression from which this pattern was compiled.</td>
+                        </tr>
+                        <tr>
+                            <td><p href="#">quote(String s)</p></td>
+                            <td>It is used to return a literal pattern String for the specified String.</td>
+                        </tr>
+                        <tr>
+                            <td><p href="#">split(CharSequence input)</p></td>
+                            <td>It is used to split the given input sequence around matches of this pattern.</td>
+                        </tr>
+                        <tr>
+                            <td><p href="#">split(CharSequence input, int limit)</p></td>
+                            <td>It is used to split the given input sequence around matches of this pattern. The limit parameter controls the number of times the pattern is applied.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container mt-5">
+                    <table class="table table-dark table-striped">
+                        <caption>Matcher class</caption>
+                        <thead>
+                        <tr>
+                            <th scope="col">Method</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><p href="#">find()</p></td>
+                            <td>It is mainly used for searching multiple occurences of the regex in the text</td>
+                        </tr>
+                        <tr>
+                            <td><p href="#">find(int start)</p></td>
+                            <td>Used for searching uccurences of the regex in the text starting form the given index</td>
+                        </tr>
+                        <tr>
+                            <td><p href="#">start()</p></td>
+                            <td>Used for getting the start index of a match that is being found using find() method</td>
+                        </tr>
+                        <tr>
+                            <td><p href="#">end()</p></td>
+                            <td>Used for getting the end index of a match that is being found using find() method. Returns the index of th char next to the last matching char</td>
+                        </tr>
+                        <tr>
+                            <td><p href="#">groupCount()</p></td>
+                            <td>Used to find the total number of the matched subsequence</td>
+                        </tr>
+                        <tr>
+                            <td><p href="#">group()</p></td>
+                            <td>Used to find the matched subsequence</td>
+                        </tr>
+                        <tr>
+                            <td><p href="#">matches()</p></td>
+                            <td>Used to test whether the regex matches the pattern</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
 
-
-                <div class="col-xs-12 col-lg-6">
-                    <div class="container mt-5">
-                        <table class="table table-dark table-striped">
-                            <caption>Pattern class</caption>
+                <div class="container mt-5">
+                    <div class="table-responsive">
+                        <table class="table table-dark table-striped table-bordered text-center">
+                            <caption>Regex Character Classes</caption>
                             <thead>
                             <tr>
-                                <th scope="col">Method</th>
-                                <th scope="col">Description</th>
+                                <th>Character Class</th>
+                                <th>Description</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td><p href="#">compile(String regex)</p></td>
-                                <td>It is used to compile the given regular expression into a pattern.</td>
+                                <td><code>[xyz]</code></td>
+                                <td>x, y, or z</td>
                             </tr>
                             <tr>
-                                <td><p href="#">compile(String regex, int flags)</p></td>
-                                <td>It is used to compile the given regular expression into a pattern with the given flags.</td>
+                                <td><code>[^xyz]</code></td>
+                                <td>Any characters other than x, y, or z</td>
                             </tr>
                             <tr>
-                                <td><p href="#">matcher(CharSequence input)</p></td>
-                                <td>It is used to create a matcher that will match the given input against this pattern.</td>
+                                <td><code>[a-zA-Z]</code></td>
+                                <td>Characters from range a to z or A to Z</td>
                             </tr>
                             <tr>
-                                <td><p href="#">matches(String regex, CharSequence input)</p></td>
-                                <td>It is used to compile the given regular expression and attempts to match the given input against it.</td>
+                                <td><code>[a-f[m-t]]</code></td>
+                                <td>Union of a to f and m to t</td>
                             </tr>
                             <tr>
-                                <td><p href="#">pattern()</p></td>
-                                <td>It is used to return the regular expression from which this pattern was compiled.</td>
+                                <td><code>[a-z && p-y]</code></td>
+                                <td>All the range of elements intersection between two ranges</td>
                             </tr>
                             <tr>
-                                <td><p href="#">quote(String s)</p></td>
-                                <td>It is used to return a literal pattern String for the specified String.</td>
+                                <td><code>[a-z && [^bc]]</code></td>
+                                <td>a to z union with except b and c</td>
                             </tr>
                             <tr>
-                                <td><p href="#">split(CharSequence input)</p></td>
-                                <td>It is used to split the given input sequence around matches of this pattern.</td>
-                            </tr>
-                            <tr>
-                                <td><p href="#">split(CharSequence input, int limit)</p></td>
-                                <td>It is used to split the given input sequence around matches of this pattern. The limit parameter controls the number of times the pattern is applied.</td>
+                                <td><code>[a-z && [^m-p]]</code></td>
+                                <td>a to z union with except range m to p</td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
-
                 </div>
-                <div class="col-xs-12 col-lg-6">
-                    <div class="container mt-5">
-                        <table class="table table-dark table-striped">
-                            <caption>Matcher class</caption>
+                <div class="container mt-5">
+                    <div class="table-responsive">
+                        <table class="table table-dark table-striped table-bordered text-center">
+                            <caption>Regex Quantifiers</caption>
                             <thead>
                             <tr>
-                                <th scope="col">Method</th>
-                                <th scope="col">Description</th>
+                                <th>Regex</th>
+                                <th>Description</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td><p href="#">find()</p></td>
-                                <td>It is mainly used for searching multiple occurences of the regex in the text</td>
+                                <td><code>X?</code></td>
+                                <td>X appears once or not</td>
                             </tr>
                             <tr>
-                                <td><p href="#">find(int start)</p></td>
-                                <td>Used for searching uccurences of the regex in the text starting form the given index</td>
+                                <td><code>X+</code></td>
+                                <td>X appears once or more than once</td>
                             </tr>
                             <tr>
-                                <td><p href="#">start()</p></td>
-                                <td>Used for getting the start index of a match that is being found using find() method</td>
+                                <td><code>X*</code></td>
+                                <td>X appears zero times or more</td>
                             </tr>
                             <tr>
-                                <td><p href="#">end()</p></td>
-                                <td>Used for getting the end index of a match that is being found using find() method. Returns the index of th char next to the last matching char</td>
+                                <td><code>X{n}</code></td>
+                                <td>X appears exactly n times</td>
                             </tr>
                             <tr>
-                                <td><p href="#">groupCount()</p></td>
-                                <td>Used to find the total number of the matched subsequence</td>
+                                <td><code>X{n,}</code></td>
+                                <td>X appears n times or more</td>
                             </tr>
                             <tr>
-                                <td><p href="#">group()</p></td>
-                                <td>Used to find the matched subsequence</td>
-                            </tr>
-                            <tr>
-                                <td><p href="#">matches()</p></td>
-                                <td>Used to test whether the regex matches the pattern</td>
+                                <td><code>X{n,m}</code></td>
+                                <td>X appears at least n times and at most m times</td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
-
                 </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="col-xs-12 col-lg-6">
-                    <div class="container mt-5">
-                        <div class="table-responsive">
-                            <table class="table table-dark table-striped table-bordered text-center">
-                                <caption>Regex Character Classes</caption>
-                                <thead>
-                                <tr>
-                                    <th>Character Class</th>
-                                    <th>Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td><code>[xyz]</code></td>
-                                    <td>x, y, or z</td>
-                                </tr>
-                                <tr>
-                                    <td><code>[^xyz]</code></td>
-                                    <td>Any characters other than x, y, or z</td>
-                                </tr>
-                                <tr>
-                                    <td><code>[a-zA-Z]</code></td>
-                                    <td>Characters from range a to z or A to Z</td>
-                                </tr>
-                                <tr>
-                                    <td><code>[a-f[m-t]]</code></td>
-                                    <td>Union of a to f and m to t</td>
-                                </tr>
-                                <tr>
-                                    <td><code>[a-z && p-y]</code></td>
-                                    <td>All the range of elements intersection between two ranges</td>
-                                </tr>
-                                <tr>
-                                    <td><code>[a-z && [^bc]]</code></td>
-                                    <td>a to z union with except b and c</td>
-                                </tr>
-                                <tr>
-                                    <td><code>[a-z && [^m-p]]</code></td>
-                                    <td>a to z union with except range m to p</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-xs-12 col-lg-6">
-                    <div class="container mt-5">
-                        <div class="table-responsive">
-                            <table class="table table-dark table-striped table-bordered text-center">
-                                <caption>Regex Quantifiers</caption>
-                                <thead>
-                                <tr>
-                                    <th>Regex</th>
-                                    <th>Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td><code>X?</code></td>
-                                    <td>X appears once or not</td>
-                                </tr>
-                                <tr>
-                                    <td><code>X+</code></td>
-                                    <td>X appears once or more than once</td>
-                                </tr>
-                                <tr>
-                                    <td><code>X*</code></td>
-                                    <td>X appears zero times or more</td>
-                                </tr>
-                                <tr>
-                                    <td><code>X{n}</code></td>
-                                    <td>X appears exactly n times</td>
-                                </tr>
-                                <tr>
-                                    <td><code>X{n,}</code></td>
-                                    <td>X appears n times or more</td>
-                                </tr>
-                                <tr>
-                                    <td><code>X{n,m}</code></td>
-                                    <td>X appears at least n times and at most m times</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="row">
-                <div class="col-xs-12">
-
                 <div class="container mt-5">
                     <div class="table-responsive">
                         <table class="table table-dark table-striped table-bordered text-center">
@@ -460,8 +480,9 @@ String demoString = new String(“Geeks”); //Stored in heapp</code></pre>
                     </div>
                 </div>
 
-                </div>
             </div>
+
+
 
         </div>
 

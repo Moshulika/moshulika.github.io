@@ -207,14 +207,14 @@
         </div>
 
 
-        <div class="row">
+        <div class="content-card">
 
             <div class="col-12">
                 <h2>1. Don't repeat yourself</h2>
                 <p>DRY is an acronym for Don’t Repeat Yourself. As the name suggests this principle focuses on reducing the duplication of the same code throughout the program. If you have the same block of code, performing the same tasks in multiple parts of the program, then it means that you are not following the DRY principle. The DRY principle can be implemented by refactoring the code such that it removes duplication and redundancy by creating a single reuseable code in the form of abstraction, or a function.</p>
             </div>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-12">
                 <div class="code">
 
                 <pre><code>public class GFG {
@@ -255,7 +255,7 @@
 
             </div>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-12">
                 <div class="code">
 
                 <pre><code>public class GFG {
@@ -304,14 +304,14 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="content-card">
 
             <div class="col-12">
                 <h2>2. Open-Closed principle</h2>
                 <p>OCP is an acronym for Open Closed Principle, it is also considered as a basic principle of OOPs. According to this principle, all the entities, like classes, methods, etc, should be open for extensions but closed for modifications. This means that you have to keep your code open for extending the behavior, but it should not allow modification of the existing source code.</p>
             </div>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-12">
                 <div class="code">
 
                 <pre><code>class Calculator {
@@ -340,7 +340,7 @@ public class GFG {
 
             </div>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-12">
                 <div class="code">
 
                 <pre><code>interface Arithmetic {
@@ -387,14 +387,14 @@ public class GFG {
             </div>
         </div>
 
-        <div class="row">
+        <div class="content-card">
 
             <div class="col-12">
                 <h2>3. Single Responsibility Principle</h2>
                 <p>SRP is an acronym for Single Responsibility Principle. This principle suggests that a `Class` should have only one reason to change. This means that a `Class` should only implement one functionality and only change when there is a need to change the functionality. If a class has too many responsibilities, it becomes difficult to manage in the long run. With SRP the classes become more modular and focused, leading to a more maintainable and flexible code.</p>
             </div>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-12">
                 <div class="code">
 
                 <pre><code>class User {
@@ -440,7 +440,7 @@ public class GFG {
 
             </div>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-12">
                 <div class="code">
 
                 <pre><code>class User {
@@ -497,14 +497,14 @@ public class GFG {
             </div>
         </div>
 
-        <div class="row">
+        <div class="content-card">
 
             <div class="col-12">
                 <h2>4. Interface Segregation Principle</h2>
                 <p>ISP is an acronym for Interface Segregation Principle. The principle states that clients should not forcefully implement an Interface if it does not use that. This means that the class should not implement an interface if the methods declared by the interface are not used by the class. Similar to SRP, this principle states that one should focus on creating multiple client interfaces responsible for a particular task, rather than having a one-fat interface. </p>
             </div>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-12">
                 <div class="code">
 
                 <pre><code>interface Animal{
@@ -526,7 +526,7 @@ class Fish implements Animal{
 
             </div>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-12">
                 <div class="code">
 
                 <pre><code>interface Animal {
@@ -554,14 +554,14 @@ class Fish implements WaterAnimal {
             </div>
         </div>
 
-        <div class="row">
+        <div class="content-card">
 
             <div class="col-12">
                 <h2>5. Interface Segregation Principle</h2>
                 <p>LSP is an acronym for Liskov Substitution Principle. According to the principle, Derived classes must be substitutable for their base classes. This indicates that superclass objects in the program should be interchangeable by instances of their subclasses without compromising the program’s correctness. It guarantees that any child class of a parent class can be used in place of their parent without causing any unexpected behavior.</p>
             </div>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-12">
                 <div class="code">
 
                 <pre><code>class Rectangle {
@@ -604,7 +604,7 @@ public class GFG {
 
             </div>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-12">
                 <div class="code">
 
                 <pre><code>interface Shape{
@@ -641,14 +641,14 @@ public class GFG {
             </div>
         </div>
 
-        <div class="row">
+        <div class="content-card">
 
             <div class="col-12">
                 <h2>6. Dependency Inversion Principle</h2>
                 <p>DIP is an acronym for Dependency Inversion Principle. The principle states that high-level classes should not depend on low-level classes, instead, both should depend on Abstractions. In other words, the modules/classes should depend on Abstractions, (interfaces and abstract classes) rather than concrete implementation. By introducing an abstract layer, DIP aims in reducing the coupling between the classes and hence make the application more easier to test and maintain. </p>
             </div>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-12">
                 <div class="code">
 
                 <pre><code>class Computer {
@@ -674,7 +674,7 @@ public class GFG {
 
             </div>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-12">
                 <div class="code">
 
                 <pre><code>interface IComputer {
@@ -708,14 +708,14 @@ public class GFG {
             </div>
         </div>
 
-        <div class="row">
+        <div class="content-card">
 
             <div class="col-12">
                 <h2>7. Composition Over Inheritance</h2>
                 <p>COI is an acronym for Composition Over Inheritance. As the name implies, this principle emphasizes using Composition instead of Inheritance to achieve code reusability. Inheritance allows a subclass to inherit its superclass’s properties and behavior, but this approach can lead to a rigid class hierarchy that is difficult to modify and maintain. In contrast, Composition enables greater flexibility and modularity in class design by constructing objects from other objects and combining their behaviors. Additionally, the fact that Java doesn’t support multiple inheritances can be another reason to favor Composition over Inheritance.</p>
             </div>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-12">
                 <div class="code">
 
                 <pre><code>class Musician {
@@ -740,7 +740,7 @@ class Drummer extends Musician {
 
             </div>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-12">
                 <div class="code">
 
                 <pre><code>class Singer {
