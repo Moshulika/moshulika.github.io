@@ -214,8 +214,9 @@ html
 {
 
     margin-top: 5vh;
-    margin-left: 5vh;
     display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
 
 }
 
@@ -253,6 +254,12 @@ html
 
 }
 
+.long-button-cont
+{
+    width: 100%;
+    display: flex;
+}
+
 .buton:hover, .buton_left:hover
 {
     background: #bde0fe;
@@ -271,8 +278,14 @@ html
 
 }
 
+.table-responsive
+{
+    scrollbar-width: thin;
+}
+
 .longest-button
 {
+    width: 100%;
     background-color: white;
     color: black;
     font-family: Exo;

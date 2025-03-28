@@ -2,30 +2,30 @@
 <html lang="en">
 
 
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://kit.fontawesome.com/ef590a2fdb.js" crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/contact.css">
-  <link rel="stylesheet" href="css/portofoliu.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/ef590a2fdb.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/portofoliu.css">
 
 
-  <title>My Portfolio</title>
+    <title>My Portfolio</title>
 
-  <style>
+    <style>
 
-    body {
-      background-image: url('assets/blurry_background.png');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-    }
+        body {
+            background-image: url('assets/blurry_background.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
 
-  </style>
+    </style>
 
 </head>
 
@@ -35,469 +35,560 @@
 
 <nav class="navbar sticky-top">
 
-  <div class="container-fluid">
+    <div class="container-fluid">
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!--
-    <form id="nav-search" class="d-flex mt-3" role="search">
-        <input class="form-control me-2" type="search" placeholder="Type something.." aria-label="Search">
-        <button class="btn btn-outline-success" type="submit"><strong>Search</strong></button>
-    </form>
-    -->
+        <!--
+        <form id="nav-search" class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Type something.." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><strong>Search</strong></button>
+        </form>
+        -->
 
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+             aria-labelledby="offcanvasNavbarLabel">
 
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><strong>Menu</strong></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><strong>Menu</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
 
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i> <strong>Home</strong></a>
-          </li>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i>
+                            <strong>Home</strong></a>
+                    </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html"><i class="fa-solid fa-phone"></i> <strong>Contact</strong></a>
-          </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fa-solid fa-phone"></i>
+                            <strong>Contact</strong></a>
+                    </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="skills.html"><i class="fa-solid fa-gears"></i> <strong>Skills</strong></a>
-          </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html"><i class="fa-solid fa-gears"></i> <strong>Skills</strong></a>
+                    </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="portofoliu.html"><i class="fa-solid fa-book"></i> <strong>Portfolio</strong></a>
-          </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portofoliu.html"><i class="fa-solid fa-book"></i>
+                            <strong>Portfolio</strong></a>
+                    </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="library.html"><i class="fa-solid fa-code"></i> <strong>Library</strong></a>
-          </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="library.html"><i class="fa-solid fa-code"></i>
+                            <strong>Library</strong></a>
+                    </li>
 
-        </ul>
-
-
-
-      </div>
-
-      <div id="offcanvas-logos">
-
-        <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
-        <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                </ul>
 
 
-      </div>
+            </div>
 
+            <div id="offcanvas-logos">
+
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+            </div>
+
+        </div>
     </div>
-  </div>
 </nav>
 
 <div class="container">
 
     <div class="animate__animated animate__fadeIn" id="picture">
 
-      <img src="assets/eu.jpg">
-      <div id="text">
+        <img src="assets/eu.jpg">
+        <div id="text">
 
-        <h1 id="#portfolio-title">Welcome</h1>
-        <h4>My name is Eduard, and I'm glad to see you here!</h4>
-
-      </div>
-
-      <a href="assets/resume.pdf" target="_blank" class="btn btn-light buton main-portofoliu"><i class="fa-solid fa-book"></i> <strong>Take a look at my CV</strong></a>
-
-    </div>
-
-    <div class ="col-xs-12 col-lg-6" id="socials">
-
-      <div id="icons">
-
-      </div>
-
-    </div>
-
-
-
-  <div class="container">
-
-    <div class="row mockup-row">
-
-      <div class="col-xs-12 col-lg-6 display-mockup">
-
-        <iframe src="https://1drv.ms/p/c/83845014f4d4384c/IQSpKBxYZ5FMRJnv8PAqW0KHAUQIZrM-kyNoSkKOP3Sxmi4?wdAr=1.7777777777777777" width="700px" height="400px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
-
-      </div>
-
-      <div class="col-xs-12 col-lg-6 text-mockup">
-
-        <h3><i class="fa-brands fa-android"></i> Unwind</h3>
-        <p>I worked alongside my colleagues to create an Android app that aims to eliminate loneliness by offering
-          people fun ideas and suggesting people they could interact with. Created Twitter-like posting of text and multimedia files by using a Cloud API, and stored the rest of the data in a MySQL database. Developed live messaging by communicating with a Java Socket on a Linux server. Solved performance issues due to multiple database connections. Designed the app's interface in XML, respecting the Material design directives.</p>
-        <div class="col-xs-12 software-plugins">
-
-          <a href="assets/Unwind.pdf" target="_blank" class="plugin-button"><i class="fa-solid fa-book"></i> Documentation</a>
-
-        </div>
-      </div>
-
-      <hr class="row-sepparator">
-
-    </div>
-
-
-    <div class="row mockup-row">
-
-      <div class="col-xs-12 col-lg-12 text-mockup">
-
-        <h3><i class="fa-solid fa-plug"></i> Software plugins</h3>
-      </div>
-
-    </div>
-
-    <div class="row mockup-row">
-
-      <div class="col-xs-12 col-lg-6 image-container">
-
-        <img src="https://i.imgur.com/PiMKpB4.png">
-
-      </div>
-
-      <div class="col-xs-12 col-lg-6 text-mockup">
-
-        <h3><i class="fa-solid fa-plug"></i> What do I do?</h3>
-        <p>I develop solutions for new game mechanics, expand existing ones, and solve problems as well as integrate with different platforms such as Discord, and Android apps that display information about the server and allow you to remotely manage it.
-          I currently have a portfolio of around 10 plugins, free and paid, all rated 5 stars. I revolve around customisation and customer support in order to tailor every client's needs. I also make custom plugins not listed publicly to satisfy even the most
-          pretentious of customers.</p>
-
-        <div class="col-xs-12 software-plugins">
-
-          <a href="https://www.spigotmc.org/resources/authors/stereon.116721/" class="plugin-button"><img src="https://avatars.githubusercontent.com/u/4350249?s=280&v=4" width="25px" height="25px"> Spigot</a>
-          <a href="https://builtbybit.com/creators/moshulika.518280" class="plugin-button"><img src="https://avatars.githubusercontent.com/u/86993355?s=280&v=4" width="25px" height="25px"> BuildByBit</a>
-          <a href="https://polymart.org/user/moshulika.42116" class="plugin-button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-y9DX9W2y0621db24f8aov1_OtSLNMOngPg&s" width="25px" height="25px"> Polymart</a>
+            <h1 id="#portfolio-title">Welcome</h1>
+            <h4>My name is Eduard, and I'm glad to see you here!</h4>
 
         </div>
 
-      </div>
-
-      <hr class="row-sepparator">
-
-    </div>
-
-    <div class="row mockup-row">
-
-      <div class="col-xs-12 col-lg-12 text-mockup">
-
-        <h3><i class="fa-solid fa-earth-americas"></i> Websites</h3>
-      </div>
-
-      <div class="col-xs-12 col-lg-6 text-mockup">
-
-        <br>
-        <p>Creating unique, responsive websites like vitrinacudulciuri.ro and mc.b-zone.ro involves tailoring the design and functionality to meet the specific needs of their respective audiences. For instance, vitrinacudulciuri.ro, a Romanian confectionery shop, features a visually appealing interface that showcases its products, including cakes and pastries, with high-quality images and detailed descriptions. The site emphasizes its commitment to offering sugar-free and vegan options, catering to diverse dietary preferences.
-          On the other hand, mc.b-zone.ro serves as the online hub for a Minecraft server community. The website provides essential information such as server status, game modes like Survival and Skyblock, and connection details for players. It also integrates community features, including forums and social media links, to foster player engagement and communication.
-          Both websites exemplify the importance of responsive design, ensuring optimal viewing experiences across various devices, and a user-centric approach that aligns with their brand identity and audience expectations.</p>
-
-        <div class="col-xs-12 software-plugins">
-
-          <a href="https://vitrinacudulciuri.ro" class="plugin-button"><img src="assets/vcd.jpg" width="25px" height="25px"> Vitrina cu Dulciuri</a>
-          <a href="https://mc.b-zone.ro" class="plugin-button"><img src="assets/bzone.png" width="25px" height="25px"> B-Zone</a>
-
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-lg-6 display-mockup">
-
-        <img src="assets/vcd.png">
-
-      </div>
-
-      <hr class="row-sepparator">
+        <a href="assets/resume.pdf" target="_blank" class="btn btn-light buton main-portofoliu"><i
+                class="fa-solid fa-book"></i> <strong>Take a look at my CV</strong></a>
 
     </div>
 
-    <div class="row mockup-row">
+    <div class="col-xs-12 col-lg-6" id="socials">
 
-      <div class="col-xs-12 col-lg-12 text-mockup">
-
-        <h3><i class="fa-solid fa-microchip"></i> ESP-32 Project</h3>
-        <p>
-          Took part in a team project during 1st year of college, in which we created a
-          device that is controlled by an Android app, communicates with JSON via
-          Bluetooth Low Energy, and is capable of getting information from the internet via WI-FI
-          through HTTP, and finally printing it to a screen. I did most of the work,
-          including onboard connections, and programming in C</p>
-
-        <div class="col-xs-12 software-plugins">
-
-          <a href="assets/Proiect%20informatica%20aplicata.pdf" class="plugin-button"><i class="fa-solid fa-book"></i> Documentation</a>
-          <a href="https://github.com/Moshulika/PIA-ESP32" class="plugin-button"><i class="fa-brands fa-github"></i> GitHub</a>
+        <div id="icons">
 
         </div>
 
-        <br>
-
-      </div>
-
-      <div class="col-xs-12 col-lg-12 text-mockup">
-
-        <h3><i class="fa-solid fa-microchip"></i> QR Code Security System</h3>
-        <p>The purpose of this project is to create an ecosystem capable of generating, storing, reading, and interpreting QR codes. QR codes are becoming increasingly common in everyday life. From advertisements to restaurant menus and Wi-Fi network access, they can be found everywhere. The inspiration for this project comes from event tickets—concerts, festivals, theater plays, etc.—which are often in the form of QR codes or barcodes. These codes contain a unique identifier stored in a database, and the actual information is delivered to the user as a "drawing" typically made up of black and white squares that encode the data. The concept is simple, and since no special devices are required for scanning, QR codes have become widely used.</p>
-
-        <div class="col-xs-12 software-plugins">
-
-          <a href="assets/Proiect%20Python.pdf" class="plugin-button"><i class="fa-solid fa-book"></i> Documentation</a>
-
-        </div>
-
-        <br>
-
-      </div>
-
-      <div class="col-xs-12 col-lg-12 text-mockup">
-
-        <h3><i class="fa-solid fa-microchip"></i> Alcohol Level tester</h3>
-        <p>The alcohol testing device was built using an MQ-2 gas sensor and an STM32 microcontroller, designed to detect and quantify alcohol concentration in the air. The MQ-2 sensor operates based on a metal oxide semiconductor (MOS) principle, where changes in resistance due to alcohol presence alter the output voltage. The sensor was connected to an ADC (Analog-to-Digital Converter) pin on the STM32 board, allowing precise measurement of voltage fluctuations. The STM32 firmware was developed using HAL (Hardware Abstraction Layer) libraries in STM32CubeIDE, implementing ADC sampling with a defined resolution to ensure accurate readings. The device features a calibration routine, where baseline values are established in a clean-air environment, and threshold levels are set for different alcohol concentrations. To display results, an OLED screen was integrated via I2C communication, providing real-time ppm (parts per million) values. Additionally, a buzzer and LED indicators were programmed via GPIO to signal when alcohol levels exceeded a predefined safety limit. The entire system was optimized for low power consumption, making it suitable for portable applications.</p>
-      </div>
-
-      <hr class="row-sepparator">
-
-    </div>
-
-    <div class="row mockup-row">
-
-      <div class="col-xs-12 col-lg-6 text-mockup">
-
-        <h3><i class="fa-solid fa-gamepad"></i> Games</h3>
-        <p>The game Alien Attack is a retro-style space shooter inspired by Space Invaders. The player controls a rocket using the mouse, aiming to shoot and destroy alien ships descending from the top of the screen while avoiding meteors. Each alien destroyed increases the score, and the difficulty escalates as the game progresses. The game includes a scoring system, a life counter (starting with three hearts), and collectible coins that, once accumulated, enable a temporary shield ability. If an alien ship reaches the bottom of the screen or the player's rocket collides with an enemy, lives are lost, and the game resets when all lives are depleted. The interface displays essential gameplay elements such as score, number of collected coins, remaining lives, and cooldown indicators for laser ammunition. A pause system is integrated, allowing the game to stop when the mouse exits the window or when the player presses the escape key. The game features a second dimension accessible via a portal after reaching 25 points, where the player's lives are restored.</p>
-      </div>
-
-      <div class="col-xs-12 col-lg-6 display-mockup">
-
-        <img src="assets/atestat.png">
-
-      </div>
-
-      <div class="col-xs-12 software-plugins">
-
-        <a href="assets/Atestat.pdf" class="plugin-button"><i class="fa-solid fa-book"></i> Documentation</a>
-
-      </div>
-
-      <hr class="row-sepparator">
-
     </div>
 
 
+    <div class="container">
 
-    <div class="row mockup-row">
+        <div class="row mockup-row">
 
-      <div class="col-xs-12 text-mockup">
+            <div class="col-xs-12 col-lg-6 display-mockup">
 
-        <h3><i class="fa-solid fa-book"></i> Classes @ University Politehnica of Bucharest</h3>
-        <div class="pills">
-          <button class="class-pill">Data Sources and Algorightms</button>
-          <button class="class-pill">OOP</button>
-          <button class="class-pill">Databases</button>
-          <button class="class-pill">Optimization theory</button>
-          <button class="class-pill">Microprocessor architecture</button>
-          <button class="class-pill">Calculus systems architecture</button>
-        </div>
+                <iframe src="https://1drv.ms/p/c/83845014f4d4384c/IQSpKBxYZ5FMRJnv8PAqW0KHAUQIZrM-kyNoSkKOP3Sxmi4?wdAr=1.7777777777777777"
+                        width="700px" height="400px" frameborder="0">This is an embedded <a target="_blank"
+                                                                                            href="https://office.com">Microsoft
+                    Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.
+                </iframe>
 
-
-      </div>
-
-      <hr class="row-sepparator">
-
-    </div>
-
-    <div class="row mockup-row">
-
-      <div class="col-xs-12 text-mockup">
-
-        <h3><i class="fa-solid fa-location-dot"></i> Attendances</h3>
-        <div class="attendances">
-
-          <br>
-
-          <div class="attendance">
-
-            <img src="https://scontent.fotp3-2.fna.fbcdn.net/v/t39.30808-6/481085677_1044754134336078_4686854943723250421_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BiTRY8kfSTwQ7kNvgEXb00f&_nc_oc=AdmeLSBXSxOdYPH4BhKMkz6pC0KaIn6J1n-pKHmJk9U5-xJ8UVqKxSxGNDdE7FH6LksjzuNTf1vAo-FTdq0uRlCj&_nc_zt=23&_nc_ht=scontent.fotp3-2.fna&_nc_gid=dpFb-UYpZhsLS2mIXn6CKw&oh=00_AYFq-2zV9wG4oc1CAUptd6PAzQ0aOSCQo9RdMPJ3G5rdRQ&oe=67E7A98B">
-
-            <div class="attendance-text">
-              <a class="attendance-name" href="https://www.facebook.com/ipworkshop/posts/amazing-time-this-weekend-at-rust-workshop-our-participants-learned-more-about-r/739106998234128/?locale=ro_RO">IP Workshop & NXP Rust workshop</a>
-              <p class="attendance-p">Took part in NXP's annual Rust Workshop in which we learned the fundamentals of Rust, and its use cases while working on a real project. Also, we saw how we can contribute to open source Rust projects, and how to get started in a career involving this language.</p>
             </div>
 
-          </div>
+            <div class="col-xs-12 col-lg-6 text-mockup">
 
-          <div class="pills">
-            <button class="class-pill">Rust</button>
-            <button class="class-pill">Linux</button>
-            <button class="class-pill">Git</button>
-          </div>
+                <h3><i class="fa-brands fa-android"></i> Unwind</h3>
+                <p>I worked alongside my colleagues to create an Android app that aims to eliminate loneliness by
+                    offering
+                    people fun ideas and suggesting people they could interact with. Created Twitter-like posting of
+                    text and multimedia files by using a Cloud API, and stored the rest of the data in a MySQL database.
+                    Developed live messaging by communicating with a Java Socket on a Linux server. Solved performance
+                    issues due to multiple database connections. Designed the app's interface in XML, respecting the
+                    Material design directives.</p>
+                <div class="col-xs-12 software-plugins">
 
-          <hr>
+                    <a href="assets/Unwind.pdf" target="_blank" class="plugin-button"><i class="fa-solid fa-book"></i>
+                        Documentation</a>
 
-          <div class="attendance">
-
-            <img src="https://scontent.fotp3-2.fna.fbcdn.net/v/t39.30808-6/476861680_1657281071580181_5276517296149053125_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LiQGZMVnJfIQ7kNvgEQJAyO&_nc_oc=Adm416gSuOv-3We0HzUgfw1Uu17D-sCC6k__NFmFV4hJXQwWcR12U4FKvVnVxQj_SJLL0hVovMWMhkukjoz0jS2V&_nc_zt=23&_nc_ht=scontent.fotp3-2.fna&_nc_gid=AovZnJdCKLIdflsNgx0nCg&oh=00_AYEZH4ORlkwxjO581PLt9ciB2momGh_PZDmyOuFlRAyYwA&oe=67E7B545">
-
-            <div class="attendance-text">
-              <a class="attendance-name" href="https://www.facebook.com/100007453922258/videos/today-we-made-history-again-what-a-wonderful-journey-and-brilliant-students-the-/1353160625295576/">Vodafone 1st Innovation Summer School</a>
-              <p class="attendance-p">
-                I took part in the 1st Vodafone Innovation Summer School, where we spoke to experts in various fields of activity such as Artificial Intelligence, IoT, NB-IoT, 5G, 3D printing, Radio Network Planning for Smart Capex Optimization of Return of Investment, Antenna Characterization and drones. We had such a fun time using the latest technologies to: create our own 5G network using OpenRAN, create our own simple image recognition software using deep learning, read sensor data and send it with the help of NB-IoT, measure mobile network performance, deep fake detection, optoelectronics and so much more. The best part is at the end we got to talk to Vodafone's executives, pitch an idea, and get feedback on our work and ideas for the future</p>
+                </div>
             </div>
 
-          </div>
-
-          <div class="pills">
-            <button class="class-pill">IoT</button>
-            <button class="class-pill">Deep Learning (ML)</button>
-            <button class="class-pill">C/C++</button>
-            <button class="class-pill">5G</button>
-            <button class="class-pill">Radio Access Networks</button>
-            <button class="class-pill">Teamwork</button>
-            <button class="class-pill">Communication</button>
-          </div>
-
-          <hr>
-
-          <div class="attendance">
-
-            <img src="https://media.licdn.com/dms/image/sync/v2/D4E27AQFO284Mgjegwg/articleshare-shrink_160/articleshare-shrink_160/0/1720021052034?e=1743462000&v=beta&t=7zBDTttgEe6j1wyDv7DrkdPlQNiUKcapbPmcnjlczZQ">
-
-            <div class="attendance-text">
-              <a class="attendance-name" href="https://www.reply.com/en/newsroom/events/code-challenge-23">Participant @ Reply Code Challange Hackathon 2023</a>
-              <p class="attendance-p">I participated in the 2023 edition of the Reply Code Challenge, where I tried to solve a complex problem alongside my team members as efficiently as possible.</p>
-            </div>
-
-          </div>
-
-          <div class="pills">
-            <button class="class-pill">Java</button>
-            <button class="class-pill">Creative Problem Solving</button>
-            <button class="class-pill">Teamwork</button>
-          </div>
-
-          <hr>
+            <hr class="row-sepparator">
 
         </div>
 
 
-      </div>
+        <div class="row mockup-row">
 
-    </div>
+            <div class="col-xs-12 col-lg-12 text-mockup">
 
-    <div class="row mockup-row">
-
-      <div class="col-xs-12 text-mockup">
-
-        <h3><i class="fa-solid fa-award"></i> Awards & Diplomas</h3>
-        <div class="attendances">
-
-          <div class="attendance">
-
-            <img src="assets/unwind.png">
-
-            <div class="attendance-text">
-              <a class="attendance-name" href="https://linkedin/in/eduard.nanescu">2nd place in the Student's scientific communications session @ UPB</a>
-              <p class="attendance-p">I worked alongside my colleagues to create an Android app that aims to eliminate loneliness by offering
-                people fun ideas and suggesting people they could interact with. Created Twitter-like posting of text and multimedia files by using a Cloud API, and stored the rest of the data in a MySQL database. Developed live messaging by communicating with a Java Socket on a Linux server. Solved performance issues due to multiple database connections. Designed the app's interface in XML, respecting the Material design directives.</p>
+                <h3><i class="fa-solid fa-plug"></i> Software plugins</h3>
             </div>
 
-          </div>
+        </div>
 
-          <div class="pills">
-            <button class="class-pill">Java</button>
-            <button class="class-pill">MySQL</button>
-            <button class="class-pill">Cloudinary</button>
-            <button class="class-pill">Live messaging</button>
-            <button class="class-pill">Maven</button>
-            <button class="class-pill">Android Studio</button>
-            <button class="class-pill">XML</button>
-          </div>
+        <div class="row mockup-row">
 
-          <hr>
+            <div class="col-xs-12 col-lg-6 image-container">
 
-          <div class="attendance">
+                <img src="https://i.imgur.com/PiMKpB4.png">
 
-            <img src="https://i1.sndcdn.com/avatars-000596611227-pyhr40-t1080x1080.jpg">
-
-            <div class="attendance-text">
-              <a class="attendance-name" href="">Cambridge English Certificate</a>
-              <p class="attendance-p">Took an English Certificat for B-Level</p>
             </div>
 
-          </div>
+            <div class="col-xs-12 col-lg-6 text-mockup">
 
-          <div class="pills">
-            <button class="class-pill">English</button>
-          </div>
+                <h3><i class="fa-solid fa-plug"></i> What do I do?</h3>
+                <p>I develop solutions for new game mechanics, expand existing ones, and solve problems as well as
+                    integrate with different platforms such as Discord, and Android apps that display information about
+                    the server and allow you to remotely manage it.
+                    I currently have a portfolio of around 10 plugins, free and paid, all rated 5 stars. I revolve
+                    around customisation and customer support in order to tailor every client's needs. I also make
+                    custom plugins not listed publicly to satisfy even the most
+                    pretentious of customers.</p>
 
-          <hr>
+                <div class="col-xs-12 software-plugins">
 
-          <div class="attendance">
+                    <a href="https://www.spigotmc.org/resources/authors/stereon.116721/" class="plugin-button"><img
+                            src="https://avatars.githubusercontent.com/u/4350249?s=280&v=4" width="25px" height="25px">
+                        Spigot</a>
+                    <a href="https://builtbybit.com/creators/moshulika.518280" class="plugin-button"><img
+                            src="https://avatars.githubusercontent.com/u/86993355?s=280&v=4" width="25px" height="25px">
+                        BuildByBit</a>
+                    <a href="https://polymart.org/user/moshulika.42116" class="plugin-button"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-y9DX9W2y0621db24f8aov1_OtSLNMOngPg&s"
+                            width="25px" height="25px"> Polymart</a>
 
-            <img src="https://www.ziuaconstanta.ro/images/stories/2020/04/27/ministerul-educatiei.jpg">
+                </div>
 
-            <div class="attendance-text">
-              <a class="attendance-name" href="">Informatics Certificate</a>
-              <p class="attendance-p">I made my own version of Space Invaders - modern, fun, simple, and interactive using Java Swing.</p>
             </div>
 
-          </div>
+            <hr class="row-sepparator">
 
-          <div class="pills">
-            <button class="class-pill">Java</button>
-          </div>
+        </div>
+
+        <div class="row mockup-row">
+
+            <div class="col-xs-12 col-lg-12 text-mockup">
+
+                <h3><i class="fa-solid fa-earth-americas"></i> Websites</h3>
+            </div>
+
+            <div class="col-xs-12 col-lg-6 text-mockup">
+
+                <br>
+                <p>Creating unique, responsive websites like vitrinacudulciuri.ro and mc.b-zone.ro involves tailoring
+                    the design and functionality to meet the specific needs of their respective audiences. For instance,
+                    vitrinacudulciuri.ro, a Romanian confectionery shop, features a visually appealing interface that
+                    showcases its products, including cakes and pastries, with high-quality images and detailed
+                    descriptions. The site emphasizes its commitment to offering sugar-free and vegan options, catering
+                    to diverse dietary preferences.
+                    On the other hand, mc.b-zone.ro serves as the online hub for a Minecraft server community. The
+                    website provides essential information such as server status, game modes like Survival and Skyblock,
+                    and connection details for players. It also integrates community features, including forums and
+                    social media links, to foster player engagement and communication.
+                    Both websites exemplify the importance of responsive design, ensuring optimal viewing experiences
+                    across various devices, and a user-centric approach that aligns with their brand identity and
+                    audience expectations.</p>
+
+                <div class="col-xs-12 software-plugins">
+
+                    <a href="https://vitrinacudulciuri.ro" class="plugin-button"><img src="assets/vcd.jpg" width="25px"
+                                                                                      height="25px"> Vitrina cu Dulciuri</a>
+                    <a href="https://mc.b-zone.ro" class="plugin-button"><img src="assets/bzone.png" width="25px"
+                                                                              height="25px"> B-Zone</a>
+
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-lg-6 display-mockup">
+
+                <img src="assets/vcd.png">
+
+            </div>
+
+            <hr class="row-sepparator">
+
+        </div>
+
+        <div class="row mockup-row">
+
+            <div class="col-xs-12 col-lg-12 text-mockup">
+
+                <h3><i class="fa-solid fa-microchip"></i> ESP-32 Project</h3>
+                <p>
+                    Took part in a team project during 1st year of college, in which we created a
+                    device that is controlled by an Android app, communicates with JSON via
+                    Bluetooth Low Energy, and is capable of getting information from the internet via WI-FI
+                    through HTTP, and finally printing it to a screen. I did most of the work,
+                    including onboard connections, and programming in C</p>
+
+                <div class="col-xs-12 software-plugins">
+
+                    <a href="assets/Proiect%20informatica%20aplicata.pdf" class="plugin-button"><i
+                            class="fa-solid fa-book"></i> Documentation</a>
+                    <a href="https://github.com/Moshulika/PIA-ESP32" class="plugin-button"><i
+                            class="fa-brands fa-github"></i> GitHub</a>
+
+                </div>
+
+                <br>
+
+            </div>
+
+            <div class="col-xs-12 col-lg-12 text-mockup">
+
+                <h3><i class="fa-solid fa-microchip"></i> QR Code Security System</h3>
+                <p>The purpose of this project is to create an ecosystem capable of generating, storing, reading, and
+                    interpreting QR codes. QR codes are becoming increasingly common in everyday life. From
+                    advertisements to restaurant menus and Wi-Fi network access, they can be found everywhere. The
+                    inspiration for this project comes from event tickets—concerts, festivals, theater plays, etc.—which
+                    are often in the form of QR codes or barcodes. These codes contain a unique identifier stored in a
+                    database, and the actual information is delivered to the user as a "drawing" typically made up of
+                    black and white squares that encode the data. The concept is simple, and since no special devices
+                    are required for scanning, QR codes have become widely used.</p>
+
+                <div class="col-xs-12 software-plugins">
+
+                    <a href="assets/Proiect%20Python.pdf" class="plugin-button"><i class="fa-solid fa-book"></i>
+                        Documentation</a>
+
+                </div>
+
+                <br>
+
+            </div>
+
+            <div class="col-xs-12 col-lg-12 text-mockup">
+
+                <h3><i class="fa-solid fa-microchip"></i> Alcohol Level tester</h3>
+                <p>The alcohol testing device was built using an MQ-2 gas sensor and an STM32 microcontroller, designed
+                    to detect and quantify alcohol concentration in the air. The MQ-2 sensor operates based on a metal
+                    oxide semiconductor (MOS) principle, where changes in resistance due to alcohol presence alter the
+                    output voltage. The sensor was connected to an ADC (Analog-to-Digital Converter) pin on the STM32
+                    board, allowing precise measurement of voltage fluctuations. The STM32 firmware was developed using
+                    HAL (Hardware Abstraction Layer) libraries in STM32CubeIDE, implementing ADC sampling with a defined
+                    resolution to ensure accurate readings. The device features a calibration routine, where baseline
+                    values are established in a clean-air environment, and threshold levels are set for different
+                    alcohol concentrations. To display results, an OLED screen was integrated via I2C communication,
+                    providing real-time ppm (parts per million) values. Additionally, a buzzer and LED indicators were
+                    programmed via GPIO to signal when alcohol levels exceeded a predefined safety limit. The entire
+                    system was optimized for low power consumption, making it suitable for portable applications.</p>
+            </div>
+
+            <hr class="row-sepparator">
+
+        </div>
+
+        <div class="row mockup-row">
+
+            <div class="col-xs-12 col-lg-6 text-mockup">
+
+                <h3><i class="fa-solid fa-gamepad"></i> Games</h3>
+                <p>The game Alien Attack is a retro-style space shooter inspired by Space Invaders. The player controls
+                    a rocket using the mouse, aiming to shoot and destroy alien ships descending from the top of the
+                    screen while avoiding meteors. Each alien destroyed increases the score, and the difficulty
+                    escalates as the game progresses. The game includes a scoring system, a life counter (starting with
+                    three hearts), and collectible coins that, once accumulated, enable a temporary shield ability. If
+                    an alien ship reaches the bottom of the screen or the player's rocket collides with an enemy, lives
+                    are lost, and the game resets when all lives are depleted. The interface displays essential gameplay
+                    elements such as score, number of collected coins, remaining lives, and cooldown indicators for
+                    laser ammunition. A pause system is integrated, allowing the game to stop when the mouse exits the
+                    window or when the player presses the escape key. The game features a second dimension accessible
+                    via a portal after reaching 25 points, where the player's lives are restored.</p>
+            </div>
+
+            <div class="col-xs-12 col-lg-6 display-mockup">
+
+                <img src="assets/atestat.png">
+
+            </div>
+
+            <div class="col-xs-12 software-plugins">
+
+                <a href="assets/Atestat.pdf" class="plugin-button"><i class="fa-solid fa-book"></i> Documentation</a>
+
+            </div>
+
+            <hr class="row-sepparator">
 
         </div>
 
 
-      </div>
+        <div class="row mockup-row">
+
+            <div class="col-xs-12 text-mockup">
+
+                <h3><i class="fa-solid fa-book"></i> Classes @ University Politehnica of Bucharest</h3>
+                <div class="pills">
+                    <button class="class-pill">Data Sources and Algorightms</button>
+                    <button class="class-pill">OOP</button>
+                    <button class="class-pill">Databases</button>
+                    <button class="class-pill">Optimization theory</button>
+                    <button class="class-pill">Microprocessor architecture</button>
+                    <button class="class-pill">Calculus systems architecture</button>
+                </div>
+
+
+            </div>
+
+            <hr class="row-sepparator">
+
+        </div>
+
+        <div class="row mockup-row">
+
+            <div class="col-xs-12 text-mockup">
+
+                <h3><i class="fa-solid fa-location-dot"></i> Attendances</h3>
+                <div class="attendances">
+
+                    <br>
+
+                    <div class="attendance">
+
+                        <img src="https://scontent.fotp3-2.fna.fbcdn.net/v/t39.30808-6/481085677_1044754134336078_4686854943723250421_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BiTRY8kfSTwQ7kNvgEXb00f&_nc_oc=AdmeLSBXSxOdYPH4BhKMkz6pC0KaIn6J1n-pKHmJk9U5-xJ8UVqKxSxGNDdE7FH6LksjzuNTf1vAo-FTdq0uRlCj&_nc_zt=23&_nc_ht=scontent.fotp3-2.fna&_nc_gid=dpFb-UYpZhsLS2mIXn6CKw&oh=00_AYFq-2zV9wG4oc1CAUptd6PAzQ0aOSCQo9RdMPJ3G5rdRQ&oe=67E7A98B">
+
+                        <div class="attendance-text">
+                            <a class="attendance-name"
+                               href="https://www.facebook.com/ipworkshop/posts/amazing-time-this-weekend-at-rust-workshop-our-participants-learned-more-about-r/739106998234128/?locale=ro_RO">IP
+                                Workshop & NXP Rust workshop</a>
+                            <p class="attendance-p">Took part in NXP's annual Rust Workshop in which we learned the
+                                fundamentals of Rust, and its use cases while working on a real project. Also, we saw
+                                how we can contribute to open source Rust projects, and how to get started in a career
+                                involving this language.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="pills">
+                        <button class="class-pill">Rust</button>
+                        <button class="class-pill">Linux</button>
+                        <button class="class-pill">Git</button>
+                    </div>
+
+                    <hr>
+
+                    <div class="attendance">
+
+                        <img src="https://scontent.fotp3-2.fna.fbcdn.net/v/t39.30808-6/476861680_1657281071580181_5276517296149053125_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LiQGZMVnJfIQ7kNvgEQJAyO&_nc_oc=Adm416gSuOv-3We0HzUgfw1Uu17D-sCC6k__NFmFV4hJXQwWcR12U4FKvVnVxQj_SJLL0hVovMWMhkukjoz0jS2V&_nc_zt=23&_nc_ht=scontent.fotp3-2.fna&_nc_gid=AovZnJdCKLIdflsNgx0nCg&oh=00_AYEZH4ORlkwxjO581PLt9ciB2momGh_PZDmyOuFlRAyYwA&oe=67E7B545">
+
+                        <div class="attendance-text">
+                            <a class="attendance-name"
+                               href="https://www.facebook.com/100007453922258/videos/today-we-made-history-again-what-a-wonderful-journey-and-brilliant-students-the-/1353160625295576/">Vodafone
+                                1st Innovation Summer School</a>
+                            <p class="attendance-p">
+                                I took part in the 1st Vodafone Innovation Summer School, where we spoke to experts in
+                                various fields of activity such as Artificial Intelligence, IoT, NB-IoT, 5G, 3D
+                                printing, Radio Network Planning for Smart Capex Optimization of Return of Investment,
+                                Antenna Characterization and drones. We had such a fun time using the latest
+                                technologies to: create our own 5G network using OpenRAN, create our own simple image
+                                recognition software using deep learning, read sensor data and send it with the help of
+                                NB-IoT, measure mobile network performance, deep fake detection, optoelectronics and so
+                                much more. The best part is at the end we got to talk to Vodafone's executives, pitch an
+                                idea, and get feedback on our work and ideas for the future</p>
+                        </div>
+
+                    </div>
+
+                    <div class="pills">
+                        <button class="class-pill">IoT</button>
+                        <button class="class-pill">Deep Learning (ML)</button>
+                        <button class="class-pill">C/C++</button>
+                        <button class="class-pill">5G</button>
+                        <button class="class-pill">Radio Access Networks</button>
+                        <button class="class-pill">Teamwork</button>
+                        <button class="class-pill">Communication</button>
+                    </div>
+
+                    <hr>
+
+                    <div class="attendance">
+
+                        <img src="https://media.licdn.com/dms/image/sync/v2/D4E27AQFO284Mgjegwg/articleshare-shrink_160/articleshare-shrink_160/0/1720021052034?e=1743462000&v=beta&t=7zBDTttgEe6j1wyDv7DrkdPlQNiUKcapbPmcnjlczZQ">
+
+                        <div class="attendance-text">
+                            <a class="attendance-name"
+                               href="https://www.reply.com/en/newsroom/events/code-challenge-23">Participant @ Reply
+                                Code Challange Hackathon 2023</a>
+                            <p class="attendance-p">I participated in the 2023 edition of the Reply Code Challenge,
+                                where I tried to solve a complex problem alongside my team members as efficiently as
+                                possible.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="pills">
+                        <button class="class-pill">Java</button>
+                        <button class="class-pill">Creative Problem Solving</button>
+                        <button class="class-pill">Teamwork</button>
+                    </div>
+
+                    <hr>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="row mockup-row">
+
+            <div class="col-xs-12 text-mockup">
+
+                <h3><i class="fa-solid fa-award"></i> Awards & Diplomas</h3>
+                <div class="attendances">
+
+                    <div class="attendance">
+
+                        <img src="assets/unwind.png">
+
+                        <div class="attendance-text">
+                            <a class="attendance-name" href="https://linkedin/in/eduard.nanescu">2nd place in the
+                                Student's scientific communications session @ UPB</a>
+                            <p class="attendance-p">I worked alongside my colleagues to create an Android app that aims
+                                to eliminate loneliness by offering
+                                people fun ideas and suggesting people they could interact with. Created Twitter-like
+                                posting of text and multimedia files by using a Cloud API, and stored the rest of the
+                                data in a MySQL database. Developed live messaging by communicating with a Java Socket
+                                on a Linux server. Solved performance issues due to multiple database connections.
+                                Designed the app's interface in XML, respecting the Material design directives.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="pills">
+                        <button class="class-pill">Java</button>
+                        <button class="class-pill">MySQL</button>
+                        <button class="class-pill">Cloudinary</button>
+                        <button class="class-pill">Live messaging</button>
+                        <button class="class-pill">Maven</button>
+                        <button class="class-pill">Android Studio</button>
+                        <button class="class-pill">XML</button>
+                    </div>
+
+                    <hr>
+
+                    <div class="attendance">
+
+                        <img src="https://i1.sndcdn.com/avatars-000596611227-pyhr40-t1080x1080.jpg">
+
+                        <div class="attendance-text">
+                            <a class="attendance-name" href="">Cambridge English Certificate</a>
+                            <p class="attendance-p">Took an English Certificat for B-Level</p>
+                        </div>
+
+                    </div>
+
+                    <div class="pills">
+                        <button class="class-pill">English</button>
+                    </div>
+
+                    <hr>
+
+                    <div class="attendance">
+
+                        <img src="https://www.ziuaconstanta.ro/images/stories/2020/04/27/ministerul-educatiei.jpg">
+
+                        <div class="attendance-text">
+                            <a class="attendance-name" href="">Informatics Certificate</a>
+                            <p class="attendance-p">I made my own version of Space Invaders - modern, fun, simple, and
+                                interactive using Java Swing.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="pills">
+                        <button class="class-pill">Java</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
 
     </div>
 
-  </div>
+    <footer class="container">
 
-  <footer class="container">
+        <hr id="before-footer">
+        <div class="row">
 
-    <hr id="before-footer">
-    <div class="row">
+            <div class="col footer-text">
 
-      <div class="col footer-text">
-
-        <a href="contact.html">Contact</a>
+                <a href="contact.html">Contact</a>
 
 
-      </div>
+            </div>
 
-      <div class="col footer-icons">
+            <div class="col footer-icons">
 
-        <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
-        <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-
-
-      </div>
-
-    </div>
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
 
 
-  </footer>
+            </div>
+
+        </div>
+
+
+    </footer>
 
 </div>
 
 
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 
 </body>
 </html>

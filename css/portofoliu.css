@@ -39,6 +39,7 @@
     padding: 15px 0px;
     display: flex;
     justify-content: start;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -106,6 +107,7 @@
     font-family: Exo;
     padding: 5px 10px;
     transition: 0.3s;
+    margin-bottom: 5px;
 }
 
 .class-pill:hover
@@ -115,8 +117,13 @@
 
 .image-container img
 {
-    max-width: 600px;
-    max-height: 400px;
+    width: 100%;
+}
+
+.image-container
+{
+    object-fit: contain;
+    margin-bottom: 10px;
 }
 
 .row-sepparator
