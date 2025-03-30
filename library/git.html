@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/ef590a2fdb.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/library.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+    <link rel="stylesheet" href="css/dracula.css">
+
+    <title>Library</title>
+
+    <style>
+
+        body {
+            background-image: url('assets/blurry_background.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+    </style>
+
+    <style>
+        .card {
+            color: white;
+            margin-bottom: 1.5rem;
+            background-color: #282a36;
+            border-radius: 10px;
+        }
+
+        .card-title {
+            font-weight: bold;
+        }
+
+        .important {
+            color: #d63384;
+            font-weight: bold;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+    </style>
+
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .content-card {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+
+        .content-card:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+
+        .section-title {
+            border-bottom: 2px solid black;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .code-example {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #0d6efd;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .note {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .feature-list {
+            margin-bottom: 20px;
+        }
+
+        .feature-list li {
+            margin-bottom: 8px;
+        }
+
+        .comparison-table {
+            margin-bottom: 30px;
+        }
+
+        .comparison-table th {
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar sticky-top">
+
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--
+        <form id="nav-search" class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Type something.." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><strong>Search</strong></button>
+        </form>
+        -->
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+             aria-labelledby="offcanvasNavbarLabel">
+
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><strong>Menu</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="https://moshulika.github.io/library.html"><i
+                                class="fa-solid fa-house"></i> <strong>Home</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://moshulika.github.io/contact"><i class="fa-solid fa-phone"></i>
+                            <strong>Contact</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://moshulika.github.io/skills.html"><i
+                                class="fa-solid fa-gears"></i> <strong>Skills</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://moshulika.github.io/portofoliu.html"><i
+                                class="fa-solid fa-book"></i> <strong>Portfolio</strong></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://moshulika.github.io/library.html"><i
+                                class="fa-solid fa-code"></i> <strong>Library</strong></a>
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+            <div id="offcanvas-logos">
+
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row" id="socials-row">
+
+        <div class="col-xs-12 col-lg-6 animate__animated animate__fadeIn" id="picture2">
+
+            <img src="assets/eu.jpg">
+            <div id="text">
+
+                <h1>My simple library</h1>
+                <h4>..of useful code</h4>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <br>
+    <br>
+
+
+    <div class="container">
+
+        <div class="row">
+            <h1>Chapters</h1>
+        </div>
+
+        <div class="library-pills">
+            <a href="https://moshulika.github.io/library.html#design" class="library-pill">OOP Design Principles</a>
+            <a href="https://moshulika.github.io/library.html#concepts" class="library-pill">OOP Concepts</a>
+            <a href="https://moshulika.github.io/library.html#exceptions" class="library-pill">Exceptions</a>
+            <a href="multithreading.html#multithreading" class="library-pill">Multithreading</a>
+            <a href="multithreading.html#final" class="library-pill">Final Keyword</a>
+            <a href="strings.html#strings" class="library-pill">Strings</a>
+            <a href="strings.html#regex" class="library-pill">Regex</a>
+            <a href="files.html#io" class="library-pill">I/O</a>
+            <a href="files.html#files" class="library-pill">Files</a>
+            <a href="https://moshulika.github.io/library.html#lambda" class="library-pill">Lambda</a>
+            <a href="jdbc.html" class="library-pill">JDBC</a>
+            <a href="networking.html#networking" class="library-pill">Networking</a>
+            <a href="networking.html#json" class="library-pill">JSON</a>
+            <a href="memory.html#memory" class="library-pill">Java Memory</a>
+            <a href="structures.html" class="library-pill">Java Data Structures</a>
+            <a href="mysql.html" class="library-pill">MySQL</a>
+            <a href="c.html" class="library-pill">C/C++</a>
+            <a href="junit.html" class="library-pill">Unit Testing</a>
+            <a href="linux.html" class="library-pill">Linux</a>
+            <a href="git.html" class="library-pill">Git</a>
+            <a href="maven.html" class="library-pill">Maven/Gradle</a>
+        </div>
+
+        <div class="row category-title" id="multithreading">
+            <h1>Git Cheatsheet</h1>
+        </div>
+
+        <div class="container">
+
+            <!-- 1. Getting Started -->
+            <div class="content-card">
+                <h2 class="section-title">1. Getting Started</h2>
+
+                <table class="command-table">
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td><code>git config</code></td>
+                        <td>Configure Git settings</td>
+                        <td><code>git config --global user.name "Your Name"</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git init</code></td>
+                        <td>Initialize new repository</td>
+                        <td><code>git init project-name</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git clone</code></td>
+                        <td>Clone existing repository</td>
+                        <td><code>git clone https://github.com/user/repo.git</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git help</code></td>
+                        <td>Get help about Git</td>
+                        <td><code>git help commit</code></td>
+                    </tr>
+                </table>
+
+                <div class="note">
+                    <h4>Initial Setup:</h4>
+                    <div class="code-example">
+                    <pre><code class="language-bash"># Set your identity
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+# Set default editor
+git config --global core.editor "code --wait"  # VS Code
+# or
+git config --global core.editor "nano"
+
+# Enable color output
+git config --global color.ui true
+
+# Set default branch name
+git config --global init.defaultBranch main</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Basic Workflow -->
+            <div class="content-card">
+                <h2 class="section-title">2. Basic Workflow</h2>
+
+                <img src="https://git-scm.com/book/en/v2/images/lifecycle.png" alt="Git workflow diagram" class="workflow-diagram">
+
+                <table class="command-table">
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td><code>git status</code></td>
+                        <td>Show working directory status</td>
+                        <td><code>git status</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git add</code></td>
+                        <td>Add files to staging area</td>
+                        <td><code>git add file.txt</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git commit</code></td>
+                        <td>Commit staged changes</td>
+                        <td><code>git commit -m "Descriptive message"</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git reset</code></td>
+                        <td>Unstage files</td>
+                        <td><code>git reset HEAD file.txt</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git restore</code></td>
+                        <td>Discard changes in working directory</td>
+                        <td><code>git restore file.txt</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git diff</code></td>
+                        <td>Show changes between commits/staging</td>
+                        <td><code>git diff</code></td>
+                    </tr>
+                </table>
+
+                <div class="note">
+                    <h4>Commit Best Practices:</h4>
+                    <ul class="feature-list">
+                        <li>Commit early and often</li>
+                        <li>Write clear, concise commit messages</li>
+                        <li>Use imperative mood ("Add feature" not "Added feature")</li>
+                        <li>Limit commits to a single logical change</li>
+                        <li>Include ticket/issue references when applicable</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3. Branching -->
+            <div class="content-card">
+                <h2 class="section-title">3. Branching</h2>
+
+                <table class="command-table">
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td><code>git branch</code></td>
+                        <td>List/create branches</td>
+                        <td><code>git branch feature-x</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git checkout</code></td>
+                        <td>Switch branches</td>
+                        <td><code>git checkout main</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git switch</code></td>
+                        <td>Newer way to switch branches</td>
+                        <td><code>git switch feature-x</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git merge</code></td>
+                        <td>Merge branches</td>
+                        <td><code>git merge feature-x</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git rebase</code></td>
+                        <td>Reapply commits on top of another branch</td>
+                        <td><code>git rebase main</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git stash</code></td>
+                        <td>Temporarily save changes</td>
+                        <td><code>git stash push -m "Work in progress"</code></td>
+                    </tr>
+                </table>
+
+                <div class="note">
+                    <h4>Branching Strategies:</h4>
+                    <ul class="feature-list">
+                        <li><strong>Feature branches</strong> - One branch per feature</li>
+                        <li><strong>Git Flow</strong> - Formalized branching model with develop/main branches</li>
+                        <li><strong>GitHub Flow</strong> - Simpler model with just main and feature branches</li>
+                        <li><strong>Trunk-based development</strong> - Small, frequent commits to main branch</li>
+                    </ul>
+                </div>
+
+                <div class="code-example">
+                <pre><code class="language-bash"># Create and switch to new branch
+git checkout -b feature-x
+
+# Work on branch, make commits
+git add .
+git commit -m "Implement feature X"
+
+# Switch back to main
+git checkout main
+
+# Merge feature branch
+git merge feature-x
+
+# Delete feature branch
+git branch -d feature-x</code></pre>
+                </div>
+            </div>
+
+            <!-- 4. Remote Repositories -->
+            <div class="content-card">
+                <h2 class="section-title">4. Remote Repositories</h2>
+
+                <table class="command-table">
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td><code>git remote</code></td>
+                        <td>Manage remote repositories</td>
+                        <td><code>git remote -v</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git fetch</code></td>
+                        <td>Download objects from remote</td>
+                        <td><code>git fetch origin</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git pull</code></td>
+                        <td>Fetch and merge remote changes</td>
+                        <td><code>git pull origin main</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git push</code></td>
+                        <td>Upload local changes to remote</td>
+                        <td><code>git push origin feature-x</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git remote add</code></td>
+                        <td>Add new remote</td>
+                        <td><code>git remote add upstream https://github.com/original/repo.git</code></td>
+                    </tr>
+                </table>
+
+                <div class="note">
+                    <h4>Common Remote Workflow:</h4>
+                    <div class="code-example">
+                    <pre><code class="language-bash"># Fork a repository (on GitHub/GitLab)
+# Clone your fork locally
+git clone https://github.com/yourname/repo.git
+cd repo
+
+# Add original repo as upstream
+git remote add upstream https://github.com/original/repo.git
+
+# Create feature branch
+git checkout -b feature-x
+
+# Make changes and commit
+git add .
+git commit -m "Add new feature"
+
+# Push to your fork
+git push origin feature-x
+
+# Create pull request (on GitHub/GitLab UI)
+
+# To sync with upstream
+git fetch upstream
+git merge upstream/main</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Inspecting History -->
+            <div class="content-card">
+                <h2 class="section-title">5. Inspecting History</h2>
+
+                <table class="command-table">
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td><code>git log</code></td>
+                        <td>Show commit history</td>
+                        <td><code>git log --oneline --graph</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git show</code></td>
+                        <td>Show details of a commit</td>
+                        <td><code>git show abc123</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git blame</code></td>
+                        <td>Show who changed each line</td>
+                        <td><code>git blame file.txt</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git bisect</code></td>
+                        <td>Binary search through history</td>
+                        <td><code>git bisect start</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git tag</code></td>
+                        <td>Mark specific points in history</td>
+                        <td><code>git tag -a v1.0 -m "Version 1.0"</code></td>
+                    </tr>
+                </table>
+
+                <div class="code-example">
+                <pre><code class="language-bash"># Show compact history with graph
+git log --oneline --graph --all
+
+# Show changes in last commit
+git show HEAD
+
+# Show changes between two commits
+git diff abc123 def456
+
+# Find when a bug was introduced
+git bisect start
+git bisect bad        # Current version is bad
+git bisect good abc123 # Commit abc123 is known good
+# Git will checkout midpoint, you test and mark good/bad
+git bisect reset      # When done</code></pre>
+                </div>
+            </div>
+
+            <!-- 6. Undoing Changes -->
+            <div class="content-card">
+                <h2 class="section-title">6. Undoing Changes</h2>
+
+                <table class="command-table">
+                    <tr>
+                        <th>Situation</th>
+                        <th>Command</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>Unstage file</td>
+                        <td><code>git restore --staged</code></td>
+                        <td><code>git restore --staged file.txt</code></td>
+                    </tr>
+                    <tr>
+                        <td>Discard local changes</td>
+                        <td><code>git restore</code></td>
+                        <td><code>git restore file.txt</code></td>
+                    </tr>
+                    <tr>
+                        <td>Amend last commit</td>
+                        <td><code>git commit --amend</code></td>
+                        <td><code>git commit --amend -m "New message"</code></td>
+                    </tr>
+                    <tr>
+                        <td>Revert a commit</td>
+                        <td><code>git revert</code></td>
+                        <td><code>git revert abc123</code></td>
+                    </tr>
+                    <tr>
+                        <td>Reset to previous commit</td>
+                        <td><code>git reset</code></td>
+                        <td><code>git reset --hard HEAD~1</code></td>
+                    </tr>
+                    <tr>
+                        <td>Recover deleted file</td>
+                        <td><code>git checkout</code></td>
+                        <td><code>git checkout HEAD -- file.txt</code></td>
+                    </tr>
+                </table>
+
+                <div class="note">
+                    <h4>Reset Types:</h4>
+                    <ul class="feature-list">
+                        <li><code>--soft</code> - Moves HEAD but keeps changes staged</li>
+                        <li><code>--mixed</code> (default) - Moves HEAD and unstages changes</li>
+                        <li><code>--hard</code> - Discards all changes (be careful!)</li>
+                    </ul>
+                </div>
+
+                <div class="code-example">
+                <pre><code class="language-bash"># Change last commit (before pushing)
+git add forgotten-file.txt
+git commit --amend --no-edit
+
+# Undo a public commit (creates new revert commit)
+git revert abc123
+
+# Completely remove last local commit (use with caution)
+git reset --hard HEAD~1
+
+# Recover file deleted in last commit
+git checkout HEAD -- deleted-file.txt</code></pre>
+                </div>
+            </div>
+
+            <!-- 7. Advanced Git -->
+            <div class="content-card">
+                <h2 class="section-title">7. Advanced Git</h2>
+
+                <table class="command-table">
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td><code>git cherry-pick</code></td>
+                        <td>Apply specific commit to current branch</td>
+                        <td><code>git cherry-pick abc123</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git reflog</code></td>
+                        <td>Show reference logs (helps recover lost commits)</td>
+                        <td><code>git reflog</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git filter-branch</code></td>
+                        <td>Rewrite history (caution!)</td>
+                        <td><code>git filter-branch --tree-filter 'rm -f password.txt'</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git submodule</code></td>
+                        <td>Manage nested repositories</td>
+                        <td><code>git submodule add https://github.com/lib/library.git</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>git worktree</code></td>
+                        <td>Manage multiple working trees</td>
+                        <td><code>git worktree add ../hotfix hotfix-branch</code></td>
+                    </tr>
+                </table>
+
+                <div class="note">
+                    <h4>Interactive Rebase:</h4>
+                    <div class="code-example">
+                    <pre><code class="language-bash"># Rebase last 3 commits interactively
+git rebase -i HEAD~3
+
+# In the editor that opens:
+# - Change "pick" to "edit" to modify a commit
+# - Change to "squash" to combine with previous commit
+# - Change to "reword" to change commit message
+# - Delete line to remove commit
+
+# After saving, follow prompts to complete rebase</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Git Hooks -->
+            <div class="content-card">
+                <h2 class="section-title">8. Git Hooks</h2>
+
+                <p>Git hooks are scripts that run automatically before or after Git commands. They live in the <code>.git/hooks</code> directory.</p>
+
+                <table class="command-table">
+                    <tr>
+                        <th>Hook</th>
+                        <th>Trigger</th>
+                        <th>Common Use</th>
+                    </tr>
+                    <tr>
+                        <td><code>pre-commit</code></td>
+                        <td>Before commit is created</td>
+                        <td>Run linters, tests</td>
+                    </tr>
+                    <tr>
+                        <td><code>commit-msg</code></td>
+                        <td>After commit message is created</td>
+                        <td>Validate message format</td>
+                    </tr>
+                    <tr>
+                        <td><code>pre-push</code></td>
+                        <td>Before push to remote</td>
+                        <td>Run full test suite</td>
+                    </tr>
+                    <tr>
+                        <td><code>post-merge</code></td>
+                        <td>After merge completes</td>
+                        <td>Install dependencies</td>
+                    </tr>
+                </table>
+
+                <div class="code-example">
+                <pre><code class="language-bash"># Example pre-commit hook to run ESLint
+#!/bin/sh
+
+# Run ESLint on staged JS files
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep ".js$")
+
+if [[ "$STAGED_FILES" = "" ]]; then
+  exit 0
+fi
+
+echo "Running ESLint on staged files..."
+eslint $STAGED_FILES
+
+if [[ $? != 0 ]]; then
+  echo "ESLint found errors. Commit aborted."
+  exit 1
+fi
+
+exit 0</code></pre>
+                </div>
+            </div>
+
+            <!-- 9. Git Aliases -->
+            <div class="content-card">
+                <h2 class="section-title">9. Git Aliases</h2>
+
+                <p>Create shortcuts for common Git commands in your <code>~/.gitconfig</code>:</p>
+
+                <div class="code-example">
+                <pre><code class="language-ini">[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    last = log -1 HEAD
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    undo = reset HEAD~1
+    amend = commit --amend --no-edit
+    unstage = restore --staged
+    discard = restore
+    graph = log --all --graph --decorate --oneline</code></pre>
+                </div>
+
+                <div class="note">
+                    <h4>Useful Aliases:</h4>
+                    <ul class="feature-list">
+                        <li><code>git config --global alias.s "status -sb"</code> - Short status</li>
+                        <li><code>git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"</code> - Pretty log</li>
+                        <li><code>git config --global alias.undo "reset HEAD~1"</code> - Undo last commit</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 10. Git Tools -->
+            <div class="content-card">
+                <h2 class="section-title">10. Git Tools</h2>
+
+                <table class="command-table">
+                    <tr>
+                        <th>Tool</th>
+                        <th>Description</th>
+                        <th>Installation</th>
+                    </tr>
+                    <tr>
+                        <td><code>gitk</code></td>
+                        <td>GUI repository browser</td>
+                        <td>Included with Git</td>
+                    </tr>
+                    <tr>
+                        <td><code>tig</code></td>
+                        <td>Text-mode interface for Git</td>
+                        <td><code>sudo apt install tig</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>lazygit</code></td>
+                        <td>Simple terminal UI for Git</td>
+                        <td><code>brew install lazygit</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>GitHub CLI</code></td>
+                        <td>Command-line interface to GitHub</td>
+                        <td><code>brew install gh</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>Git GUI</code></td>
+                        <td>Graphical commit tool</td>
+                        <td>Included with Git</td>
+                    </tr>
+                </table>
+
+                <div class="note">
+                    <h4>Visual Git Clients:</h4>
+                    <ul class="feature-list">
+                        <li><strong>GitKraken</strong> - Cross-platform GUI client</li>
+                        <li><strong>Sourcetree</strong> - Free GUI from Atlassian</li>
+                        <li><strong>Fork</strong> - Fast and friendly Git client</li>
+                        <li><strong>VS Code Git Integration</strong> - Built-in Git support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <footer class="container">
+
+        <hr id="before-footer">
+        <div class="row">
+
+            <div class="col footer-text">
+
+                <a href="contact.html">Contact</a>
+
+
+            </div>
+
+            <div class="col footer-icons">
+
+                <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+</div>
+
+<style>
+    /* Scroll to top button styles */
+    .scroll-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #0d6efd;
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: none; /* Hidden by default */
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .scroll-to-top:hover {
+        background-color: #0b5ed7;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .scroll-to-top:active {
+        transform: translateY(0);
+    }
+
+    .scroll-to-top svg {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+    }
+
+    /* Show the button when user scrolls down */
+    .scroll-to-top.visible {
+        display: flex;
+    }
+</style>
+
+<button class="scroll-to-top" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+    </svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+<script>
+    hljs.highlightAll();
+
+</script>
+<script>
+    // Show/hide scroll to top button based on scroll position
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopButton.classList.add('visible');
+        } else {
+            scrollToTopButton.classList.remove('visible');
+        }
+    });
+
+    // Scroll to top when button is clicked
+    scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+<!--
+<div class="code-container">
+
+            <div class="code-description"></div>
+            <div class="code">
+
+                <pre><code></code></pre>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h1>OOP Design principles</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h1>1. Don't repeat yourself</h1>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+        </div>
+-->
+
+</body>
+</html>

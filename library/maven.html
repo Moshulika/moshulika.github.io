@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/ef590a2fdb.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/library.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <!-- and it's easy to individually load additional languages -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+  <link rel="stylesheet" href="css/dracula.css">
+
+  <title>Library</title>
+
+  <style>
+
+    body {
+      background-image: url('assets/blurry_background.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+  </style>
+
+  <style>
+    .card {
+      color: white;
+      margin-bottom: 1.5rem;
+      background-color: #282a36;
+      border-radius: 10px;
+    }
+
+    .card-title {
+      font-weight: bold;
+    }
+
+    .important {
+      color: #d63384;
+      font-weight: bold;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+  </style>
+
+  <style>
+    body {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .content-card {
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      margin-bottom: 30px;
+      transition: 0.3s;
+    }
+
+    .content-card:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+
+    .section-title {
+      border-bottom: 2px solid black;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    .code-example {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-left: 4px solid #0d6efd;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .note {
+      background-color: #fff3cd;
+      padding: 15px;
+      border-left: 4px solid #ffc107;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .feature-list {
+      margin-bottom: 20px;
+    }
+
+    .feature-list li {
+      margin-bottom: 8px;
+    }
+
+    .comparison-table {
+      margin-bottom: 30px;
+    }
+
+    .comparison-table th {
+
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar sticky-top">
+
+  <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--
+    <form id="nav-search" class="d-flex mt-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Type something.." aria-label="Search">
+        <button class="btn btn-outline-success" type="submit"><strong>Search</strong></button>
+    </form>
+    -->
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+         aria-labelledby="offcanvasNavbarLabel">
+
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><strong>Menu</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="https://moshulika.github.io/library.html"><i
+                    class="fa-solid fa-house"></i> <strong>Home</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/contact"><i class="fa-solid fa-phone"></i>
+              <strong>Contact</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/skills.html"><i
+                    class="fa-solid fa-gears"></i> <strong>Skills</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/portofoliu.html"><i
+                    class="fa-solid fa-book"></i> <strong>Portfolio</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="https://moshulika.github.io/library.html"><i
+                    class="fa-solid fa-code"></i> <strong>Library</strong></a>
+          </li>
+
+        </ul>
+
+
+      </div>
+
+      <div id="offcanvas-logos">
+
+        <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="row" id="socials-row">
+
+    <div class="col-xs-12 col-lg-6 animate__animated animate__fadeIn" id="picture2">
+
+      <img src="assets/eu.jpg">
+      <div id="text">
+
+        <h1>My simple library</h1>
+        <h4>..of useful code</h4>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <br>
+  <br>
+
+
+  <div class="container">
+
+    <div class="row">
+      <h1>Chapters</h1>
+    </div>
+
+    <div class="library-pills">
+      <a href="https://moshulika.github.io/library.html#design" class="library-pill">OOP Design Principles</a>
+      <a href="https://moshulika.github.io/library.html#concepts" class="library-pill">OOP Concepts</a>
+      <a href="https://moshulika.github.io/library.html#exceptions" class="library-pill">Exceptions</a>
+      <a href="multithreading.html#multithreading" class="library-pill">Multithreading</a>
+      <a href="multithreading.html#final" class="library-pill">Final Keyword</a>
+      <a href="strings.html#strings" class="library-pill">Strings</a>
+      <a href="strings.html#regex" class="library-pill">Regex</a>
+      <a href="files.html#io" class="library-pill">I/O</a>
+      <a href="files.html#files" class="library-pill">Files</a>
+      <a href="https://moshulika.github.io/library.html#lambda" class="library-pill">Lambda</a>
+      <a href="jdbc.html" class="library-pill">JDBC</a>
+      <a href="networking.html#networking" class="library-pill">Networking</a>
+      <a href="networking.html#json" class="library-pill">JSON</a>
+      <a href="memory.html#memory" class="library-pill">Java Memory</a>
+      <a href="structures.html" class="library-pill">Java Data Structures</a>
+      <a href="mysql.html" class="library-pill">MySQL</a>
+      <a href="c.html" class="library-pill">C/C++</a>
+      <a href="junit.html" class="library-pill">Unit Testing</a>
+      <a href="linux.html" class="library-pill">Linux</a>
+      <a href="git.html" class="library-pill">Git</a>
+      <a href="maven.html" class="library-pill">Maven/Gradle</a>
+    </div>
+
+    <div class="row category-title" id="multithreading">
+      <h1>Maven / Gradle</h1>
+    </div>
+
+    <div class="container">
+
+        <div class="col-md-12">
+          <div class="content-card">
+            <h2 class="section-title">Maven Overview</h2>
+            <p>Apache Maven is a build automation tool used primarily for Java projects. It uses a Project Object Model (POM) file to manage project build, reporting and documentation.</p>
+
+            <h3 class="mt-4">Key Features</h3>
+            <ul class="feature-list">
+              <li>Declarative build configuration with XML</li>
+              <li>Convention over configuration</li>
+              <li>Dependency management</li>
+              <li>Large ecosystem of plugins</li>
+              <li>Strict project structure</li>
+            </ul>
+          </div>
+
+          <div class="content-card">
+            <h2 class="section-title">Maven Commands</h2>
+
+            <div class="code-example">
+              <h5>Create a new project</h5>
+              <pre><code class="language-bash">mvn archetype:generate -DgroupId=com.mycompany.app \
+    -DartifactId=my-app \
+    -DarchetypeArtifactId=maven-archetype-quickstart \
+    -DinteractiveMode=false</code></pre>
+            </div>
+
+            <div class="code-example">
+              <h5>Common lifecycle commands</h5>
+              <pre><code class="language-bash"># Compile source code
+mvn compile
+
+# Run tests
+mvn test
+
+# Create package (JAR, WAR, etc.)
+mvn package
+
+# Install artifact in local repository
+mvn install
+
+# Clean build artifacts
+mvn clean
+
+# Run all phases up to install
+mvn clean install</code></pre>
+            </div>
+
+            <div class="code-example">
+              <h5>Dependency management</h5>
+              <pre><code class="language-bash"># Display dependency tree
+mvn dependency:tree
+
+# Download sources for dependencies
+mvn dependency:sources
+
+# Analyze dependency conflicts
+mvn dependency:analyze</code></pre>
+            </div>
+
+            <div class="code-example">
+              <h5>Add local .jar</h5>
+              <pre><code class="language-bash">mvn install:install-file  -Dfile=file.jar -DgroupId=com.Moshu -DartifactId=myResource -Dversion=1.0 -Dpackaging=jar -DgeneratePom=true</code></pre>
+            </div>
+          </div>
+
+          </div>
+
+          <div class="content-card">
+            <h2 class="section-title">Maven POM Configuration</h2>
+
+            <div class="code-example">
+              <h5>Basic POM.xml structure</h5>
+              <pre><code class="language-xml">&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;com.mycompany.app&lt;/groupId&gt;
+    &lt;artifactId&gt;my-app&lt;/artifactId&gt;
+    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;packaging&gt;jar&lt;/packaging&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;junit&lt;/groupId&gt;
+            &lt;artifactId&gt;junit&lt;/artifactId&gt;
+            &lt;version&gt;4.12&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+                &lt;version&gt;3.8.1&lt;/version&gt;
+                &lt;configuration&gt;
+                    &lt;source&gt;1.8&lt;/source&gt;
+                    &lt;target&gt;1.8&lt;/target&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+&lt;/project&gt;</code></pre>
+            </div>
+
+            <div class="note">
+              <h5>Note: Maven Lifecycle</h5>
+              <p>Maven has three built-in build lifecycles: default (handles project deployment), clean (handles project cleaning), and site (handles site documentation). Each lifecycle consists of phases that are executed sequentially.</p>
+            </div>
+          </div>
+
+
+        <div class="col-md-12">
+          <div class="content-card">
+            <h2 class="section-title">Gradle Overview</h2>
+            <p>Gradle is a build automation tool that combines the power and flexibility of Ant with the dependency management and conventions of Maven. It uses a Groovy or Kotlin DSL for build scripts.</p>
+
+            <h3 class="mt-4">Key Features</h3>
+            <ul class="feature-list">
+              <li>Flexible, programmatic build configuration</li>
+              <li>Incremental builds</li>
+              <li>Powerful dependency management</li>
+              <li>Build cache for faster builds</li>
+              <li>Supports multi-project builds</li>
+              <li>Can use Maven repositories</li>
+            </ul>
+          </div>
+
+          <div class="content-card">
+            <h2 class="section-title">Gradle Commands</h2>
+
+            <div class="code-example">
+              <h5>Create a new project</h5>
+              <pre><code class="language-bash"># Initialize a new Gradle project
+gradle init --type java-application</code></pre>
+            </div>
+
+            <div class="code-example">
+              <h5>Common tasks</h5>
+              <pre><code class="language-bash"># List available tasks
+gradle tasks
+
+# Build the project
+gradle build
+
+# Run tests
+gradle test
+
+# Clean build artifacts
+gradle clean
+
+# Run a specific task
+gradle &lt;task-name&gt;
+
+# Build with parallel execution
+gradle build --parallel
+
+# Build with continuous mode (watch for changes)
+gradle build --continuous</code></pre>
+            </div>
+
+            <div class="code-example">
+              <h5>Dependency management</h5>
+              <pre><code class="language-bash"># Display dependency tree
+gradle dependencies
+
+# Download sources for dependencies
+gradle dependencies --refresh-dependencies
+
+# Generate dependency insight report
+gradle dependencyInsight --dependency &lt;dependency-name&gt;</code></pre>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h2 class="section-title">Gradle Build Configuration</h2>
+
+            <div class="code-example">
+              <h5>Basic build.gradle structure (Groovy DSL)</h5>
+              <pre><code class="language-groovy">plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.mycompany.app'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:30.1.1-jre'
+    testImplementation 'junit:junit:4.13.2'
+}
+
+application {
+    mainClass = 'com.mycompany.app.App'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}</code></pre>
+            </div>
+
+            <div class="code-example">
+              <h5>Basic build.gradle.kts structure (Kotlin DSL)</h5>
+              <pre><code class="language-kotlin">plugins {
+    java
+    application
+}
+
+group = "com.mycompany.app"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("com.google.guava:guava:30.1.1-jre")
+    testImplementation("junit:junit:4.13.2")
+}
+
+application {
+    mainClass.set("com.mycompany.app.App")
+}
+
+tasks.test {
+    useJUnitPlatform()
+}</code></pre>
+            </div>
+
+            <div class="note">
+              <h5>Note: Gradle Wrapper</h5>
+              <p>The Gradle Wrapper is the preferred way to execute Gradle builds. It ensures that the right Gradle version is used for the build. To generate the wrapper:</p>
+              <pre><code class="language-bash">gradle wrapper --gradle-version 7.4.1</code></pre>
+              <p>Then use the wrapper scripts (gradlew or gradlew.bat) instead of the global gradle command.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        <div class="col-12">
+          <div class="content-card">
+            <h2 class="section-title">Maven vs Gradle Comparison</h2>
+
+            <table class="table comparison-table">
+              <thead class="table-light">
+              <tr>
+                <th>Feature</th>
+                <th>Maven</th>
+                <th>Gradle</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Build Script Language</td>
+                <td>XML (declarative)</td>
+                <td>Groovy/Kotlin DSL (programmatic)</td>
+              </tr>
+              <tr>
+                <td>Performance</td>
+                <td>Slower due to rigid lifecycle</td>
+                <td>Faster with incremental builds and build cache</td>
+              </tr>
+              <tr>
+                <td>Dependency Management</td>
+                <td>Excellent, with transitive dependency resolution</td>
+                <td>More flexible, with rich dependency configurations</td>
+              </tr>
+              <tr>
+                <td>Customization</td>
+                <td>Limited, through plugins</td>
+                <td>Highly customizable with custom tasks</td>
+              </tr>
+              <tr>
+                <td>Learning Curve</td>
+                <td>Easier for simple projects</td>
+                <td>Steeper but more powerful</td>
+              </tr>
+              <tr>
+                <td>IDE Support</td>
+                <td>Excellent in all major IDEs</td>
+                <td>Good, but sometimes slower with large builds</td>
+              </tr>
+              <tr>
+                <td>Multi-project Builds</td>
+                <td>Supported but can be complex</td>
+                <td>Excellent support with flexible configurations</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <div class="note">
+              <h5>When to Choose Which?</h5>
+              <ul>
+                <li><strong>Choose Maven</strong> if you need a simple, standardized build process with excellent IDE support and a large ecosystem of plugins.</li>
+                <li><strong>Choose Gradle</strong> if you need flexibility, faster builds, custom build logic, or are working on a large multi-project build.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+  </div>
+
+
+  <footer class="container">
+
+    <hr id="before-footer">
+    <div class="row">
+
+      <div class="col footer-text">
+
+        <a href="contact.html">Contact</a>
+
+
+      </div>
+
+      <div class="col footer-icons">
+
+        <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+      </div>
+
+    </div>
+
+
+  </footer>
+
+</div>
+
+<style>
+  /* Scroll to top button styles */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .scroll-to-top:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .scroll-to-top:active {
+    transform: translateY(0);
+  }
+
+  .scroll-to-top svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+
+  /* Show the button when user scrolls down */
+  .scroll-to-top.visible {
+    display: flex;
+  }
+</style>
+
+<button class="scroll-to-top" aria-label="Scroll to top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+  </svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+<script>
+  hljs.highlightAll();
+
+</script>
+<script>
+  // Show/hide scroll to top button based on scroll position
+  const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollToTopButton.classList.add('visible');
+    } else {
+      scrollToTopButton.classList.remove('visible');
+    }
+  });
+
+  // Scroll to top when button is clicked
+  scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+<!--
+<div class="code-container">
+
+            <div class="code-description"></div>
+            <div class="code">
+
+                <pre><code></code></pre>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h1>OOP Design principles</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h1>1. Don't repeat yourself</h1>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+        </div>
+-->
+
+</body>
+</html>
