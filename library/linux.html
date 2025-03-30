@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/ef590a2fdb.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/library.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <!-- and it's easy to individually load additional languages -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+  <link rel="stylesheet" href="css/dracula.css">
+
+  <title>Library</title>
+
+  <style>
+
+    body {
+      background-image: url('assets/blurry_background.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+  </style>
+
+  <style>
+    .card {
+      color: white;
+      margin-bottom: 1.5rem;
+      background-color: #282a36;
+      border-radius: 10px;
+    }
+
+    .card-title {
+      font-weight: bold;
+    }
+
+    .important {
+      color: #d63384;
+      font-weight: bold;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+  </style>
+
+  <style>
+    body {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .content-card {
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      margin-bottom: 30px;
+      transition: 0.3s;
+    }
+
+    .content-card:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+
+    .section-title {
+      border-bottom: 2px solid black;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    .code-example {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-left: 4px solid #0d6efd;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .note {
+      background-color: #fff3cd;
+      padding: 15px;
+      border-left: 4px solid #ffc107;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .feature-list {
+      margin-bottom: 20px;
+    }
+
+    .feature-list li {
+      margin-bottom: 8px;
+    }
+
+    .comparison-table {
+      margin-bottom: 30px;
+    }
+
+    .comparison-table th {
+
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar sticky-top">
+
+  <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--
+    <form id="nav-search" class="d-flex mt-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Type something.." aria-label="Search">
+        <button class="btn btn-outline-success" type="submit"><strong>Search</strong></button>
+    </form>
+    -->
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+         aria-labelledby="offcanvasNavbarLabel">
+
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><strong>Menu</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="https://moshulika.github.io/library.html"><i
+                    class="fa-solid fa-house"></i> <strong>Home</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/contact"><i class="fa-solid fa-phone"></i>
+              <strong>Contact</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/skills.html"><i
+                    class="fa-solid fa-gears"></i> <strong>Skills</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/portofoliu.html"><i
+                    class="fa-solid fa-book"></i> <strong>Portfolio</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="https://moshulika.github.io/library.html"><i
+                    class="fa-solid fa-code"></i> <strong>Library</strong></a>
+          </li>
+
+        </ul>
+
+
+      </div>
+
+      <div id="offcanvas-logos">
+
+        <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="row" id="socials-row">
+
+    <div class="col-xs-12 col-lg-6 animate__animated animate__fadeIn" id="picture2">
+
+      <img src="assets/eu.jpg">
+      <div id="text">
+
+        <h1>My simple library</h1>
+        <h4>..of useful code</h4>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <br>
+  <br>
+
+
+  <div class="container">
+
+    <div class="row">
+      <h1>Chapters</h1>
+    </div>
+
+    <div class="library-pills">
+      <a href="https://moshulika.github.io/library.html#design" class="library-pill">OOP Design Principles</a>
+      <a href="https://moshulika.github.io/library.html#concepts" class="library-pill">OOP Concepts</a>
+      <a href="https://moshulika.github.io/library.html#exceptions" class="library-pill">Exceptions</a>
+      <a href="multithreading.html#multithreading" class="library-pill">Multithreading</a>
+      <a href="multithreading.html#final" class="library-pill">Final Keyword</a>
+      <a href="strings.html#strings" class="library-pill">Strings</a>
+      <a href="strings.html#regex" class="library-pill">Regex</a>
+      <a href="files.html#io" class="library-pill">I/O</a>
+      <a href="files.html#files" class="library-pill">Files</a>
+      <a href="https://moshulika.github.io/library.html#lambda" class="library-pill">Lambda</a>
+      <a href="jdbc.html" class="library-pill">JDBC</a>
+      <a href="networking.html#networking" class="library-pill">Networking</a>
+      <a href="networking.html#json" class="library-pill">JSON</a>
+      <a href="memory.html#memory" class="library-pill">Java Memory</a>
+      <a href="structures.html" class="library-pill">Java Data Structures</a>
+      <a href="mysql.html" class="library-pill">MySQL</a>
+      <a href="c.html" class="library-pill">C/C++</a>
+      <a href="junit.html" class="library-pill">Unit Testing</a>
+      <a href="linux.html" class="library-pill">Linux</a>
+    </div>
+
+    <div class="row category-title" id="multithreading">
+      <h1>Linux Cheat Sheet</h1>
+    </div>
+
+    <div class="container">
+      <h1 class="text-center mb-4">Ubuntu/Linux Command Reference</h1>
+
+      <!-- 1. System Information -->
+      <div class="content-card">
+        <h2 class="section-title">1. System Information</h2>
+
+        <table class="command-table">
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td><code>uname -a</code></td>
+            <td>Show system and kernel information</td>
+            <td><code>uname -a</code></td>
+          </tr>
+          <tr>
+            <td><code>lsb_release -a</code></td>
+            <td>Display Linux distribution information</td>
+            <td><code>lsb_release -a</code></td>
+          </tr>
+          <tr>
+            <td><code>cat /etc/os-release</code></td>
+            <td>Show OS release information</td>
+            <td><code>cat /etc/os-release</code></td>
+          </tr>
+          <tr>
+            <td><code>uptime</code></td>
+            <td>Show system uptime and load average</td>
+            <td><code>uptime</code></td>
+          </tr>
+          <tr>
+            <td><code>free -h</code></td>
+            <td>Display memory usage (human-readable)</td>
+            <td><code>free -h</code></td>
+          </tr>
+          <tr>
+            <td><code>df -h</code></td>
+            <td>Show disk space usage</td>
+            <td><code>df -h</code></td>
+          </tr>
+          <tr>
+            <td><code>du -sh [dir]</code></td>
+            <td>Display directory size</td>
+            <td><code>du -sh /home</code></td>
+          </tr>
+          <tr>
+            <td><code>top</code> or <code>htop</code></td>
+            <td>Interactive process viewer</td>
+            <td><code>htop</code></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- 2. File System Navigation -->
+      <div class="content-card">
+        <h2 class="section-title">2. File System Navigation</h2>
+
+        <table class="command-table">
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td><code>pwd</code></td>
+            <td>Print working directory</td>
+            <td><code>pwd</code></td>
+          </tr>
+          <tr>
+            <td><code>ls</code></td>
+            <td>List directory contents</td>
+            <td><code>ls -lah</code></td>
+          </tr>
+          <tr>
+            <td><code>cd</code></td>
+            <td>Change directory</td>
+            <td><code>cd /var/www</code></td>
+          </tr>
+          <tr>
+            <td><code>mkdir</code></td>
+            <td>Create directory</td>
+            <td><code>mkdir -p projects/new</code></td>
+          </tr>
+          <tr>
+            <td><code>rmdir</code></td>
+            <td>Remove empty directory</td>
+            <td><code>rmdir old_dir</code></td>
+          </tr>
+          <tr>
+            <td><code>touch</code></td>
+            <td>Create empty file</td>
+            <td><code>touch file.txt</code></td>
+          </tr>
+          <tr>
+            <td><code>cp</code></td>
+            <td>Copy files/directories</td>
+            <td><code>cp -r source_dir dest_dir</code></td>
+          </tr>
+          <tr>
+            <td><code>mv</code></td>
+            <td>Move/rename files</td>
+            <td><code>mv old.txt new.txt</code></td>
+          </tr>
+          <tr>
+            <td><code>rm</code></td>
+            <td>Remove files/directories</td>
+            <td><code>rm -rf directory</code></td>
+          </tr>
+          <tr>
+            <td><code>find</code></td>
+            <td>Search for files</td>
+            <td><code>find / -name "*.log"</code></td>
+          </tr>
+          <tr>
+            <td><code>locate</code></td>
+            <td>Find files quickly (uses database)</td>
+            <td><code>locate nginx.conf</code></td>
+          </tr>
+        </table>
+
+        <br>
+
+        <div class="note">
+          <h4>File Permissions:</h4>
+          <ul class="feature-list">
+            <li><code>chmod 755 file</code> - Change file permissions (owner: rwx, group: r-x, others: r-x)</li>
+            <li><code>chown user:group file</code> - Change file owner and group</li>
+            <li><code>chgrp group file</code> - Change file group</li>
+            <li><code>umask</code> - Set default permissions for new files</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 3. File Viewing and Editing -->
+      <div class="content-card">
+        <h2 class="section-title">3. File Viewing and Editing</h2>
+
+        <table class="command-table">
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td><code>cat</code></td>
+            <td>Display file contents</td>
+            <td><code>cat file.txt</code></td>
+          </tr>
+          <tr>
+            <td><code>less</code> or <code>more</code></td>
+            <td>View file page by page</td>
+            <td><code>less large_file.log</code></td>
+          </tr>
+          <tr>
+            <td><code>head</code></td>
+            <td>Show first lines of file</td>
+            <td><code>head -n 20 file.log</code></td>
+          </tr>
+          <tr>
+            <td><code>tail</code></td>
+            <td>Show last lines of file</td>
+            <td><code>tail -f /var/log/syslog</code></td>
+          </tr>
+          <tr>
+            <td><code>grep</code></td>
+            <td>Search text patterns</td>
+            <td><code>grep "error" *.log</code></td>
+          </tr>
+          <tr>
+            <td><code>awk</code></td>
+            <td>Pattern scanning and processing</td>
+            <td><code>awk '{print $1}' file.csv</code></td>
+          </tr>
+          <tr>
+            <td><code>sed</code></td>
+            <td>Stream editor for text substitution</td>
+            <td><code>sed 's/old/new/g' file.txt</code></td>
+          </tr>
+          <tr>
+            <td><code>nano</code></td>
+            <td>Simple text editor</td>
+            <td><code>nano file.txt</code></td>
+          </tr>
+          <tr>
+            <td><code>vim</code> or <code>vi</code></td>
+            <td>Advanced text editor</td>
+            <td><code>vim /etc/hosts</code></td>
+          </tr>
+          <tr>
+            <td><code>diff</code></td>
+            <td>Compare files line by line</td>
+            <td><code>diff file1.txt file2.txt</code></td>
+          </tr>
+          <tr>
+            <td><code>wc</code></td>
+            <td>Count lines, words, characters</td>
+            <td><code>wc -l file.txt</code></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- 4. Package Management -->
+      <div class="content-card">
+        <h2 class="section-title">4. Package Management (APT)</h2>
+
+        <table class="command-table">
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td><code>sudo apt update</code></td>
+            <td>Update package lists</td>
+            <td><code>sudo apt update</code></td>
+          </tr>
+          <tr>
+            <td><code>sudo apt upgrade</code></td>
+            <td>Upgrade installed packages</td>
+            <td><code>sudo apt upgrade</code></td>
+          </tr>
+          <tr>
+            <td><code>sudo apt install</code></td>
+            <td>Install a package</td>
+            <td><code>sudo apt install nginx</code></td>
+          </tr>
+          <tr>
+            <td><code>sudo apt remove</code></td>
+            <td>Remove a package</td>
+            <td><code>sudo apt remove apache2</code></td>
+          </tr>
+          <tr>
+            <td><code>sudo apt purge</code></td>
+            <td>Remove package with config files</td>
+            <td><code>sudo apt purge mysql-server</code></td>
+          </tr>
+          <tr>
+            <td><code>sudo apt autoremove</code></td>
+            <td>Remove unused packages</td>
+            <td><code>sudo apt autoremove</code></td>
+          </tr>
+          <tr>
+            <td><code>sudo apt search</code></td>
+            <td>Search for packages</td>
+            <td><code>sudo apt search python3</code></td>
+          </tr>
+          <tr>
+            <td><code>sudo apt show</code></td>
+            <td>Show package information</td>
+            <td><code>sudo apt show nginx</code></td>
+          </tr>
+          <tr>
+            <td><code>sudo apt list --installed</code></td>
+            <td>List installed packages</td>
+            <td><code>sudo apt list --installed</code></td>
+          </tr>
+          <tr>
+            <td><code>sudo apt-get dist-upgrade</code></td>
+            <td>Upgrade distribution</td>
+            <td><code>sudo apt-get dist-upgrade</code></td>
+          </tr>
+          <tr>
+            <td><code>sudo apt-cache policy</code></td>
+            <td>Show package version priorities</td>
+            <td><code>sudo apt-cache policy nginx</code></td>
+          </tr>
+          <tr>
+            <td><code>sudo dpkg -i</code></td>
+            <td>Install .deb package</td>
+            <td><code>sudo dpkg -i package.deb</code></td>
+          </tr>
+          <tr>
+            <td><code>sudo dpkg -l</code></td>
+            <td>List installed .deb packages</td>
+            <td><code>sudo dpkg -l</code></td>
+          </tr>
+        </table>
+
+        <br>
+
+        <div class="note">
+          <h4>Snap Commands:</h4>
+          <ul class="feature-list">
+            <li><code>snap find</code> - Search for snaps</li>
+            <li><code>snap install</code> - Install snap package</li>
+            <li><code>snap remove</code> - Remove snap package</li>
+            <li><code>snap list</code> - List installed snaps</li>
+            <li><code>snap refresh</code> - Update snaps</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 5. Process Management -->
+      <div class="content-card">
+        <h2 class="section-title">5. Process Management</h2>
+
+        <table class="command-table">
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td><code>ps</code></td>
+            <td>Display running processes</td>
+            <td><code>ps aux</code></td>
+          </tr>
+          <tr>
+            <td><code>top</code></td>
+            <td>Interactive process viewer</td>
+            <td><code>top</code></td>
+          </tr>
+          <tr>
+            <td><code>htop</code></td>
+            <td>Enhanced process viewer</td>
+            <td><code>htop</code></td>
+          </tr>
+          <tr>
+            <td><code>kill</code></td>
+            <td>Terminate process by PID</td>
+            <td><code>kill -9 1234</code></td>
+          </tr>
+          <tr>
+            <td><code>killall</code></td>
+            <td>Terminate processes by name</td>
+            <td><code>killall nginx</code></td>
+          </tr>
+          <tr>
+            <td><code>pkill</code></td>
+            <td>Kill processes by pattern</td>
+            <td><code>pkill -f "python script.py"</code></td>
+          </tr>
+          <tr>
+            <td><code>pgrep</code></td>
+            <td>Find process IDs by name</td>
+            <td><code>pgrep nginx</code></td>
+          </tr>
+          <tr>
+            <td><code>nice</code></td>
+            <td>Run program with modified priority</td>
+            <td><code>nice -n 10 command</code></td>
+          </tr>
+          <tr>
+            <td><code>renice</code></td>
+            <td>Change priority of running process</td>
+            <td><code>renice 5 -p 1234</code></td>
+          </tr>
+          <tr>
+            <td><code>nohup</code></td>
+            <td>Run command immune to hangups</td>
+            <td><code>nohup command &</code></td>
+          </tr>
+          <tr>
+            <td><code>bg</code> / <code>fg</code></td>
+            <td>Move jobs to background/foreground</td>
+            <td><code>bg %1</code></td>
+          </tr>
+          <tr>
+            <td><code>jobs</code></td>
+            <td>List background jobs</td>
+            <td><code>jobs</code></td>
+          </tr>
+          <tr>
+            <td><code>systemctl</code></td>
+            <td>Control systemd services</td>
+            <td><code>systemctl status nginx</code></td>
+          </tr>
+        </table>
+
+        <br>
+
+        <div class="note">
+          <h4>Systemd Service Management:</h4>
+          <ul class="feature-list">
+            <li><code>systemctl start service</code> - Start service</li>
+            <li><code>systemctl stop service</code> - Stop service</li>
+            <li><code>systemctl restart service</code> - Restart service</li>
+            <li><code>systemctl reload service</code> - Reload config</li>
+            <li><code>systemctl enable service</code> - Enable on boot</li>
+            <li><code>systemctl disable service</code> - Disable on boot</li>
+            <li><code>systemctl status service</code> - Check service status</li>
+            <li><code>journalctl -u service</code> - View service logs</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 6. Networking -->
+      <div class="content-card">
+        <h2 class="section-title">6. Networking</h2>
+
+        <table class="command-table">
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td><code>ip addr</code> or <code>ifconfig</code></td>
+            <td>Show network interfaces and IPs</td>
+            <td><code>ip addr show</code></td>
+          </tr>
+          <tr>
+            <td><code>ping</code></td>
+            <td>Test network connectivity</td>
+            <td><code>ping google.com</code></td>
+          </tr>
+          <tr>
+            <td><code>traceroute</code></td>
+            <td>Trace route to host</td>
+            <td><code>traceroute google.com</code></td>
+          </tr>
+          <tr>
+            <td><code>netstat</code> or <code>ss</code></td>
+            <td>Show network statistics</td>
+            <td><code>ss -tulnp</code></td>
+          </tr>
+          <tr>
+            <td><code>dig</code> or <code>nslookup</code></td>
+            <td>DNS lookup</td>
+            <td><code>dig example.com</code></td>
+          </tr>
+          <tr>
+            <td><code>whois</code></td>
+            <td>Domain WHOIS information</td>
+            <td><code>whois example.com</code></td>
+          </tr>
+          <tr>
+            <td><code>wget</code></td>
+            <td>Download files from web</td>
+            <td><code>wget https://example.com/file.zip</code></td>
+          </tr>
+          <tr>
+            <td><code>curl</code></td>
+            <td>Transfer data from URLs</td>
+            <td><code>curl -O https://example.com/file</code></td>
+          </tr>
+          <tr>
+            <td><code>ssh</code></td>
+            <td>Secure shell client</td>
+            <td><code>ssh user@host</code></td>
+          </tr>
+          <tr>
+            <td><code>scp</code></td>
+            <td>Secure file copy</td>
+            <td><code>scp file.txt user@host:/path</code></td>
+          </tr>
+          <tr>
+            <td><code>rsync</code></td>
+            <td>Remote file synchronization</td>
+            <td><code>rsync -avz /local user@host:/remote</code></td>
+          </tr>
+          <tr>
+            <td><code>ufw</code></td>
+            <td>Uncomplicated firewall</td>
+            <td><code>sudo ufw allow 22/tcp</code></td>
+          </tr>
+          <tr>
+            <td><code>iptables</code></td>
+            <td>Packet filtering framework</td>
+            <td><code>sudo iptables -L</code></td>
+          </tr>
+          <tr>
+            <td><code>nmcli</code></td>
+            <td>NetworkManager command line</td>
+            <td><code>nmcli device status</code></td>
+          </tr>
+          <tr>
+            <td><code>hostname</code></td>
+            <td>Show or set system hostname</td>
+            <td><code>hostname -I</code></td>
+          </tr>
+        </table>
+
+        <br>
+
+        <div class="note">
+          <h4>Network Troubleshooting:</h4>
+          <ul class="feature-list">
+            <li><code>mtr</code> - Network diagnostic tool (combines ping + traceroute)</li>
+            <li><code>telnet</code> - Test TCP port connectivity</li>
+            <li><code>nc</code> or <code>netcat</code> - Network swiss army knife</li>
+            <li><code>tcpdump</code> - Network packet analyzer</li>
+            <li><code>iptables -A INPUT -p tcp --dport 8000 -j ACCEPT</code> - For opening the incoming traffic</li>
+            <li><code>iptables -A OUTPUT -p tcp --dport 8000 -j ACCEPT</code> - For opening the outgoing traffic</li>
+            <li><code>netfilter-persistent save</code> - Save the added rules so that the new rules will be applied even after a server reboot</li>
+            <li><code>service iptables save</code> - Save the added rules so that the new rules will be applied even after a server reboot</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 7. Archives and Compression -->
+      <div class="content-card">
+        <h2 class="section-title">7. Archives and Compression</h2>
+
+        <table class="command-table">
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td><code>tar</code></td>
+            <td>Archive files (tape archive)</td>
+            <td><code>tar -cvf archive.tar files/</code></td>
+          </tr>
+          <tr>
+            <td><code>gzip</code></td>
+            <td>Compress files (.gz)</td>
+            <td><code>gzip file</code></td>
+          </tr>
+          <tr>
+            <td><code>gunzip</code></td>
+            <td>Decompress .gz files</td>
+            <td><code>gunzip file.gz</code></td>
+          </tr>
+          <tr>
+            <td><code>bzip2</code></td>
+            <td>Compress files (.bz2)</td>
+            <td><code>bzip2 file</code></td>
+          </tr>
+          <tr>
+            <td><code>bunzip2</code></td>
+            <td>Decompress .bz2 files</td>
+            <td><code>bunzip2 file.bz2</code></td>
+          </tr>
+          <tr>
+            <td><code>zip</code></td>
+            <td>Package and compress files (.zip)</td>
+            <td><code>zip archive.zip files/</code></td>
+          </tr>
+          <tr>
+            <td><code>unzip</code></td>
+            <td>Extract .zip files</td>
+            <td><code>unzip archive.zip</code></td>
+          </tr>
+          <tr>
+            <td><code>7z</code></td>
+            <td>High compression ratio archiver</td>
+            <td><code>7z a archive.7z files/</code></td>
+          </tr>
+        </table>
+
+        <br>
+
+        <div class="note">
+          <h4>Common Combinations:</h4>
+          <ul class="feature-list">
+            <li><strong>Create tar.gz:</strong> <code>tar -czvf archive.tar.gz files/</code></li>
+            <li><strong>Extract tar.gz:</strong> <code>tar -xzvf archive.tar.gz</code></li>
+            <li><strong>Create tar.bz2:</strong> <code>tar -cjvf archive.tar.bz2 files/</code></li>
+            <li><strong>Extract tar.bz2:</strong> <code>tar -xjvf archive.tar.bz2</code></li>
+            <li><strong>View tar contents:</strong> <code>tar -tvf archive.tar</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 8. User and Permission Management -->
+      <div class="content-card">
+        <h2 class="section-title">8. User and Permission Management</h2>
+
+        <table class="command-table">
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td><code>sudo</code></td>
+            <td>Execute command as superuser</td>
+            <td><code>sudo apt update</code></td>
+          </tr>
+          <tr>
+            <td><code>su</code></td>
+            <td>Switch user</td>
+            <td><code>su - username</code></td>
+          </tr>
+          <tr>
+            <td><code>useradd</code></td>
+            <td>Add new user</td>
+            <td><code>sudo useradd -m username</code></td>
+          </tr>
+          <tr>
+            <td><code>usermod</code></td>
+            <td>Modify user account</td>
+            <td><code>sudo usermod -aG sudo username</code></td>
+          </tr>
+          <tr>
+            <td><code>userdel</code></td>
+            <td>Delete user</td>
+            <td><code>sudo userdel -r username</code></td>
+          </tr>
+          <tr>
+            <td><code>passwd</code></td>
+            <td>Change user password</td>
+            <td><code>passwd username</code></td>
+          </tr>
+          <tr>
+            <td><code>groupadd</code></td>
+            <td>Add new group</td>
+            <td><code>sudo groupadd groupname</code></td>
+          </tr>
+          <tr>
+            <td><code>groups</code></td>
+            <td>Show user groups</td>
+            <td><code>groups username</code></td>
+          </tr>
+          <tr>
+            <td><code>id</code></td>
+            <td>Show user and group info</td>
+            <td><code>id username</code></td>
+          </tr>
+          <tr>
+            <td><code>who</code> or <code>w</code></td>
+            <td>Show logged in users</td>
+            <td><code>w</code></td>
+          </tr>
+          <tr>
+            <td><code>last</code></td>
+            <td>Show last logged in users</td>
+            <td><code>last</code></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- 9. System Monitoring and Logs -->
+      <div class="content-card">
+        <h2 class="section-title">9. System Monitoring and Logs</h2>
+
+        <table class="command-table">
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td><code>dmesg</code></td>
+            <td>Kernel ring buffer messages</td>
+            <td><code>dmesg | grep error</code></td>
+          </tr>
+          <tr>
+            <td><code>journalctl</code></td>
+            <td>Systemd journal logs</td>
+            <td><code>journalctl -xe</code></td>
+          </tr>
+          <tr>
+            <td><code>tail -f</code></td>
+            <td>Follow log file in real-time</td>
+            <td><code>tail -f /var/log/syslog</code></td>
+          </tr>
+          <tr>
+            <td><code>vmstat</code></td>
+            <td>System performance monitoring</td>
+            <td><code>vmstat 1</code></td>
+          </tr>
+          <tr>
+            <td><code>iostat</code></td>
+            <td>CPU and I/O statistics</td>
+            <td><code>iostat -x 2</code></td>
+          </tr>
+          <tr>
+            <td><code>sar</code></td>
+            <td>System activity reporter</td>
+            <td><code>sar -u 1 3</code></td>
+          </tr>
+          <tr>
+            <td><code>lsof</code></td>
+            <td>List open files</td>
+            <td><code>lsof -i :80</code></td>
+          </tr>
+          <tr>
+            <td><code>strace</code></td>
+            <td>Trace system calls</td>
+            <td><code>strace -p 1234</code></td>
+          </tr>
+          <tr>
+            <td><code>ncdu</code></td>
+            <td>Disk usage analyzer</td>
+            <td><code>ncdu /</code></td>
+          </tr>
+          <tr>
+            <td><code>glances</code></td>
+            <td>Advanced system monitoring</td>
+            <td><code>glances</code></td>
+          </tr>
+        </table>
+
+        <br>
+
+        <div class="note">
+          <h4>Important Log Files:</h4>
+          <ul class="feature-list">
+            <li><code>/var/log/syslog</code> - General system activity</li>
+            <li><code>/var/log/auth.log</code> - Authentication logs</li>
+            <li><code>/var/log/kern.log</code> - Kernel messages</li>
+            <li><code>/var/log/dmesg</code> - Boot-time kernel messages</li>
+            <li><code>/var/log/nginx/</code> - Nginx web server logs</li>
+            <li><code>/var/log/apache2/</code> - Apache web server logs</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 10. Scripting and Automation -->
+      <div class="content-card">
+        <h2 class="section-title">10. Scripting and Automation</h2>
+
+        <h3>10.1 Basic Bash Script</h3>
+        <div class="code-example">
+                <pre><code class="language-bash">#!/bin/bash
+# Simple backup script
+BACKUP_DIR="/backups"
+DATE=$(date +%Y-%m-%d)
+SOURCE="/var/www"
+
+# Create backup directory if not exists
+mkdir -p $BACKUP_DIR
+
+# Create compressed tar archive
+tar -czf "$BACKUP_DIR/backup_$DATE.tar.gz" "$SOURCE"
+
+# Delete backups older than 30 days
+find $BACKUP_DIR -type f -name "*.tar.gz" -mtime +30 -delete
+
+echo "Backup completed: $BACKUP_DIR/backup_$DATE.tar.gz"</code></pre>
+        </div>
+
+        <h3>10.2 Common Scripting Elements</h3>
+        <table class="command-table">
+          <tr>
+            <th>Element</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td><code>#!/bin/bash</code></td>
+            <td>Shebang line (specifies interpreter)</td>
+            <td><code>#!/bin/bash</code></td>
+          </tr>
+          <tr>
+            <td><code>Variables</code></td>
+            <td>Store values</td>
+            <td><code>NAME="John"</code></td>
+          </tr>
+          <tr>
+            <td><code>$1, $2, ...</code></td>
+            <td>Positional parameters</td>
+            <td><code>echo "Hello $1"</code></td>
+          </tr>
+          <tr>
+            <td><code>if [ condition ]</code></td>
+            <td>Conditional statement</td>
+            <td><code>if [ -f "$FILE" ]; then ...</code></td>
+          </tr>
+          <tr>
+            <td><code>for</code></td>
+            <td>Loop through items</td>
+            <td><code>for FILE in *.txt; do ...</code></td>
+          </tr>
+          <tr>
+            <td><code>while</code></td>
+            <td>Loop while condition is true</td>
+            <td><code>while [ $COUNT -lt 10 ]; do ...</code></td>
+          </tr>
+          <tr>
+            <td><code>functions</code></td>
+            <td>Define reusable code blocks</td>
+            <td><code>function greet() { echo "Hello $1"; }</code></td>
+          </tr>
+          <tr>
+            <td><code>exit</code></td>
+            <td>Exit script with status code</td>
+            <td><code>exit 0</code></td>
+          </tr>
+        </table>
+
+        <br>
+
+        <h3>10.3 Cron Jobs (Scheduled Tasks)</h3>
+        <div class="code-example">
+                <pre><code class="language-bash"># Edit crontab file
+crontab -e
+
+# Example entries
+* * * * * /path/to/script.sh        # Run every minute
+0 * * * * /path/to/script.sh        # Run hourly at :00
+0 0 * * * /path/to/backup.sh        # Run daily at midnight
+0 0 * * 0 /path/to/cleanup.sh       # Run weekly on Sunday
+0 0 1 * * /path/to/report.sh        # Run monthly on 1st</code></pre>
+        </div>
+
+        <div class="note">
+          <h4>Cron Time Format:</h4>
+          <p><code>* * * * * command</code></p>
+          <ol class="feature-list">
+            <li>Minute (0-59)</li>
+            <li>Hour (0-23)</li>
+            <li>Day of month (1-31)</li>
+            <li>Month (1-12)</li>
+            <li>Day of week (0-7, where both 0 and 7 are Sunday)</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- 11. Security -->
+      <div class="content-card">
+        <h2 class="section-title">11. Security</h2>
+
+        <table class="command-table">
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td><code>sudo</code></td>
+            <td>Execute command as another user</td>
+            <td><code>sudo visudo</code></td>
+          </tr>
+          <tr>
+            <td><code>chmod</code></td>
+            <td>Change file permissions</td>
+            <td><code>chmod 600 private.key</code></td>
+          </tr>
+          <tr>
+            <td><code>chown</code></td>
+            <td>Change file owner</td>
+            <td><code>chown user:group file</code></td>
+          </tr>
+          <tr>
+            <td><code>passwd</code></td>
+            <td>Change user password</td>
+            <td><code>passwd username</code></td>
+          </tr>
+          <tr>
+            <td><code>ssh-keygen</code></td>
+            <td>Generate SSH key pair</td>
+            <td><code>ssh-keygen -t rsa -b 4096</code></td>
+          </tr>
+          <tr>
+            <td><code>gpg</code></td>
+            <td>GNU Privacy Guard encryption</td>
+            <td><code>gpg --encrypt file.txt</code></td>
+          </tr>
+          <tr>
+            <td><code>fail2ban-client</code></td>
+            <td>Ban IPs with too many failed attempts</td>
+            <td><code>fail2ban-client status sshd</code></td>
+          </tr>
+          <tr>
+            <td><code>clamscan</code></td>
+            <td>Virus scanner</td>
+            <td><code>clamscan -r /home</code></td>
+          </tr>
+          <tr>
+            <td><code>lynis</code></td>
+            <td>Security auditing tool</td>
+            <td><code>sudo lynis audit system</code></td>
+          </tr>
+          <tr>
+            <td><code>openssl</code></td>
+            <td>SSL/TLS toolkit</td>
+            <td><code>openssl req -new -newkey rsa:2048 -nodes -keyout server.key -out server.csr</code></td>
+          </tr>
+        </table>
+
+        <br>
+
+        <div class="note">
+          <h4>Security Best Practices:</h4>
+          <ul class="feature-list">
+            <li>Always use <code>sudo</code> instead of logging in as root</li>
+            <li>Disable root SSH login (<code>PermitRootLogin no</code> in <code>/etc/ssh/sshd_config</code>)</li>
+            <li>Use SSH keys instead of passwords</li>
+            <li>Keep system and packages updated (<code>sudo apt update && sudo apt upgrade</code>)</li>
+            <li>Configure firewall (<code>ufw</code> or <code>iptables</code>)</li>
+            <li>Change owner to 'myuser' <code>sudo chown myuser myfile.txt</code></li>
+            <li>Change owner to 'myuser' and group to 'notmygroup' <code>sudo chown notme:notmygroup myfile.txt</code></li>
+            <li>Change owner to 'myuser' and group to 'notmygroup' <code>sudo chown notme:notmygroup myfile.txt</code></li>
+            <li>Use <code>usermod</code> to change user's settings such as group, password and more</li>
+            <li>Create a new group <code>sudo groupadd demo</code></li>
+            <li>Add user to group <code>sudo usermod --append --groups demo user1</code></li>
+            <li>Remove user from group <code>sudo gpasswd --delete user1 demo</code></li>
+            <li>Delete a group <code>sudo groupdel demo</code></li>
+          </ul>
+        </div>
+
+        <br>
+
+        <h4>chmod tutorial:</h4>
+        <ul class="feature-list">
+          <li>4 = read, 2 = write, 1 = execute, 0 = no permission</li>
+          <li>7 = 4 + 2 + 1, 5 = 4 + 0 + 1, 4 = 4 + 0 + 0</li>
+          <li>Equivalent commands (<code>chmod u=rwx,g=rx,o=r myfile</code> or <code>chmod 754 myfile</code>)</li>
+          <li>Use -R to affect all folders and files it contains</li>
+          <li>Regularly check system logs for suspicious activity</li>
+        </ul>
+
+      </div>
+
+      <!-- 12. Miscellaneous -->
+      <div class="content-card">
+        <h2 class="section-title">12. Miscellaneous Useful Commands</h2>
+
+        <table class="command-table">
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td><code>alias</code></td>
+            <td>Create command shortcuts</td>
+            <td><code>alias ll='ls -alF'</code></td>
+          </tr>
+          <tr>
+            <td><code>history</code></td>
+            <td>Show command history</td>
+            <td><code>history | grep apt</code></td>
+          </tr>
+          <tr>
+            <td><code>!!</code></td>
+            <td>Repeat last command</td>
+            <td><code>sudo !!</code></td>
+          </tr>
+          <tr>
+            <td><code>man</code></td>
+            <td>Show manual pages</td>
+            <td><code>man ls</code></td>
+          </tr>
+          <tr>
+            <td><code>whatis</code></td>
+            <td>Brief command description</td>
+            <td><code>whatis grep</code></td>
+          </tr>
+          <tr>
+            <td><code>which</code></td>
+            <td>Show full path of commands</td>
+            <td><code>which python</code></td>
+          </tr>
+          <tr>
+            <td><code>whereis</code></td>
+            <td>Locate binary, source, and manual pages</td>
+            <td><code>whereis java</code></td>
+          </tr>
+          <tr>
+            <td><code>watch</code></td>
+            <td>Execute program periodically</td>
+            <td><code>watch -n 1 free -h</code></td>
+          </tr>
+          <tr>
+            <td><code>time</code></td>
+            <td>Measure command execution time</td>
+            <td><code>time ls -R /</code></td>
+          </tr>
+          <tr>
+            <td><code>cal</code></td>
+            <td>Display calendar</td>
+            <td><code>cal -3</code></td>
+          </tr>
+          <tr>
+            <td><code>bc</code></td>
+            <td>Arbitrary precision calculator</td>
+            <td><code>echo "5+7" | bc</code></td>
+          </tr>
+          <tr>
+            <td><code>shutdown</code></td>
+            <td>Shutdown or restart system</td>
+            <td><code>sudo shutdown -r now</code></td>
+          </tr>
+          <tr>
+            <td><code>reboot</code></td>
+            <td>Reboot system</td>
+            <td><code>sudo reboot</code></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer class="container">
+
+    <hr id="before-footer">
+    <div class="row">
+
+      <div class="col footer-text">
+
+        <a href="contact.html">Contact</a>
+
+
+      </div>
+
+      <div class="col footer-icons">
+
+        <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+      </div>
+
+    </div>
+
+
+  </footer>
+
+</div>
+
+<style>
+  /* Scroll to top button styles */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .scroll-to-top:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .scroll-to-top:active {
+    transform: translateY(0);
+  }
+
+  .scroll-to-top svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+
+  /* Show the button when user scrolls down */
+  .scroll-to-top.visible {
+    display: flex;
+  }
+</style>
+
+<button class="scroll-to-top" aria-label="Scroll to top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+  </svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+<script>
+  hljs.highlightAll();
+
+</script>
+<script>
+  // Show/hide scroll to top button based on scroll position
+  const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollToTopButton.classList.add('visible');
+    } else {
+      scrollToTopButton.classList.remove('visible');
+    }
+  });
+
+  // Scroll to top when button is clicked
+  scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+<!--
+<div class="code-container">
+
+            <div class="code-description"></div>
+            <div class="code">
+
+                <pre><code></code></pre>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h1>OOP Design principles</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h1>1. Don't repeat yourself</h1>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+        </div>
+-->
+
+</body>
+</html>

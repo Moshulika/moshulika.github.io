@@ -60,7 +60,6 @@
         body {
             padding-top: 20px;
             padding-bottom: 20px;
-            background-color: #f8f9fa;
         }
 
         .content-card {
@@ -75,6 +74,7 @@
         .content-card:hover {
             background-color: rgba(255, 255, 255, 1);
         }
+
 
         .section-title {
             border-bottom: 2px solid black;
@@ -99,10 +99,12 @@
             border-radius: 4px;
         }
 
-        .function-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #0d6efd;
+        .feature-list {
+            margin-bottom: 20px;
+        }
+
+        .feature-list li {
+            margin-bottom: 8px;
         }
 
         .comparison-table {
@@ -111,7 +113,6 @@
 
         .comparison-table th {
 
-            color: white;
         }
     </style>
 
@@ -243,253 +244,278 @@
         </div>
 
         <div class="row category-title" id="multithreading">
-            <h1>JDBC Programming Guide</h1>
+            <h1>Java Unit Testing</h1>
         </div>
 
         <div class="container">
 
+            <!-- 1. Introduction -->
             <div class="content-card">
-                <h2 class="section-title">Basic JDBC Example</h2>
+                <h2 class="section-title">1. Introduction to JUnit Testing</h2>
+                <p>JUnit is a popular unit testing framework for Java applications. IntelliJ IDEA provides excellent support for creating, running, and debugging JUnit tests with features like:</p>
+                <ul class="feature-list">
+                    <li>Automatic test generation</li>
+                    <li>Visual test runner</li>
+                    <li>Code coverage analysis</li>
+                    <li>Integration with build tools (Maven, Gradle)</li>
+                    <li>Parameterized test support</li>
+                </ul>
+            </div>
+
+            <!-- 2. Setting Up JUnit -->
+            <div class="content-card">
+                <h2 class="section-title">2. Setting Up JUnit in IntelliJ IDEA</h2>
+
+                <h3>2.1 Adding JUnit Dependency</h3>
+                <p>For Maven projects, add this to your pom.xml:</p>
+                <div class="code-example">
+                <pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;
+    &lt;artifactId&gt;junit-jupiter&lt;/artifactId&gt;
+    &lt;version&gt;5.8.2&lt;/version&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;</code></pre>
+                </div>
+
+                <p>For Gradle projects, add this to your build.gradle:</p>
+                <div class="code-example">
+                    <pre><code class="language-groovy">testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'</code></pre>
+                </div>
+
+                <div class="note">
+                    <h4>Note:</h4>
+                    <p>IntelliJ IDEA comes with bundled JUnit libraries. You can also use these without adding dependencies by configuring the test framework in Project Structure (⌘; on Mac or Ctrl+Alt+Shift+S on Windows/Linux).</p>
+                </div>
+            </div>
+
+            <!-- 3. Creating Test Classes -->
+            <div class="content-card">
+                <h2 class="section-title">3. Creating Test Classes</h2>
+
+                <h3>3.1 Generating Tests Automatically</h3>
+                <ol class="feature-list">
+                    <li>Place the cursor on the class name in your source code</li>
+                    <li>Press ⌘N (Mac) or Alt+Insert (Windows/Linux)</li>
+                    <li>Select "Test..." from the menu</li>
+                    <li>In the dialog:
+                        <ul>
+                            <li>Choose testing library (JUnit 4 or JUnit 5)</li>
+                            <li>Select methods to generate tests for</li>
+                            <li>Choose destination package (usually same as source class but in test folder)</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>3.2 Manual Test Class Creation</h3>
+                <p>Create a new class in your test directory (src/test/java) with naming convention:</p>
+                <p><code>OriginalClassName + "Test"</code> (e.g., <code>CalculatorTest</code>)</p>
 
                 <div class="code-example">
-                <pre><code class="language-java">// Java program to implement a simple JDBC application
-import java.sql.*;
+                <pre><code class="language-java">import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class Geeks {
-    public static void main(String[] args)
-    {
-        // Database URL, username, and password
-        String url = "jdbc:mysql://localhost:3306/your_database";
-        String username = "your_username";
-        String password = "your_password";
+class CalculatorTest {
 
-        String query = "INSERT INTO students (id, name) VALUES (109, 'bhatt')";
-
-        // Establish JDBC Connection
-        try {
-            // Load Type-4 Driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            // Establish connection
-            Connection c = DriverManager.getConnection(url, username, password);
-
-            // Create a statement
-            Statement st = c.createStatement();
-
-            // Execute the query
-            int count = st.executeUpdate(query);
-            System.out.println("Number of rows affected by this query: " + count);
-
-            // Close the connection
-            st.close();
-            c.close();
-            System.out.println("Connection closed.");
-        }
-        catch (ClassNotFoundException e) {
-            System.err.println("JDBC Driver not found: " + e.getMessage());
-        }
-        catch (SQLException e) {
-            System.err.println("SQL Error: " + e.getMessage());
-        }
+    @Test
+    void testAdd() {
+        Calculator calculator = new Calculator();
+        assertEquals(5, calculator.add(2, 3), "2 + 3 should be 5");
     }
 }</code></pre>
                 </div>
             </div>
 
+            <!-- 4. Writing Test Methods -->
             <div class="content-card">
-                <h2 class="section-title">1. Statement</h2>
-                <p>A Statement object is used for general-purpose access to databases and is useful for executing static
-                    SQL statements at runtime.</p>
+                <h2 class="section-title">4. Writing Test Methods</h2>
 
+                <h3>4.1 Basic Test Structure</h3>
                 <div class="code-example">
-                    <div class="function-title">Syntax</div>
-                    <pre><code class="language-java">Statement statement = connection.createStatement();</code></pre>
-                </div>
+                <pre><code class="language-java">import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-                <h3>Implementation</h3>
-                <p>Once the Statement object is created, there are three ways to execute it:</p>
-                <ul>
-                    <li><strong>execute(String SQL):</strong> Executes any SQL statements (like SELECT, INSERT, UPDATE
-                        or DELETE). Returns true if a ResultSet object is retrieved, false otherwise.
-                    </li>
-                    <li><strong>executeUpdate(String SQL):</strong> Executes SQL statements (like INSERT, UPDATE or
-                        DELETE). Returns the number of rows affected by the SQL statement.
-                    </li>
-                    <li><strong>ResultSet executeQuery(String SQL):</strong> Executes the SELECT query. Returns a
-                        ResultSet object that contains the data retrieved by the query.
-                    </li>
-                </ul>
-            </div>
+class StringUtilsTest {
 
-            <div class="content-card">
-                <h2 class="section-title">2. Prepared Statement</h2>
-                <p>A PreparedStatement represents a precompiled SQL statement that can be executed multiple times. It
-                    accepts parameterized SQL queries, with ? as placeholders for parameters, which can be set
-                    dynamically.</p>
+    @Test
+    void testIsEmpty() {
+        assertTrue(StringUtils.isEmpty(""));
+        assertFalse(StringUtils.isEmpty("text"));
+    }
 
-                <div class="code-example">
-                    <div class="function-title">Example</div>
-                    <pre><code class="language-java">String query = "INSERT INTO people(name, age) VALUES(?, ?)";
-PreparedStatement pstmt = con.prepareStatement(query);
-pstmt.setString(1,"Ayan");
-ptstmt.setInt(2,25);</code></pre>
-                </div>
-
-                <h3>Implementation</h3>
-                <p>Once the PreparedStatement object is created, there are three ways to execute it:</p>
-                <ul>
-                    <li><strong>execute():</strong> Returns a boolean value and executes a static SQL statement that is
-                        present in the prepared statement object.
-                    </li>
-                    <li><strong>executeQuery():</strong> Returns a ResultSet from the current prepared statement.</li>
-                    <li><strong>executeUpdate():</strong> Returns the number of rows affected by the DML statements such
-                        as INSERT, DELETE, and more that is present in the current Prepared Statement.
-                    </li>
-                </ul>
-
-                <br>
-
-                <div class="code-example">
-                    <div class="function-title">Complete Example</div>
-                    <pre><code class="language-java">// Java Program illustrating Prepared Statement in JDBC
-import java.sql.*;
-import java.util.Scanner;
-
-class Geeks {
-    public static void main(String[] args) {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Scanner sc = new Scanner(System.in);
-
-            System.out.println("What age do you want to search?? ");
-            int age = sc.nextInt();
-
-            Connection con = DriverManager.getConnection(
-                "jdbc:mysql:///world", "root", "12345");
-
-            PreparedStatement ps = con.prepareStatement(
-                "select name from world.people where age = ?");
-
-            ps.setInt(1, age);
-            ResultSet res = ps.executeQuery();
-
-            while (res.next()) {
-                System.out.println("Name : " + res.getString(1));
-            }
-        }
-        catch (SQLException e) {
-            System.out.println(e);
-        }
-        catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+    @Test
+    void testReverse() {
+        assertEquals("cba", StringUtils.reverse("abc"));
+        assertNull(StringUtils.reverse(null));
     }
 }</code></pre>
                 </div>
-            </div>
 
-            <div class="content-card">
-                <h2 class="section-title">3. Callable Statement</h2>
-                <p>A CallableStatement is used to execute stored procedures in the database. Stored procedures are
-                    precompiled SQL statements that can be called with parameters. They are useful for executing complex
-                    operations that involve multiple SQL statements.</p>
-
-                <div class="code-example">
-                    <div class="function-title">Syntax</div>
-                    <pre><code class="language-java">CallableStatement cstmt = con.prepareCall("{call ProcedureName(?, ?)}");</code></pre>
-                    <p><code>{call ProcedureName(?, ?)}:</code> Calls a stored procedure named ProcedureName with
-                        placeholders ? for input parameters.</p>
-                </div>
-
-                <h3>Methods to Execute</h3>
-                <ul>
-                    <li><strong>execute():</strong> Executes the stored procedure and returns a boolean indicating
-                        whether the result is a ResultSet (true) or an update count (false).
-                    </li>
-                    <li><strong>executeQuery():</strong> Executes a stored procedure that returns a ResultSet.</li>
-                    <li><strong>executeUpdate():</strong> Executes a stored procedure that performs an update and
-                        returns the number of rows affected.
-                    </li>
-                </ul>
-
-                <br>
-
-                <div class="code-example">
-                    <div class="function-title">Example</div>
-                    <pre><code class="language-java">// Java Program illustrating Callable Statement in JDBC
-import java.sql.*;
-
-public class Geeks {
-    public static void main(String[] args) {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager
-              .getConnection("jdbc:mysql:///world", "root", "12345");
-
-            CallableStatement cs = con.prepareCall("{call GetPeopleInfo()}");
-            ResultSet res = cs.executeQuery();
-
-            while (res.next()) {
-                System.out.println("Name : " + res.getString("name"));
-                System.out.println("Age : " + res.getInt("age"));
-            }
-
-            res.close();
-            cs.close();
-            con.close();
-        }
-        catch (SQLException e) {
-            e.printStackTrace();
-        }
-        catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                </div>
-            </div>
-
-            <div class="content-card">
-                <h2 class="section-title">JDBC Classes and Interfaces</h2>
-                <div class="table-responsive comparison-table">
+                <h3>4.2 Common Assertions</h3>
+                <div class="comparison-table table-responsive">
                     <table class="table table-dark table-striped">
-                        <thead>
+                        <thead class="">
                         <tr>
-                            <th>Class/Interfaces</th>
+                            <th>Assertion</th>
                             <th>Description</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td>DriverManager</td>
-                            <td>Manages JDBC drivers and establishes database connections.</td>
+                            <td><code>assertEquals(expected, actual)</code></td>
+                            <td>Tests if two values are equal</td>
                         </tr>
                         <tr>
-                            <td>Connection</td>
-                            <td>Represents a session with a specific database.</td>
+                            <td><code>assertTrue(condition)</code></td>
+                            <td>Tests if condition is true</td>
                         </tr>
                         <tr>
-                            <td>Statement</td>
-                            <td>Used to execute static SQL queries.</td>
+                            <td><code>assertFalse(condition)</code></td>
+                            <td>Tests if condition is false</td>
                         </tr>
                         <tr>
-                            <td>PreparedStatement</td>
-                            <td>Precompiled SQL statement, used for dynamic queries with parameters.</td>
+                            <td><code>assertNull(object)</code></td>
+                            <td>Tests if object is null</td>
                         </tr>
                         <tr>
-                            <td>CallableStatement</td>
-                            <td>Used to execute stored procedures in the database.</td>
+                            <td><code>assertNotNull(object)</code></td>
+                            <td>Tests if object is not null</td>
                         </tr>
                         <tr>
-                            <td>ResultSet</td>
-                            <td>Represents the result set of a query, allowing navigation through the rows.</td>
-                        </tr>
-                        <tr>
-                            <td>SQLException</td>
-                            <td>Handles SQL-related exceptions during database operations.</td>
+                            <td><code>assertThrows(exception, executable)</code></td>
+                            <td>Tests if code throws expected exception</td>
                         </tr>
                         </tbody>
                     </table>
+                </div>
+
+                <h3>4.3 Test Lifecycle Annotations</h3>
+                <div class="comparison-table table-responsive">
+                    <table class="table table-dark table-striped">
+                        <thead >
+                        <tr>
+                            <th>Annotation</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><code>@BeforeEach</code></td>
+                            <td>Executed before each test method</td>
+                        </tr>
+                        <tr>
+                            <td><code>@AfterEach</code></td>
+                            <td>Executed after each test method</td>
+                        </tr>
+                        <tr>
+                            <td><code>@BeforeAll</code></td>
+                            <td>Executed once before all test methods</td>
+                        </tr>
+                        <tr>
+                            <td><code>@AfterAll</code></td>
+                            <td>Executed once after all test methods</td>
+                        </tr>
+                        <tr>
+                            <td><code>@DisplayName</code></td>
+                            <td>Custom display name for test class or method</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 5. Running Tests -->
+            <div class="content-card">
+                <h2 class="section-title">5. Running Tests in IntelliJ</h2>
+
+                <h3>5.1 Running Individual Tests</h3>
+                <ol class="feature-list">
+                    <li>Click the green arrow icon next to the test class or method</li>
+                    <li>Right-click the test and select "Run"</li>
+                    <li>Use keyboard shortcut (Ctrl+Shift+F10 on Windows/Linux, ⌃⇧R on Mac)</li>
+                </ol>
+
+                <h3>5.2 Running All Tests</h3>
+                <ul class="feature-list">
+                    <li>Right-click the test directory and select "Run 'All Tests'"</li>
+                    <li>Use the Run configuration dropdown and select "All Tests"</li>
+                    <li>Run from command line with Maven: <code>mvn test</code> or Gradle: <code>gradle test</code></li>
+                </ul>
+
+                <h3>5.3 Debugging Tests</h3>
+                <ol class="feature-list">
+                    <li>Set breakpoints in your test or production code</li>
+                    <li>Click the debug icon (bug) instead of run</li>
+                    <li>Use keyboard shortcut (Shift+F9 on Windows/Linux, ⌃D on Mac)</li>
+                </ol>
+
+                <img src="https://www.jetbrains.com/help/img/idea/2023.2/runTestFromEditor.png" alt="Running tests in IntelliJ" style="max-width: 100%; height: auto;">
+            </div>
+
+            <!-- 6. Advanced Testing -->
+            <div class="content-card">
+                <h2 class="section-title">6. Advanced Testing Techniques</h2>
+
+                <h3>6.1 Parameterized Tests</h3>
+                <div class="code-example">
+                <pre><code class="language-java">@ParameterizedTest
+@ValueSource(ints = {1, 3, 5, -3, 15})
+void testIsOdd(int number) {
+    assertTrue(MathUtils.isOdd(number));
+}</code></pre>
+                </div>
+
+                <h3>6.2 Mocking with Mockito</h3>
+                <div class="code-example">
+                <pre><code class="language-java">@Test
+void testUserService() {
+    // Create mock
+    UserRepository mockRepo = Mockito.mock(UserRepository.class);
+
+    // Define mock behavior
+    when(mockRepo.findById(1L)).thenReturn(new User(1L, "test@example.com"));
+
+    // Inject mock and test
+    UserService service = new UserService(mockRepo);
+    User user = service.getUserById(1L);
+
+    assertEquals("test@example.com", user.getEmail());
+    verify(mockRepo).findById(1L);
+}</code></pre>
+                </div>
+
+                <h3>6.3 Testing Exceptions</h3>
+                <div class="code-example">
+                <pre><code class="language-java">@Test
+void testWithdrawalFailsWhenBalanceInsufficient() {
+    BankAccount account = new BankAccount(100);
+    assertThrows(InsufficientFundsException.class, () -> {
+        account.withdraw(200);
+    });
+}</code></pre>
+                </div>
+            </div>
+
+            <!-- 7. Best Practices -->
+            <div class="content-card">
+                <h2 class="section-title">7. JUnit Best Practices</h2>
+
+                <ul class="feature-list">
+                    <li><strong>Test Naming</strong>: Use descriptive names (testMethodName_StateUnderTest_ExpectedBehavior)</li>
+                    <li><strong>Single Responsibility</strong>: Each test should verify one thing</li>
+                    <li><strong>AAA Pattern</strong>: Arrange-Act-Assert structure</li>
+                    <li><strong>Independent Tests</strong>: Tests shouldn't depend on each other</li>
+                    <li><strong>Fast Tests</strong>: Keep tests fast (avoid I/O, use mocks)</li>
+                    <li><strong>Test Coverage</strong>: Aim for high coverage but focus on important paths</li>
+                </ul>
+
+                <div class="note">
+                    <h4>IntelliJ IDEA Tips:</h4>
+                    <ul class="feature-list">
+                        <li>Use <code>Ctrl+Shift+T</code> (Windows/Linux) or <code>⌘⇧T</code> (Mac) to quickly navigate between test and production code</li>
+                        <li>Enable "Coverage" when running tests to see which code is exercised</li>
+                        <li>Use "Run with Coverage" to generate coverage reports</li>
+                        <li>Configure test templates in Settings > Editor > Live Templates</li>
+                    </ul>
                 </div>
             </div>
         </div>
