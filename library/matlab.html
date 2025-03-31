@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/ef590a2fdb.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/library.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <!-- and it's easy to individually load additional languages -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+  <link rel="stylesheet" href="css/dracula.css">
+
+  <title>Library</title>
+
+  <style>
+
+    body {
+      background-image: url('assets/blurry_background.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+  </style>
+
+  <style>
+    .card {
+      color: white;
+      margin-bottom: 1.5rem;
+      background-color: #282a36;
+      border-radius: 10px;
+    }
+
+    .card-title {
+      font-weight: bold;
+    }
+
+    .important {
+      color: #d63384;
+      font-weight: bold;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+  </style>
+
+  <style>
+    body {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .content-card {
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      margin-bottom: 30px;
+      transition: 0.3s;
+    }
+
+    .content-card:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+
+    .section-title {
+      border-bottom: 2px solid black;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    .code-example {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-left: 4px solid #0d6efd;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .note {
+      background-color: #fff3cd;
+      padding: 15px;
+      border-left: 4px solid #ffc107;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .feature-list {
+      margin-bottom: 20px;
+    }
+
+    .feature-list li {
+      margin-bottom: 8px;
+    }
+
+    .comparison-table {
+      margin-bottom: 30px;
+    }
+
+    .comparison-table th {
+
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar sticky-top">
+
+  <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--
+    <form id="nav-search" class="d-flex mt-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Type something.." aria-label="Search">
+        <button class="btn btn-outline-success" type="submit"><strong>Search</strong></button>
+    </form>
+    -->
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+         aria-labelledby="offcanvasNavbarLabel">
+
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><strong>Menu</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="https://moshulika.github.io/library.html"><i
+                    class="fa-solid fa-house"></i> <strong>Home</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/contact"><i class="fa-solid fa-phone"></i>
+              <strong>Contact</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/skills.html"><i
+                    class="fa-solid fa-gears"></i> <strong>Skills</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/portofoliu.html"><i
+                    class="fa-solid fa-book"></i> <strong>Portfolio</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="https://moshulika.github.io/library.html"><i
+                    class="fa-solid fa-code"></i> <strong>Library</strong></a>
+          </li>
+
+        </ul>
+
+
+      </div>
+
+      <div id="offcanvas-logos">
+
+        <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="row" id="socials-row">
+
+    <div class="col-xs-12 col-lg-6 animate__animated animate__fadeIn" id="picture2">
+
+      <img src="assets/eu.jpg">
+      <div id="text">
+
+        <h1>My simple library</h1>
+        <h4>..of useful code</h4>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <br>
+  <br>
+
+
+  <div class="container">
+
+    <div class="row">
+      <h1>Chapters</h1>
+    </div>
+
+    <div class="library-pills">
+      <a href="https://moshulika.github.io/library.html#design" class="library-pill">OOP Design Principles</a>
+      <a href="https://moshulika.github.io/library.html#concepts" class="library-pill">OOP Concepts</a>
+      <a href="https://moshulika.github.io/library.html#exceptions" class="library-pill">Exceptions</a>
+      <a href="multithreading.html#multithreading" class="library-pill">Multithreading</a>
+      <a href="multithreading.html#final" class="library-pill">Final Keyword</a>
+      <a href="strings.html#strings" class="library-pill">Strings</a>
+      <a href="strings.html#regex" class="library-pill">Regex</a>
+      <a href="files.html#io" class="library-pill">I/O</a>
+      <a href="files.html#files" class="library-pill">Files</a>
+      <a href="https://moshulika.github.io/library.html#lambda" class="library-pill">Lambda</a>
+      <a href="jdbc.html" class="library-pill">JDBC</a>
+      <a href="networking.html#networking" class="library-pill">Networking</a>
+      <a href="networking.html#json" class="library-pill">JSON</a>
+      <a href="memory.html#memory" class="library-pill">Java Memory</a>
+      <a href="structures.html" class="library-pill">Java Data Structures</a>
+      <a href="mysql.html" class="library-pill">MySQL</a>
+      <a href="c.html" class="library-pill">C/C++</a>
+      <a href="junit.html" class="library-pill">Unit Testing</a>
+      <a href="linux.html" class="library-pill">Linux</a>
+      <a href="git.html" class="library-pill">Git</a>
+      <a href="maven.html" class="library-pill">Maven/Gradle</a>
+      <a href="rest-api.html" class="library-pill">REST-API</a>
+      <a href="python.html" class="library-pill">Python</a>
+      <a href="matlab.html" class="library-pill">Matlab</a>
+      <a href="assembly.html" class="library-pill">Assembly</a>
+      <a href="bits.html" class="library-pill">Java bit manipulation</a>
+    </div>
+
+    <div class="row category-title" id="multithreading">
+      <h1>Matlab guide</h1>
+      <p class="lead">Comprehensive reference for signal generation, analysis, and visualization in MATLAB</p>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content-card">
+            <h2 class="section-title">Signal Generation</h2>
+
+            <h3>Basic Signals</h3>
+            <div class="code-example">
+                        <pre><code >% Time vector
+Fs = 1000;            % Sampling frequency (Hz)
+T = 1/Fs;             % Sampling period
+t = 0:T:1-T;          % Time vector (1 second)
+
+% Sine wave
+f = 5;                % Frequency (Hz)
+sine_wave = sin(2*pi*f*t);
+
+% Cosine wave
+cos_wave = cos(2*pi*f*t);
+
+% Square wave
+square_wave = square(2*pi*f*t);
+
+% Sawtooth wave
+sawtooth_wave = sawtooth(2*pi*f*t);
+
+% Pulse train
+pulse_train = pulstran(t, 0:1/f:1, 'rectpuls', 0.05);</code></pre>
+            </div>
+
+            <h3>Random Signals</h3>
+            <div class="code-example">
+                        <pre><code >% White noise
+white_noise = randn(size(t));
+
+% Pink noise (1/f noise)
+pink_noise = dsp.ColoredNoise('Color', 'pink', 'SamplesPerFrame', length(t));
+pink_noise = pink_noise();
+
+% Impulse signal
+impulse = zeros(size(t));
+impulse(1) = 1;</code></pre>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h2 class="section-title">Matrix Operations</h2>
+
+            <h3>Matrix Creation</h3>
+            <div class="code-example">
+                        <pre><code >% Basic matrices
+A = [1 2 3; 4 5 6; 7 8 9];  % 3x3 matrix
+B = zeros(3, 2);            % 3x2 zeros matrix
+C = ones(2, 4);             % 2x4 ones matrix
+D = eye(3);                 % 3x3 identity matrix
+
+% Special matrices
+E = magic(3);               % Magic square
+F = rand(3, 3);             % Uniform random
+G = randn(3, 3);            % Normal random
+
+% From vectors
+v = 1:5;                    % Row vector [1 2 3 4 5]
+M = v' * v;                 % Outer product</code></pre>
+            </div>
+
+            <h3>Matrix Operations</h3>
+            <div class="code-example">
+                        <pre><code >% Basic operations
+sum_A = sum(A);             % Column sums
+mean_A = mean(A);           % Column means
+max_A = max(A);             % Column maximums
+
+% Matrix algebra
+A_transpose = A';           % Transpose
+A_inverse = inv(A);         % Inverse (if square and non-singular)
+A_det = det(A);             % Determinant
+[V, D] = eig(A);            % Eigenvalues and eigenvectors
+
+% Element-wise operations
+A_squared = A.^2;           % Element-wise square
+A_times_B = A .* B;         % Element-wise multiplication (if same size)</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="content-card">
+            <h2 class="section-title">Fourier Analysis</h2>
+
+            <h3>FFT (Fast Fourier Transform)</h3>
+            <div class="code-example">
+                        <pre><code >% Generate signal
+Fs = 1000;            % Sampling frequency
+t = 0:1/Fs:1-1/Fs;    % Time vector
+x = sin(2*pi*50*t) + 0.7*sin(2*pi*120*t);
+
+% Compute FFT
+N = length(x);        % Number of samples
+X = fft(x);           % Compute FFT
+X_mag = abs(X);       % Magnitude spectrum
+f = (0:N-1)*(Fs/N);   % Frequency vector
+
+% Plot single-sided spectrum
+X_mag_ss = X_mag(1:N/2+1);
+f_ss = f(1:N/2+1);
+plot(f_ss, X_mag_ss);
+xlabel('Frequency (Hz)');
+ylabel('Magnitude');
+title('Single-Sided Spectrum');</code></pre>
+            </div>
+
+            <div class="note">
+              <h5>FFT Explanation</h5>
+              <p>The FFT converts a time-domain signal into its frequency components. Key points:</p>
+              <ul>
+                <li>The output is complex-valued, showing magnitude and phase at each frequency</li>
+                <li>The first half of the FFT output (up to Nyquist frequency) contains all the information</li>
+                <li>Magnitude shows signal strength at each frequency</li>
+                <li>Phase shows timing relationships between components</li>
+              </ul>
+            </div>
+
+            <h3>FFTShift</h3>
+            <div class="code-example">
+                        <pre><code >% Shift zero-frequency component to center
+X_shifted = fftshift(X);
+f_shifted = (-N/2:N/2-1)*(Fs/N);
+
+% Plot centered spectrum
+plot(f_shifted, abs(X_shifted));
+xlabel('Frequency (Hz)');
+ylabel('Magnitude');
+title('Centered Spectrum (using fftshift)');</code></pre>
+            </div>
+
+            <div class="note">
+              <h5>FFTShift Explanation</h5>
+              <p><code>fftshift</code> rearranges the FFT output to put the zero-frequency component at the center. This is useful for:</p>
+              <ul>
+                <li>Visualizing spectra with negative and positive frequencies</li>
+                <li>Working with filters in the frequency domain</li>
+                <li>Analyzing signals where DC component is important</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h2 class="section-title">Z-Transform and Filtering</h2>
+
+            <h3>Z-Transform Basics</h3>
+            <div class="code-example">
+                        <pre><code >% Define a simple discrete-time system
+b = [1, 0.5];        % Numerator coefficients (feedforward)
+a = [1, -0.9];       % Denominator coefficients (feedback)
+
+% Compute frequency response
+[H, w] = freqz(b, a, 1024, Fs);
+
+% Plot magnitude response
+subplot(2,1,1);
+plot(w, 20*log10(abs(H)));
+title('Magnitude Response');
+xlabel('Frequency (Hz)');
+ylabel('Magnitude (dB)');
+
+% Plot phase response
+subplot(2,1,2);
+plot(w, angle(H));
+title('Phase Response');
+xlabel('Frequency (Hz)');
+ylabel('Phase (radians)');</code></pre>
+            </div>
+
+            <div class="note">
+              <h5>Z-Transform Explanation</h5>
+              <p>The Z-transform converts a discrete-time signal into a complex frequency domain representation. In MATLAB:</p>
+              <ul>
+                <li><code>freqz</code> computes the frequency response of a system given its numerator and denominator coefficients</li>
+                <li>The numerator (b) represents the feedforward coefficients</li>
+                <li>The denominator (a) represents the feedback coefficients</li>
+                <li>Poles and zeros can be found with <code>roots</code> function</li>
+              </ul>
+            </div>
+
+            <h3>Filter Design and Application</h3>
+            <div class="code-example">
+                        <pre><code >% Design a lowpass Butterworth filter
+fc = 100;            % Cutoff frequency (Hz)
+order = 4;           % Filter order
+[b, a] = butter(order, fc/(Fs/2));
+
+% Apply filter to noisy signal
+noisy_signal = sin(2*pi*50*t) + 0.5*randn(size(t));
+filtered_signal = filter(b, a, noisy_signal);
+
+% Plot results
+figure;
+subplot(2,1,1);
+plot(t, noisy_signal);
+title('Original Noisy Signal');
+subplot(2,1,2);
+plot(t, filtered_signal);
+title('Filtered Signal');</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content-card">
+            <h2 class="section-title">Plotting Guide</h2>
+
+            <h3>Basic Plotting</h3>
+            <div class="code-example">
+                        <pre><code >% Line plot
+x = 0:0.1:10;
+y = sin(x);
+plot(x, y, 'b-', 'LineWidth', 2);
+title('Sine Wave');
+xlabel('Time (s)');
+ylabel('Amplitude');
+grid on;
+
+% Multiple plots
+y2 = cos(x);
+hold on;
+plot(x, y2, 'r--', 'LineWidth', 2);
+legend('Sine', 'Cosine');
+hold off;
+
+% Subplots
+figure;
+subplot(2,1,1);
+plot(x, y);
+title('Sine Wave');
+subplot(2,1,2);
+plot(x, y2);
+title('Cosine Wave');</code></pre>
+            </div>
+
+            <h3>Advanced Plotting</h3>
+            <div class="code-example">
+                        <pre><code >% Stem plot (for discrete signals)
+n = 0:20;
+x = 0.9.^n;
+stem(n, x, 'filled');
+title('Discrete Signal');
+
+% Spectrogram
+Fs = 1000;
+t = 0:1/Fs:2;
+x = chirp(t, 0, 1, 250);  % Frequency sweep
+spectrogram(x, 256, 250, 256, Fs, 'yaxis');
+title('Spectrogram of Chirp Signal');
+
+% 3D Surface plot
+[X, Y] = meshgrid(-2:0.1:2);
+Z = X.*exp(-X.^2 - Y.^2);
+surf(X, Y, Z);
+title('3D Surface Plot');
+xlabel('X');
+ylabel('Y');
+zlabel('Z');
+colorbar;</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="content-card table-responsive">
+            <h2 class="section-title">Signal Processing Toolbox</h2>
+
+            <h3>Common Signal Processing Functions</h3>
+            <table class="table method-table table-dark">
+              <thead>
+              <tr>
+                <th>Function</th>
+                <th>Description</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td><code>conv</code></td>
+                <td>Convolution of two signals</td>
+              </tr>
+              <tr>
+                <td><code>xcorr</code></td>
+                <td>Cross-correlation</td>
+              </tr>
+              <tr>
+                <td><code>filter</code></td>
+                <td>Digital filter implementation</td>
+              </tr>
+              <tr>
+                <td><code>resample</code></td>
+                <td>Change sampling rate</td>
+              </tr>
+              <tr>
+                <td><code>hilbert</code></td>
+                <td>Analytic signal (Hilbert transform)</td>
+              </tr>
+              <tr>
+                <td><code>fir1</code>, <code>butter</code></td>
+                <td>Filter design functions</td>
+              </tr>
+              <tr>
+                <td><code>spectrogram</code></td>
+                <td>Time-frequency analysis</td>
+              </tr>
+              <tr>
+                <td><code>pwelch</code></td>
+                <td>Power spectral density estimate</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <h3>Practical Example: Signal Denoising</h3>
+            <div class="code-example">
+                        <pre><code >% Create noisy signal
+Fs = 1000;
+t = 0:1/Fs:1;
+f = 10;
+clean_signal = sin(2*pi*f*t);
+noise = 0.5*randn(size(t));
+noisy_signal = clean_signal + noise;
+
+% Moving average filter
+window_size = 10;
+b = ones(1, window_size)/window_size;
+filtered_signal = filter(b, 1, noisy_signal);
+
+% Plot results
+figure;
+subplot(3,1,1);
+plot(t, clean_signal);
+title('Clean Signal');
+subplot(3,1,2);
+plot(t, noisy_signal);
+title('Noisy Signal');
+subplot(3,1,3);
+plot(t, filtered_signal);
+title('Filtered Signal');</code></pre>
+            </div>
+
+            <div class="note">
+              <h5>Signal Processing Workflow</h5>
+              <ol>
+                <li>Generate or acquire the signal</li>
+                <li>Pre-process (filter, normalize, remove artifacts)</li>
+                <li>Analyze (time-domain, frequency-domain, time-frequency)</li>
+                <li>Visualize results</li>
+                <li>Extract features or make decisions</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="content-card">
+            <h2 class="section-title">Useful MATLAB Tips</h2>
+
+            <div class="row">
+              <div class="col-md-12">
+                <h3>Performance Tips</h3>
+                <div class="code-example">
+                                <pre><code>% Preallocate arrays for speed
+N = 10000;
+result = zeros(1, N);  % Preallocate
+for k = 1:N
+    result(k) = someCalculation(k);
+end
+
+% Vectorize operations when possible
+x = 1:10000;
+y = sin(x);            % Vectorized is faster than loop
+
+% Use parfor for parallel computing
+parfor i = 1:100
+    results(i) = longCalculation(i);
+end
+
+% Profile your code
+profile on;
+myFunction();
+profile viewer;</code></pre>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <h3>Common Pitfalls</h3>
+                <div class="code-example">
+                                <pre><code>% 1. Indexing starts at 1 (not 0)
+A = [10 20 30];
+A(1)   % Returns 10 (not A[0] like in some languages)
+
+% 2. Matrix vs. element-wise operations
+A = [1 2; 3 4];
+B = [5 6; 7 8];
+A * B   % Matrix multiplication
+A .* B  % Element-wise multiplication
+
+% 3. Transpose of complex matrices
+A = [1+2i, 3+4i];
+A'      % Hermitian (conjugate) transpose
+A.'     % Regular transpose</code></pre>
+                </div>
+
+                <div class="note">
+                  <h5>Debugging Tips</h5>
+                  <ul>
+                    <li>Use <code>disp</code> or <code>fprintf</code> for variable inspection</li>
+                    <li>Set breakpoints with <code>dbstop</code> or in the editor</li>
+                    <li>Check dimensions with <code>size</code> and <code>whos</code></li>
+                    <li>Use <code>try-catch</code> blocks for error handling</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer class="container">
+
+    <hr id="before-footer">
+    <div class="row">
+
+      <div class="col footer-text">
+
+        <a href="contact.html">Contact</a>
+
+
+      </div>
+
+      <div class="col footer-icons">
+
+        <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+      </div>
+
+    </div>
+
+
+  </footer>
+
+</div>
+
+<style>
+  /* Scroll to top button styles */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .scroll-to-top:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .scroll-to-top:active {
+    transform: translateY(0);
+  }
+
+  .scroll-to-top svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+
+  /* Show the button when user scrolls down */
+  .scroll-to-top.visible {
+    display: flex;
+  }
+</style>
+
+<button class="scroll-to-top" aria-label="Scroll to top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+  </svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+<script>
+  hljs.highlightAll();
+
+</script>
+<script>
+  // Show/hide scroll to top button based on scroll position
+  const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollToTopButton.classList.add('visible');
+    } else {
+      scrollToTopButton.classList.remove('visible');
+    }
+  });
+
+  // Scroll to top when button is clicked
+  scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+<!--
+<div class="code-container">
+
+            <div class="code-description"></div>
+            <div class="code">
+
+                <pre><code></code></pre>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h1>OOP Design principles</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h1>1. Don't repeat yourself</h1>
+            </div>
+
+            <div class="col-xs-12 col-md-12">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-12">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+        </div>
+-->
+
+</body>
+</html>

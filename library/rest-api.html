@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/ef590a2fdb.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/library.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <!-- and it's easy to individually load additional languages -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+  <link rel="stylesheet" href="css/dracula.css">
+
+  <title>Library</title>
+
+  <style>
+
+    body {
+      background-image: url('assets/blurry_background.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+  </style>
+
+  <style>
+    .card {
+      color: white;
+      margin-bottom: 1.5rem;
+      background-color: #282a36;
+      border-radius: 10px;
+    }
+
+    .card-title {
+      font-weight: bold;
+    }
+
+    .important {
+      color: #d63384;
+      font-weight: bold;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+  </style>
+
+  <style>
+    body {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .content-card {
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      margin-bottom: 30px;
+      transition: 0.3s;
+    }
+
+    .content-card:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+
+    .section-title {
+      border-bottom: 2px solid black;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    .code-example {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-left: 4px solid #0d6efd;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .note {
+      background-color: #fff3cd;
+      padding: 15px;
+      border-left: 4px solid #ffc107;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .feature-list {
+      margin-bottom: 20px;
+    }
+
+    .feature-list li {
+      margin-bottom: 8px;
+    }
+
+    .comparison-table {
+      margin-bottom: 30px;
+    }
+
+    .comparison-table th {
+
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar sticky-top">
+
+  <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--
+    <form id="nav-search" class="d-flex mt-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Type something.." aria-label="Search">
+        <button class="btn btn-outline-success" type="submit"><strong>Search</strong></button>
+    </form>
+    -->
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+         aria-labelledby="offcanvasNavbarLabel">
+
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><strong>Menu</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="https://moshulika.github.io/library.html"><i
+                    class="fa-solid fa-house"></i> <strong>Home</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/contact"><i class="fa-solid fa-phone"></i>
+              <strong>Contact</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/skills.html"><i
+                    class="fa-solid fa-gears"></i> <strong>Skills</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/portofoliu.html"><i
+                    class="fa-solid fa-book"></i> <strong>Portfolio</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="https://moshulika.github.io/library.html"><i
+                    class="fa-solid fa-code"></i> <strong>Library</strong></a>
+          </li>
+
+        </ul>
+
+
+      </div>
+
+      <div id="offcanvas-logos">
+
+        <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="row" id="socials-row">
+
+    <div class="col-xs-12 col-lg-6 animate__animated animate__fadeIn" id="picture2">
+
+      <img src="assets/eu.jpg">
+      <div id="text">
+
+        <h1>My simple library</h1>
+        <h4>..of useful code</h4>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <br>
+  <br>
+
+
+  <div class="container">
+
+    <div class="row">
+      <h1>Chapters</h1>
+    </div>
+
+    <div class="library-pills">
+      <a href="https://moshulika.github.io/library.html#design" class="library-pill">OOP Design Principles</a>
+      <a href="https://moshulika.github.io/library.html#concepts" class="library-pill">OOP Concepts</a>
+      <a href="https://moshulika.github.io/library.html#exceptions" class="library-pill">Exceptions</a>
+      <a href="multithreading.html#multithreading" class="library-pill">Multithreading</a>
+      <a href="multithreading.html#final" class="library-pill">Final Keyword</a>
+      <a href="strings.html#strings" class="library-pill">Strings</a>
+      <a href="strings.html#regex" class="library-pill">Regex</a>
+      <a href="files.html#io" class="library-pill">I/O</a>
+      <a href="files.html#files" class="library-pill">Files</a>
+      <a href="https://moshulika.github.io/library.html#lambda" class="library-pill">Lambda</a>
+      <a href="jdbc.html" class="library-pill">JDBC</a>
+      <a href="networking.html#networking" class="library-pill">Networking</a>
+      <a href="networking.html#json" class="library-pill">JSON</a>
+      <a href="memory.html#memory" class="library-pill">Java Memory</a>
+      <a href="structures.html" class="library-pill">Java Data Structures</a>
+      <a href="mysql.html" class="library-pill">MySQL</a>
+      <a href="c.html" class="library-pill">C/C++</a>
+      <a href="junit.html" class="library-pill">Unit Testing</a>
+      <a href="linux.html" class="library-pill">Linux</a>
+      <a href="git.html" class="library-pill">Git</a>
+      <a href="maven.html" class="library-pill">Maven/Gradle</a>
+        <a href="rest-api.html" class="library-pill">REST-API</a>
+        <a href="python.html" class="library-pill">Python</a>
+        <a href="matlab.html" class="library-pill">Matlab</a>
+        <a href="assembly.html" class="library-pill">Assembly</a>
+        <a href="bits.html" class="library-pill">Java bit manipulation</a>
+    </div>
+
+    <div class="row category-title" id="multithreading">
+      <h1>Creating a REST-API in Java</h1>
+      <p class="lead">Building and consuming RESTful web services in Java</p>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content-card table-responsive">
+            <h2 class="section-title">REST API Fundamentals</h2>
+
+            <h3>What is REST?</h3>
+            <p>REST (Representational State Transfer) is an architectural style for designing networked applications. Key principles:</p>
+            <ul class="feature-list">
+              <li><strong>Client-Server</strong>: Separation of concerns</li>
+              <li><strong>Stateless</strong>: Each request contains all necessary information</li>
+              <li><strong>Cacheable</strong>: Responses must define themselves as cacheable or not</li>
+              <li><strong>Uniform Interface</strong>: Resources are identified in requests</li>
+              <li><strong>Layered System</strong>: Intermediary servers can improve scalability</li>
+            </ul>
+
+            <h3>HTTP Methods</h3>
+            <table class="table comparison-table table-dark">
+              <thead>
+              <tr>
+                <th>Method</th>
+                <th>Description</th>
+                <th>Idempotent</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td><span class="http-method get">GET</span></td>
+                <td>Retrieve a resource</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td><span class="http-method post">POST</span></td>
+                <td>Create a new resource</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td><span class="http-method put">PUT</span></td>
+                <td>Update an existing resource (full update)</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td><span class="http-method patch">PATCH</span></td>
+                <td>Partially update a resource</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td><span class="http-method delete">DELETE</span></td>
+                <td>Remove a resource</td>
+                <td>Yes</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="content-card">
+            <h2 class="section-title">Creating a REST API with Spring Boot</h2>
+
+            <h3>Project Setup</h3>
+            <div class="code-example">
+                        <pre><code class="language-xml">&lt;!-- pom.xml dependencies --&gt;
+&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;com.h2database&lt;/groupId&gt;
+        &lt;artifactId&gt;h2&lt;/artifactId&gt;
+        &lt;scope&gt;runtime&lt;/scope&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+            </div>
+
+            <h3>Entity Class</h3>
+            <div class="code-example">
+                        <pre><code class="language-java">// Product.java
+@Entity
+public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false)
+    private String name;
+
+    private String description;
+    private double price;
+
+    // Constructors, getters and setters
+}</code></pre>
+            </div>
+
+            <h3>Repository Interface</h3>
+            <div class="code-example">
+                        <pre><code class="language-java">// ProductRepository.java
+public interface ProductRepository extends JpaRepository&lt;Product, Long&gt; {
+    List&lt;Product&gt; findByNameContaining(String name);
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="content-card">
+            <h2 class="section-title">REST Controller</h2>
+
+            <h3>Basic Controller</h3>
+            <div class="code-example">
+                        <pre><code class="language-java">// ProductController.java
+@RestController
+@RequestMapping("/api/products")
+public class ProductController {
+
+    @Autowired
+    private ProductRepository productRepository;
+
+    @GetMapping
+    public List&lt;Product&gt; getAllProducts() {
+        return productRepository.findAll();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity&lt;Product&gt; getProductById(@PathVariable Long id) {
+        return productRepository.findById(id)
+            .map(ResponseEntity::ok)
+            .orElse(ResponseEntity.notFound().build());
+    }
+
+    @PostMapping
+    public Product createProduct(@Valid @RequestBody Product product) {
+        return productRepository.save(product);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity&lt;Product&gt; updateProduct(
+            @PathVariable Long id,
+            @Valid @RequestBody Product productDetails) {
+
+        return productRepository.findById(id)
+            .map(product -&gt; {
+                product.setName(productDetails.getName());
+                product.setDescription(productDetails.getDescription());
+                product.setPrice(productDetails.getPrice());
+                Product updatedProduct = productRepository.save(product);
+                return ResponseEntity.ok(updatedProduct);
+            })
+            .orElse(ResponseEntity.notFound().build());
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity&lt;?&gt; deleteProduct(@PathVariable Long id) {
+        return productRepository.findById(id)
+            .map(product -&gt; {
+                productRepository.delete(product);
+                return ResponseEntity.ok().build();
+            })
+            .orElse(ResponseEntity.notFound().build());
+    }
+}</code></pre>
+            </div>
+
+            <div class="note">
+              <h5>Key Annotations</h5>
+              <ul>
+                <li><code>@RestController</code>: Combines <code>@Controller</code> and <code>@ResponseBody</code></li>
+                <li><code>@RequestMapping</code>: Maps web requests to handler methods</li>
+                <li><code>@GetMapping</code>, <code>@PostMapping</code>, etc.: Shortcut for request method mapping</li>
+                <li><code>@PathVariable</code>: Binds a method parameter to a URI template variable</li>
+                <li><code>@RequestBody</code>: Binds HTTP request body to a method parameter</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h2 class="section-title">Advanced Features</h2>
+
+            <h3>Exception Handling</h3>
+            <div class="code-example">
+                        <pre><code class="language-java">@ControllerAdvice
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity&lt;ErrorResponse&gt; handleResourceNotFound(
+            ResourceNotFoundException ex) {
+
+        ErrorResponse error = new ErrorResponse(
+            "NOT_FOUND",
+            ex.getMessage(),
+            HttpStatus.NOT_FOUND.value());
+
+        return new ResponseEntity&lt;&gt;(error, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity&lt;ErrorResponse&gt; handleValidationErrors(
+            MethodArgumentNotValidException ex) {
+
+        List&lt;String&gt; errors = ex.getBindingResult()
+            .getFieldErrors()
+            .stream()
+            .map(FieldError::getDefaultMessage)
+            .collect(Collectors.toList());
+
+        ErrorResponse error = new ErrorResponse(
+            "VALIDATION_FAILED",
+            "Validation failed",
+            HttpStatus.BAD_REQUEST.value(),
+            errors);
+
+        return new ResponseEntity&lt;&gt;(error, HttpStatus.BAD_REQUEST);
+    }
+}</code></pre>
+            </div>
+
+            <h3>DTOs (Data Transfer Objects)</h3>
+            <div class="code-example">
+                        <pre><code class="language-java">// ProductDTO.java
+public class ProductDTO {
+    private String name;
+    private String description;
+    private double price;
+
+    // Constructors, getters and setters
+
+    public static ProductDTO fromEntity(Product product) {
+        ProductDTO dto = new ProductDTO();
+        dto.setName(product.getName());
+        dto.setDescription(product.getDescription());
+        dto.setPrice(product.getPrice());
+        return dto;
+    }
+
+    public Product toEntity() {
+        Product product = new Product();
+        product.setName(this.getName());
+        product.setDescription(this.getDescription());
+        product.setPrice(this.getPrice());
+        return product;
+    }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content-card">
+            <h2 class="section-title">API Documentation with Swagger</h2>
+
+            <div class="code-example">
+                        <pre><code class="language-xml">&lt;!-- Add to pom.xml --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+    &lt;artifactId&gt;springfox-boot-starter&lt;/artifactId&gt;
+    &lt;version&gt;3.0.0&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+            </div>
+
+            <div class="code-example">
+                        <pre><code class="language-java">// SwaggerConfig.java
+@Configuration
+public class SwaggerConfig {
+
+    @Bean
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2)
+            .select()
+            .apis(RequestHandlerSelectors.any())
+            .paths(PathSelectors.any())
+            .build()
+            .apiInfo(apiInfo());
+    }
+
+    private ApiInfo apiInfo() {
+        return new ApiInfo(
+            "Product API",
+            "API for managing products",
+            "1.0",
+            "Terms of service",
+            new Contact("Your Name", "www.example.com", "contact@example.com"),
+            "License",
+            "License URL",
+            Collections.emptyList());
+    }
+}</code></pre>
+            </div>
+
+            <div class="note">
+              <p>After adding Swagger, access the API documentation at:</p>
+              <ul>
+                <li><code>http://localhost:8080/swagger-ui/</code> - Swagger UI</li>
+                <li><code>http://localhost:8080/v2/api-docs</code> - Raw API docs</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h2 class="section-title">Testing the API</h2>
+
+            <h3>Unit Testing with JUnit and Mockito</h3>
+            <div class="code-example">
+                        <pre><code class="language-java">@ExtendWith(MockitoExtension.class)
+class ProductControllerTest {
+
+    @Mock
+    private ProductRepository productRepository;
+
+    @InjectMocks
+    private ProductController productController;
+
+    @Test
+    void getProductById_shouldReturnProduct() {
+        // Arrange
+        Product product = new Product(1L, "Test", "Desc", 9.99);
+        when(productRepository.findById(1L)).thenReturn(Optional.of(product));
+
+        // Act
+        ResponseEntity&lt;Product&gt; response = productController.getProductById(1L);
+
+        // Assert
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals("Test", response.getBody().getName());
+    }
+
+    @Test
+    void getProductById_shouldReturnNotFound() {
+        when(productRepository.findById(1L)).thenReturn(Optional.empty());
+
+        ResponseEntity&lt;Product&gt; response = productController.getProductById(1L);
+
+        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
+    }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="content-card">
+            <h2 class="section-title">Consuming REST APIs in Java</h2>
+
+            <h3>Using HttpURLConnection</h3>
+            <div class="code-example">
+                        <pre><code class="language-java">// GET request example
+URL url = new URL("http://localhost:8080/api/products/1");
+HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+conn.setRequestMethod("GET");
+
+int responseCode = conn.getResponseCode();
+if (responseCode == HttpURLConnection.HTTP_OK) {
+    BufferedReader in = new BufferedReader(
+        new InputStreamReader(conn.getInputStream()));
+    String inputLine;
+    StringBuilder response = new StringBuilder();
+
+    while ((inputLine = in.readLine()) != null) {
+        response.append(inputLine);
+    }
+    in.close();
+
+    // Parse JSON response
+    ObjectMapper mapper = new ObjectMapper();
+    Product product = mapper.readValue(response.toString(), Product.class);
+    System.out.println(product.getName());
+}</code></pre>
+            </div>
+
+            <h3>Using Spring's RestTemplate</h3>
+            <div class="code-example">
+                        <pre><code class="language-java">// GET request
+RestTemplate restTemplate = new RestTemplate();
+String url = "http://localhost:8080/api/products/1";
+
+ResponseEntity&lt;Product&gt; response =
+    restTemplate.getForEntity(url, Product.class);
+
+if (response.getStatusCode() == HttpStatus.OK) {
+    Product product = response.getBody();
+    System.out.println(product.getName());
+}
+
+// POST request
+Product newProduct = new Product(null, "New", "Desc", 19.99);
+ResponseEntity&lt;Product&gt; postResponse =
+    restTemplate.postForEntity(url, newProduct, Product.class);</code></pre>
+            </div>
+
+            <h3>Using WebClient (Reactive)</h3>
+            <div class="code-example">
+                        <pre><code class="language-java">WebClient webClient = WebClient.create("http://localhost:8080");
+
+// GET request
+Mono&lt;Product&gt; productMono = webClient.get()
+    .uri("/api/products/1")
+    .retrieve()
+    .bodyToMono(Product.class);
+
+productMono.subscribe(product -&gt;
+    System.out.println(product.getName()));
+
+// POST request
+Product newProduct = new Product(null, "New", "Desc", 19.99);
+Mono&lt;Product&gt; createdProduct = webClient.post()
+    .uri("/api/products")
+    .contentType(MediaType.APPLICATION_JSON)
+    .bodyValue(newProduct)
+    .retrieve()
+    .bodyToMono(Product.class);</code></pre>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h2 class="section-title">Best Practices</h2>
+
+            <ul class="feature-list">
+              <li><strong>Use proper HTTP status codes</strong>: 200 for success, 201 for created, 400 for bad requests, etc.</li>
+              <li><strong>Implement HATEOAS</strong>: Include links to related resources</li>
+              <li><strong>Version your API</strong>: Include version in the URL (/v1/products) or headers</li>
+              <li><strong>Use pagination</strong>: For large collections, implement page and size parameters</li>
+              <li><strong>Secure your API</strong>: Use HTTPS, implement authentication (JWT, OAuth2)</li>
+              <li><strong>Validate input</strong>: Use Bean Validation (@Valid) to validate request bodies</li>
+              <li><strong>Document your API</strong>: Use Swagger/OpenAPI for documentation</li>
+              <li><strong>Handle errors consistently</strong>: Return standardized error responses</li>
+              <li><strong>Use DTOs</strong>: Don't expose your entities directly</li>
+              <li><strong>Implement caching</strong>: Use ETags and Cache-Control headers</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer class="container">
+
+    <hr id="before-footer">
+    <div class="row">
+
+      <div class="col footer-text">
+
+        <a href="contact.html">Contact</a>
+
+
+      </div>
+
+      <div class="col footer-icons">
+
+        <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+      </div>
+
+    </div>
+
+
+  </footer>
+
+</div>
+
+<style>
+  /* Scroll to top button styles */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .scroll-to-top:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .scroll-to-top:active {
+    transform: translateY(0);
+  }
+
+  .scroll-to-top svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+
+  /* Show the button when user scrolls down */
+  .scroll-to-top.visible {
+    display: flex;
+  }
+</style>
+
+<button class="scroll-to-top" aria-label="Scroll to top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+  </svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+<script>
+  hljs.highlightAll();
+
+</script>
+<script>
+  // Show/hide scroll to top button based on scroll position
+  const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollToTopButton.classList.add('visible');
+    } else {
+      scrollToTopButton.classList.remove('visible');
+    }
+  });
+
+  // Scroll to top when button is clicked
+  scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+<!--
+<div class="code-container">
+
+            <div class="code-description"></div>
+            <div class="code">
+
+                <pre><code></code></pre>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h1>OOP Design principles</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h1>1. Don't repeat yourself</h1>
+            </div>
+
+            <div class="col-xs-12 col-md-12">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-12">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+        </div>
+-->
+
+</body>
+</html>

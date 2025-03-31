@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/ef590a2fdb.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/library.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <!-- and it's easy to individually load additional languages -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+  <link rel="stylesheet" href="css/dracula.css">
+
+  <title>Library</title>
+
+  <style>
+
+    body {
+      background-image: url('assets/blurry_background.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+  </style>
+
+  <style>
+    .card {
+      color: white;
+      margin-bottom: 1.5rem;
+      background-color: #282a36;
+      border-radius: 10px;
+    }
+
+    .card-title {
+      font-weight: bold;
+    }
+
+    .important {
+      color: #d63384;
+      font-weight: bold;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+  </style>
+
+  <style>
+    body {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .content-card {
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      margin-bottom: 30px;
+      transition: 0.3s;
+    }
+
+    .content-card:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+
+    .section-title {
+      border-bottom: 2px solid black;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    .code-example {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-left: 4px solid #0d6efd;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .note {
+      background-color: #fff3cd;
+      padding: 15px;
+      border-left: 4px solid #ffc107;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .feature-list {
+      margin-bottom: 20px;
+    }
+
+    .feature-list li {
+      margin-bottom: 8px;
+    }
+
+    .comparison-table {
+      margin-bottom: 30px;
+    }
+
+    .comparison-table th {
+
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar sticky-top">
+
+  <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--
+    <form id="nav-search" class="d-flex mt-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Type something.." aria-label="Search">
+        <button class="btn btn-outline-success" type="submit"><strong>Search</strong></button>
+    </form>
+    -->
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+         aria-labelledby="offcanvasNavbarLabel">
+
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><strong>Menu</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="https://moshulika.github.io/library.html"><i
+                    class="fa-solid fa-house"></i> <strong>Home</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/contact"><i class="fa-solid fa-phone"></i>
+              <strong>Contact</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/skills.html"><i
+                    class="fa-solid fa-gears"></i> <strong>Skills</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/portofoliu.html"><i
+                    class="fa-solid fa-book"></i> <strong>Portfolio</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="https://moshulika.github.io/library.html"><i
+                    class="fa-solid fa-code"></i> <strong>Library</strong></a>
+          </li>
+
+        </ul>
+
+
+      </div>
+
+      <div id="offcanvas-logos">
+
+        <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="row" id="socials-row">
+
+    <div class="col-xs-12 col-lg-6 animate__animated animate__fadeIn" id="picture2">
+
+      <img src="assets/eu.jpg">
+      <div id="text">
+
+        <h1>My simple library</h1>
+        <h4>..of useful code</h4>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <br>
+  <br>
+
+
+  <div class="container">
+
+    <div class="row">
+      <h1>Chapters</h1>
+    </div>
+
+    <div class="library-pills">
+      <a href="https://moshulika.github.io/library.html#design" class="library-pill">OOP Design Principles</a>
+      <a href="https://moshulika.github.io/library.html#concepts" class="library-pill">OOP Concepts</a>
+      <a href="https://moshulika.github.io/library.html#exceptions" class="library-pill">Exceptions</a>
+      <a href="multithreading.html#multithreading" class="library-pill">Multithreading</a>
+      <a href="multithreading.html#final" class="library-pill">Final Keyword</a>
+      <a href="strings.html#strings" class="library-pill">Strings</a>
+      <a href="strings.html#regex" class="library-pill">Regex</a>
+      <a href="files.html#io" class="library-pill">I/O</a>
+      <a href="files.html#files" class="library-pill">Files</a>
+      <a href="https://moshulika.github.io/library.html#lambda" class="library-pill">Lambda</a>
+      <a href="jdbc.html" class="library-pill">JDBC</a>
+      <a href="networking.html#networking" class="library-pill">Networking</a>
+      <a href="networking.html#json" class="library-pill">JSON</a>
+      <a href="memory.html#memory" class="library-pill">Java Memory</a>
+      <a href="structures.html" class="library-pill">Java Data Structures</a>
+      <a href="mysql.html" class="library-pill">MySQL</a>
+      <a href="c.html" class="library-pill">C/C++</a>
+      <a href="junit.html" class="library-pill">Unit Testing</a>
+      <a href="linux.html" class="library-pill">Linux</a>
+      <a href="git.html" class="library-pill">Git</a>
+      <a href="maven.html" class="library-pill">Maven/Gradle</a>
+      <a href="rest-api.html" class="library-pill">REST-API</a>
+      <a href="python.html" class="library-pill">Python</a>
+      <a href="matlab.html" class="library-pill">Matlab</a>
+      <a href="assembly.html" class="library-pill">Assembly</a>
+      <a href="bits.html" class="library-pill">Java bit manipulation</a>
+    </div>
+
+    <div class="row category-title" id="multithreading">
+      <h1>Bitwise operators in Java</h1>
+      <p class="lead">Useful information and tricks for Java bit manipulation</p>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12">
+          <div class="content-card">
+            <h2 class="section-title">Introduction to Bitwise Operators</h2>
+            <p>Bitwise operators perform operations on integer data at the bit level. These operators are used to manipulate individual bits of a number and are extremely fast as they are implemented at the processor level.</p>
+
+            <div class="note">
+              <h5>Key Characteristics:</h5>
+              <ul>
+                <li>Operate on individual bits of integer types (byte, short, int, long, char)</li>
+                <li>Can be used with both signed and unsigned integers</li>
+                <li>Much faster than arithmetic operations</li>
+                <li>Commonly used in low-level programming, encryption, compression, etc.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content-card table-responsive">
+            <h2 class="section-title">Basic Bitwise Operators</h2>
+
+            <h3>1. Bitwise AND (&)</h3>
+            <p>Performs a logical AND operation on each pair of corresponding bits.</p>
+
+            <table class="table truth-table table-light">
+              <thead>
+              <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>A & B</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <div class="code-example">
+                        <pre><code class="language-java">int a = 5;    // 0101 in binary
+int b = 3;    // 0011 in binary
+int result = a & b;  // 0001 (1 in decimal)
+System.out.println(result); // Output: 1</code></pre>
+            </div>
+
+            <h3>2. Bitwise OR (|)</h3>
+            <p>Performs a logical OR operation on each pair of corresponding bits.</p>
+
+            <table class="table truth-table table-light">
+              <thead>
+              <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>A | B</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <div class="code-example">
+                        <pre><code class="language-java">int a = 5;    // 0101
+int b = 3;    // 0011
+int result = a | b;  // 0111 (7 in decimal)
+System.out.println(result); // Output: 7</code></pre>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h2 class="section-title">Shift Operators</h2>
+
+            <h3>1. Left Shift (&lt;&lt;)</h3>
+            <p>Shifts all bits to the left by a specified number of positions, filling with zeros on the right.</p>
+
+            <div class="code-example">
+                        <pre><code class="language-java">int num = 5;    // 0000 0101
+int result = num << 2;  // 0001 0100 (20 in decimal)
+System.out.println(result); // Output: 20</code></pre>
+            </div>
+
+            <div class="note">
+              <p><strong>Note:</strong> Left shifting by n positions is equivalent to multiplying by 2<sup>n</sup>.</p>
+            </div>
+
+            <h3>2. Right Shift (&gt;&gt;)</h3>
+            <p>Shifts all bits to the right by a specified number of positions. For signed numbers, the sign bit is preserved.</p>
+
+            <div class="code-example">
+                        <pre><code class="language-java">int num = 20;    // 0001 0100
+int result = num >> 2;  // 0000 0101 (5 in decimal)
+System.out.println(result); // Output: 5
+
+int negativeNum = -20;
+result = negativeNum >> 2;  // preserves sign bit
+System.out.println(result); // Output: -5</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="content-card table-responsive">
+            <h2 class="section-title">More Bitwise Operators</h2>
+
+            <h3>3. Bitwise XOR (^)</h3>
+            <p>Performs a logical XOR (exclusive OR) operation on each pair of corresponding bits.</p>
+
+            <table class="table truth-table table-light">
+              <thead>
+              <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>A ^ B</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <div class="code-example">
+                        <pre><code class="language-java">int a = 5;    // 0101
+int b = 3;    // 0011
+int result = a ^ b;  // 0110 (6 in decimal)
+System.out.println(result); // Output: 6</code></pre>
+            </div>
+
+            <h3>4. Bitwise NOT (~)</h3>
+            <p>Inverts all the bits of the operand (unary operator).</p>
+
+            <div class="code-example">
+                        <pre><code class="language-java">int num = 5;    // 0000 0101
+int result = ~num;  // 1111 1010 (-6 in decimal)
+System.out.println(result); // Output: -6</code></pre>
+            </div>
+
+            <div class="note">
+              <p><strong>Note:</strong> The result of ~ is the two's complement of the inverted bits. For any integer n, ~n = -(n+1).</p>
+            </div>
+          </div>
+
+          <div class="content-card table-responsive">
+            <h2 class="section-title">Unsigned Right Shift (&gt;&gt;&gt;)</h2>
+            <p>Shifts all bits to the right by a specified number of positions, filling with zeros on the left regardless of the sign.</p>
+
+            <div class="code-example">
+                        <pre><code class="language-java">int num = -20;    // 11111111 11111111 11111111 11101100
+int result = num >>> 2;  // 00111111 11111111 11111111 11111011
+System.out.println(result); // Output: 1073741819</code></pre>
+            </div>
+
+            <div class="note">
+              <p><strong>Important:</strong> The unsigned right shift operator always fills with zeros, while the regular right shift operator preserves the sign bit. This makes a difference only for negative numbers.</p>
+            </div>
+
+            <h3>Comparison of Shift Operators</h3>
+            <table class="table comparison-table table-light">
+              <thead>
+              <tr>
+                <th>Operator</th>
+                <th>Name</th>
+                <th>Behavior</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>&lt;&lt;</td>
+                <td>Left shift</td>
+                <td>Shifts bits left, fills with 0s</td>
+              </tr>
+              <tr>
+                <td>&gt;&gt;</td>
+                <td>Signed right shift</td>
+                <td>Shifts bits right, preserves sign bit</td>
+              </tr>
+              <tr>
+                <td>&gt;&gt;&gt;</td>
+                <td>Unsigned right shift</td>
+                <td>Shifts bits right, fills with 0s</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="content-card">
+            <h2 class="section-title">Practical Applications</h2>
+
+            <h3>1. Checking if a number is even or odd</h3>
+            <div class="code-example">
+                        <pre><code class="language-java">int num = 13;
+if ((num & 1) == 0) {
+    System.out.println("Even");
+} else {
+    System.out.println("Odd");
+}
+// Output: Odd</code></pre>
+            </div>
+
+            <h3>2. Swapping two numbers without temporary variable</h3>
+            <div class="code-example">
+                        <pre><code class="language-java">int a = 5, b = 7;
+a = a ^ b;
+b = a ^ b;
+a = a ^ b;
+System.out.println("a = " + a + ", b = " + b);
+// Output: a = 7, b = 5</code></pre>
+            </div>
+
+            <h3>3. Finding the number of set bits (Hamming weight)</h3>
+            <div class="code-example">
+                        <pre><code class="language-java">int countSetBits(int n) {
+    int count = 0;
+    while (n > 0) {
+        count += n & 1;
+        n >>= 1;
+    }
+    return count;
+}
+
+System.out.println(countSetBits(15)); // 1111 → 4
+System.out.println(countSetBits(16)); // 10000 → 1</code></pre>
+            </div>
+
+            <h3>4. Checking if a number is a power of 2</h3>
+            <div class="code-example">
+                        <pre><code class="language-java">boolean isPowerOfTwo(int n) {
+    return (n > 0) && ((n & (n - 1)) == 0);
+}
+
+System.out.println(isPowerOfTwo(16)); // true
+System.out.println(isPowerOfTwo(15)); // false</code></pre>
+            </div>
+
+            <h3>5. Toggling a specific bit</h3>
+            <div class="code-example">
+                        <pre><code class="language-java">int toggleBit(int num, int pos) {
+    return num ^ (1 << pos);
+}
+
+// Toggle 3rd bit of 5 (0101 → 1101)
+System.out.println(toggleBit(5, 3)); // 13</code></pre>
+            </div>
+
+            <h3>6. Adding without arithmetic operators</h3>
+            <div class="code-example">
+                        <pre><code class="language-java">static int sum(int a, int b) {
+
+        // Iterate till there is no carry
+        while (b != 0) {
+
+            // carry contains common set bits of a and b, left shifted by 1
+            int carry = (a & b) << 1;
+
+            // Update a with (a + b without carry)
+            a = a ^ b;
+
+            // Update b with carry
+            b = carry;
+        }
+        return a;
+    } </code></pre>
+            </div>
+
+            <br>
+
+            <h3>Full adder circuit</h3>
+            <p>Can be used for SUB too</p>
+            <img src="assets/fullAdder.png" style="width: 100%">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="content-card ">
+            <h2 class="section-title">Bitwise Operator Precedence</h2>
+            <p>Bitwise operators have the following precedence (from highest to lowest):</p>
+
+            <ol>
+              <li>~ (Bitwise NOT)</li>
+              <li>&lt;&lt;, &gt;&gt;, &gt;&gt;&gt; (Shift operators)</li>
+              <li>& (Bitwise AND)</li>
+              <li>^ (Bitwise XOR)</li>
+              <li>| (Bitwise OR)</li>
+            </ol>
+
+            <div class="note">
+              <p><strong>Best Practice:</strong> Use parentheses to make complex bitwise expressions clearer and to ensure the desired order of operations.</p>
+            </div>
+
+            <div class="code-example">
+                        <pre><code class="language-java">int a = 1, b = 2, c = 3;
+int result1 = a | b & c;    // Equivalent to a | (b & c)
+int result2 = (a | b) & c;  // Different from above
+
+System.out.println(result1); // 3
+System.out.println(result2); // 1</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer class="container">
+
+    <hr id="before-footer">
+    <div class="row">
+
+      <div class="col footer-text">
+
+        <a href="contact.html">Contact</a>
+
+
+      </div>
+
+      <div class="col footer-icons">
+
+        <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+      </div>
+
+    </div>
+
+
+  </footer>
+
+</div>
+
+<style>
+  /* Scroll to top button styles */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .scroll-to-top:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .scroll-to-top:active {
+    transform: translateY(0);
+  }
+
+  .scroll-to-top svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+
+  /* Show the button when user scrolls down */
+  .scroll-to-top.visible {
+    display: flex;
+  }
+</style>
+
+<button class="scroll-to-top" aria-label="Scroll to top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+  </svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+<script>
+  hljs.highlightAll();
+
+</script>
+<script>
+  // Show/hide scroll to top button based on scroll position
+  const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollToTopButton.classList.add('visible');
+    } else {
+      scrollToTopButton.classList.remove('visible');
+    }
+  });
+
+  // Scroll to top when button is clicked
+  scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+<!--
+<div class="code-container">
+
+            <div class="code-description"></div>
+            <div class="code">
+
+                <pre><code></code></pre>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h1>OOP Design principles</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h1>1. Don't repeat yourself</h1>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+        </div>
+-->
+
+</body>
+</html>

@@ -251,318 +251,445 @@
     </div>
 
     <div class="row category-title" id="multithreading">
-      <h1>Maven / Gradle</h1>
+      <h1>Python guide</h1>
+        <p class="lead">Comprehensive reference for basic usage</p>
     </div>
 
     <div class="container">
 
+      <div class="row">
         <div class="col-md-12">
           <div class="content-card">
-            <h2 class="section-title">Maven Overview</h2>
-            <p>Apache Maven is a build automation tool used primarily for Java projects. It uses a Project Object Model (POM) file to manage project build, reporting and documentation.</p>
+            <h2 class="section-title">Basic Syntax</h2>
 
-            <h3 class="mt-4">Key Features</h3>
-            <ul class="feature-list">
-              <li>Declarative build configuration with XML</li>
-              <li>Convention over configuration</li>
-              <li>Dependency management</li>
-              <li>Large ecosystem of plugins</li>
-              <li>Strict project structure</li>
-            </ul>
+            <h3>Variables and Assignment</h3>
+            <div class="code-example">
+                        <pre><code class="language-python"># Variable assignment
+x = 10
+name = "Alice"
+is_active = True
+
+# Multiple assignment
+a, b, c = 1, 2, 3
+
+# Swap variables
+a, b = b, a
+
+# Type conversion
+num_str = "123"
+num = int(num_str)</code></pre>
+            </div>
+
+            <h3>Control Flow</h3>
+            <div class="code-example">
+                        <pre><code class="language-python"># If-elif-else
+if x > 10:
+    print("Greater than 10")
+elif x == 10:
+    print("Equal to 10")
+else:
+    print("Less than 10")
+
+# Ternary operator
+result = "Even" if x % 2 == 0 else "Odd"</code></pre>
+            </div>
+
+            <h3>Loops</h3>
+            <div class="code-example">
+                        <pre><code class="language-python"># For loop
+for i in range(5):  # 0 to 4
+    print(i)
+
+# Iterate through list
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+
+# With index
+for idx, fruit in enumerate(fruits):
+    print(f"{idx}: {fruit}")
+
+# While loop
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+
+# Loop control
+for num in range(10):
+    if num == 3:
+        continue  # Skip this iteration
+    if num == 7:
+        break     # Exit loop
+    print(num)</code></pre>
+            </div>
           </div>
 
           <div class="content-card">
-            <h2 class="section-title">Maven Commands</h2>
+            <h2 class="section-title">Functions</h2>
 
             <div class="code-example">
-              <h5>Create a new project</h5>
-              <pre><code class="language-bash">mvn archetype:generate -DgroupId=com.mycompany.app \
-    -DartifactId=my-app \
-    -DarchetypeArtifactId=maven-archetype-quickstart \
-    -DinteractiveMode=false</code></pre>
-            </div>
+                        <pre><code class="language-python"># Basic function
+def greet(name):
+    return f"Hello, {name}!"
 
-            <div class="code-example">
-              <h5>Common lifecycle commands</h5>
-              <pre><code class="language-bash"># Compile source code
-mvn compile
+# Default arguments
+def power(base, exponent=2):
+    return base ** exponent
 
-# Run tests
-mvn test
+# Variable arguments
+def sum_all(*args):
+    return sum(args)
 
-# Create package (JAR, WAR, etc.)
-mvn package
+# Keyword arguments
+def create_user(**kwargs):
+    print(kwargs)  # Dictionary of arguments
 
-# Install artifact in local repository
-mvn install
-
-# Clean build artifacts
-mvn clean
-
-# Run all phases up to install
-mvn clean install</code></pre>
-            </div>
-
-            <div class="code-example">
-              <h5>Dependency management</h5>
-              <pre><code class="language-bash"># Display dependency tree
-mvn dependency:tree
-
-# Download sources for dependencies
-mvn dependency:sources
-
-# Analyze dependency conflicts
-mvn dependency:analyze</code></pre>
-            </div>
-
-            <div class="code-example">
-              <h5>Add local .jar</h5>
-              <pre><code class="language-bash">mvn install:install-file  -Dfile=file.jar -DgroupId=com.Moshu -DartifactId=myResource -Dversion=1.0 -Dpackaging=jar -DgeneratePom=true</code></pre>
-            </div>
-          </div>
-
-          </div>
-
-          <div class="content-card">
-            <h2 class="section-title">Maven POM Configuration</h2>
-
-            <div class="code-example">
-              <h5>Basic POM.xml structure</h5>
-              <pre><code class="language-xml">&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-         http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
-    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
-
-    &lt;groupId&gt;com.mycompany.app&lt;/groupId&gt;
-    &lt;artifactId&gt;my-app&lt;/artifactId&gt;
-    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
-    &lt;packaging&gt;jar&lt;/packaging&gt;
-
-    &lt;dependencies&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;junit&lt;/groupId&gt;
-            &lt;artifactId&gt;junit&lt;/artifactId&gt;
-            &lt;version&gt;4.12&lt;/version&gt;
-            &lt;scope&gt;test&lt;/scope&gt;
-        &lt;/dependency&gt;
-    &lt;/dependencies&gt;
-
-    &lt;build&gt;
-        &lt;plugins&gt;
-            &lt;plugin&gt;
-                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
-                &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
-                &lt;version&gt;3.8.1&lt;/version&gt;
-                &lt;configuration&gt;
-                    &lt;source&gt;1.8&lt;/source&gt;
-                    &lt;target&gt;1.8&lt;/target&gt;
-                &lt;/configuration&gt;
-            &lt;/plugin&gt;
-        &lt;/plugins&gt;
-    &lt;/build&gt;
-&lt;/project&gt;</code></pre>
+# Lambda functions
+square = lambda x: x * x
+sorted_names = sorted(names, key=lambda x: x.lower())</code></pre>
             </div>
 
             <div class="note">
-              <h5>Note: Maven Lifecycle</h5>
-              <p>Maven has three built-in build lifecycles: default (handles project deployment), clean (handles project cleaning), and site (handles site documentation). Each lifecycle consists of phases that are executed sequentially.</p>
+              <h5>Function Annotations (Python 3+)</h5>
+              <pre><code class="language-python">def add(a: int, b: int) -> int:
+    return a + b</code></pre>
             </div>
           </div>
 
+          <div class="content-card">
+            <h2 class="section-title">Strings</h2>
+
+            <div class="code-example">
+                        <pre><code class="language-python"># String creation
+s1 = 'Single quotes'
+s2 = "Double quotes"
+s3 = """Multi-line
+string"""
+
+# String operations
+name = "Alice"
+greeting = f"Hello, {name}!"  # f-string (Python 3.6+)
+length = len(name)
+substring = name[1:3]  # 'li'
+
+# Common methods
+"hello".upper()       # 'HELLO'
+"HELLO".lower()       # 'hello'
+" hello ".strip()     # 'hello'
+"a,b,c".split(',')    # ['a', 'b', 'c']
+'-'.join(['a', 'b'])  # 'a-b'
+
+# String formatting
+"{} + {} = {}".format(1, 2, 3)  # '1 + 2 = 3'
+"%d + %d = %d" % (1, 2, 3)      # Old style</code></pre>
+            </div>
+          </div>
+        </div>
 
         <div class="col-md-12">
           <div class="content-card">
-            <h2 class="section-title">Gradle Overview</h2>
-            <p>Gradle is a build automation tool that combines the power and flexibility of Ant with the dependency management and conventions of Maven. It uses a Groovy or Kotlin DSL for build scripts.</p>
+            <h2 class="section-title">Data Structures</h2>
 
-            <h3 class="mt-4">Key Features</h3>
-            <ul class="feature-list">
-              <li>Flexible, programmatic build configuration</li>
-              <li>Incremental builds</li>
-              <li>Powerful dependency management</li>
-              <li>Build cache for faster builds</li>
-              <li>Supports multi-project builds</li>
-              <li>Can use Maven repositories</li>
-            </ul>
-          </div>
-
-          <div class="content-card">
-            <h2 class="section-title">Gradle Commands</h2>
-
+            <h3>Lists</h3>
             <div class="code-example">
-              <h5>Create a new project</h5>
-              <pre><code class="language-bash"># Initialize a new Gradle project
-gradle init --type java-application</code></pre>
+                        <pre><code class="language-python"># List creation
+numbers = [1, 2, 3]
+mixed = [1, "two", 3.0]
+
+# List operations
+numbers.append(4)       # [1, 2, 3, 4]
+numbers.insert(1, 1.5)  # [1, 1.5, 2, 3, 4]
+numbers.remove(2)       # [1, 1.5, 3, 4]
+popped = numbers.pop()  # 4, list is [1, 1.5, 3]
+
+# List comprehensions
+squares = [x**2 for x in range(5)]  # [0, 1, 4, 9, 16]
+evens = [x for x in range(10) if x % 2 == 0]  # [0, 2, 4, 6, 8]
+
+# Slicing
+nums = [0, 1, 2, 3, 4]
+nums[1:3]    # [1, 2]
+nums[:3]     # [0, 1, 2]
+nums[2:]     # [2, 3, 4]
+nums[::-1]   # Reverse list [4, 3, 2, 1, 0]</code></pre>
             </div>
 
+            <h3>Dictionaries</h3>
             <div class="code-example">
-              <h5>Common tasks</h5>
-              <pre><code class="language-bash"># List available tasks
-gradle tasks
+                        <pre><code class="language-python"># Dictionary creation
+person = {"name": "Alice", "age": 30}
 
-# Build the project
-gradle build
+# Dictionary operations
+person["email"] = "alice@example.com"  # Add key
+age = person.get("age")                # Get value
+email = person.pop("email")            # Remove key
 
-# Run tests
-gradle test
+# Dictionary comprehension
+squares = {x: x*x for x in range(5)}  # {0:0, 1:1, 2:4, 3:9, 4:16}
 
-# Clean build artifacts
-gradle clean
-
-# Run a specific task
-gradle &lt;task-name&gt;
-
-# Build with parallel execution
-gradle build --parallel
-
-# Build with continuous mode (watch for changes)
-gradle build --continuous</code></pre>
+# Iterating
+for key, value in person.items():
+    print(f"{key}: {value}")</code></pre>
             </div>
 
+            <h3>Tuples and Sets</h3>
             <div class="code-example">
-              <h5>Dependency management</h5>
-              <pre><code class="language-bash"># Display dependency tree
-gradle dependencies
+                        <pre><code class="language-python"># Tuples (immutable)
+point = (10, 20)
+x, y = point  # Unpacking
 
-# Download sources for dependencies
-gradle dependencies --refresh-dependencies
-
-# Generate dependency insight report
-gradle dependencyInsight --dependency &lt;dependency-name&gt;</code></pre>
+# Sets (unique elements)
+primes = {2, 3, 5, 7}
+primes.add(11)          # Add element
+evens = {2, 4, 6, 8}
+union = primes | evens  # {2, 3, 4, 5, 6, 7, 8, 11}</code></pre>
             </div>
           </div>
 
           <div class="content-card">
-            <h2 class="section-title">Gradle Build Configuration</h2>
+            <h2 class="section-title">NumPy Basics</h2>
 
             <div class="code-example">
-              <h5>Basic build.gradle structure (Groovy DSL)</h5>
-              <pre><code class="language-groovy">plugins {
-    id 'java'
-    id 'application'
-}
+                        <pre><code class="language-python">import numpy as np
 
-group 'com.mycompany.app'
-version '1.0-SNAPSHOT'
+# Creating arrays
+arr1 = np.array([1, 2, 3])          # 1D array
+arr2 = np.array([[1, 2], [3, 4]])   # 2D array
+zeros = np.zeros((3, 3))            # 3x3 zeros
+ones = np.ones((2, 4))              # 2x4 ones
+identity = np.eye(3)                # 3x3 identity
+range_arr = np.arange(0, 10, 2)     # [0, 2, 4, 6, 8]
 
-repositories {
-    mavenCentral()
-}
+# Array operations
+arr = np.array([1, 2, 3])
+arr + 1               # [2, 3, 4]
+arr * 2               # [2, 4, 6]
+np.sqrt(arr)          # [1., 1.414, 1.732]
 
-dependencies {
-    implementation 'com.google.guava:guava:30.1.1-jre'
-    testImplementation 'junit:junit:4.13.2'
-}
+# Indexing and slicing
+matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+matrix[1, 2]          # 6 (second row, third column)
+matrix[:, 1]          # [2, 5, 8] (second column)
 
-application {
-    mainClass = 'com.mycompany.app.App'
-}
-
-tasks.named('test') {
-    useJUnitPlatform()
-}</code></pre>
-            </div>
-
-            <div class="code-example">
-              <h5>Basic build.gradle.kts structure (Kotlin DSL)</h5>
-              <pre><code class="language-kotlin">plugins {
-    java
-    application
-}
-
-group = "com.mycompany.app"
-version = "1.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    implementation("com.google.guava:guava:30.1.1-jre")
-    testImplementation("junit:junit:4.13.2")
-}
-
-application {
-    mainClass.set("com.mycompany.app.App")
-}
-
-tasks.test {
-    useJUnitPlatform()
-}</code></pre>
-            </div>
-
-            <div class="note">
-              <h5>Note: Gradle Wrapper</h5>
-              <p>The Gradle Wrapper is the preferred way to execute Gradle builds. It ensures that the right Gradle version is used for the build. To generate the wrapper:</p>
-              <pre><code class="language-bash">gradle wrapper --gradle-version 7.4.1</code></pre>
-              <p>Then use the wrapper scripts (gradlew or gradlew.bat) instead of the global gradle command.</p>
+# Useful functions
+arr = np.array([3, 1, 4, 2])
+arr.sum()             # 10
+arr.mean()            # 2.5
+arr.max()             # 4
+np.sort(arr)          # [1, 2, 3, 4]</code></pre>
             </div>
           </div>
         </div>
       </div>
 
-
-        <div class="col-12">
+      <div class="row">
+        <div class="col-md-12">
           <div class="content-card">
-            <h2 class="section-title">Maven vs Gradle Comparison</h2>
+            <h2 class="section-title">Matplotlib Basics</h2>
 
-            <table class="table comparison-table">
-              <thead class="table-light">
-              <tr>
-                <th>Feature</th>
-                <th>Maven</th>
-                <th>Gradle</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>Build Script Language</td>
-                <td>XML (declarative)</td>
-                <td>Groovy/Kotlin DSL (programmatic)</td>
-              </tr>
-              <tr>
-                <td>Performance</td>
-                <td>Slower due to rigid lifecycle</td>
-                <td>Faster with incremental builds and build cache</td>
-              </tr>
-              <tr>
-                <td>Dependency Management</td>
-                <td>Excellent, with transitive dependency resolution</td>
-                <td>More flexible, with rich dependency configurations</td>
-              </tr>
-              <tr>
-                <td>Customization</td>
-                <td>Limited, through plugins</td>
-                <td>Highly customizable with custom tasks</td>
-              </tr>
-              <tr>
-                <td>Learning Curve</td>
-                <td>Easier for simple projects</td>
-                <td>Steeper but more powerful</td>
-              </tr>
-              <tr>
-                <td>IDE Support</td>
-                <td>Excellent in all major IDEs</td>
-                <td>Good, but sometimes slower with large builds</td>
-              </tr>
-              <tr>
-                <td>Multi-project Builds</td>
-                <td>Supported but can be complex</td>
-                <td>Excellent support with flexible configurations</td>
-              </tr>
-              </tbody>
-            </table>
+            <div class="code-example">
+                        <pre><code class="language-python">import matplotlib.pyplot as plt
 
-            <div class="note">
-              <h5>When to Choose Which?</h5>
-              <ul>
-                <li><strong>Choose Maven</strong> if you need a simple, standardized build process with excellent IDE support and a large ecosystem of plugins.</li>
-                <li><strong>Choose Gradle</strong> if you need flexibility, faster builds, custom build logic, or are working on a large multi-project build.</li>
-              </ul>
+# Simple line plot
+x = [1, 2, 3, 4]
+y = [1, 4, 9, 16]
+plt.plot(x, y)
+plt.title("Simple Plot")
+plt.xlabel("X axis")
+plt.ylabel("Y axis")
+plt.show()
+
+# Scatter plot
+plt.scatter(x, y, color='red', marker='o')
+plt.show()
+
+# Bar chart
+labels = ['A', 'B', 'C']
+values = [10, 20, 15]
+plt.bar(labels, values)
+plt.show()
+
+# Histogram
+data = np.random.normal(0, 1, 1000)
+plt.hist(data, bins=30)
+plt.show()
+
+# Subplots
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4))
+ax1.plot(x, y)
+ax2.scatter(x, y)</code></pre>
             </div>
           </div>
         </div>
+
+        <div class="col-md-12">
+          <div class="content-card">
+            <h2 class="section-title">Pandas Basics</h2>
+
+            <div class="code-example">
+                        <pre><code class="language-python">import pandas as pd
+
+# Series (1D)
+s = pd.Series([1, 3, 5, np.nan, 6, 8])
+
+# DataFrame (2D)
+df = pd.DataFrame({
+    'A': [1, 2, 3, 4],
+    'B': pd.Timestamp('20230101'),
+    'C': pd.Series(1, index=list(range(4)), dtype='float32'),
+    'D': np.array([3] * 4, dtype='int32'),
+    'E': ['test', 'train', 'test', 'train'],
+    'F': 'foo'
+})
+
+# Read CSV
+data = pd.read_csv('data.csv')
+
+# Basic operations
+df.head()       # First 5 rows
+df.describe()   # Summary statistics
+df['A'].mean()  # Mean of column A
+df[df['A'] > 2]  # Filtering
+
+# Grouping
+df.groupby('E').sum()  # Group by column E and sum</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="content-card">
+            <h2 class="section-title">Useful Python Tricks</h2>
+
+            <div class="row">
+              <div class="col-md-12">
+                <h3>List Operations</h3>
+                <div class="code-example">
+                                <pre><code class="language-python"># Flatten list of lists
+nested = [[1, 2], [3, 4], [5, 6]]
+flat = [item for sublist in nested for item in sublist]
+
+# Zip and unzip
+names = ['Alice', 'Bob', 'Charlie']
+ages = [25, 30, 35]
+zipped = list(zip(names, ages))  # [('Alice',25), ('Bob',30)...]
+names, ages = zip(*zipped)
+
+# Find most common element
+from collections import Counter
+words = ['apple', 'banana', 'apple', 'orange']
+most_common = Counter(words).most_common(1)</code></pre>
+                </div>
+
+                <h3>Dictionary Tricks</h3>
+                <div class="code-example">
+                                <pre><code class="language-python"># Dictionary merge (Python 3.5+)
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'b': 3, 'c': 4}
+merged = {**dict1, **dict2}  # {'a':1, 'b':3, 'c':4}
+
+# Default dictionary
+from collections import defaultdict
+dd = defaultdict(list)
+dd['key'].append(1)  # No KeyError
+
+# Invert dictionary (unique values)
+inverted = {v: k for k, v in original_dict.items()}</code></pre>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <h3>Functional Programming</h3>
+                <div class="code-example">
+                                <pre><code class="language-python"># Map and filter
+nums = [1, 2, 3, 4]
+squares = list(map(lambda x: x**2, nums))
+evens = list(filter(lambda x: x % 2 == 0, nums))
+
+# Any and all
+any_negative = any(x < 0 for x in nums)
+all_positive = all(x > 0 for x in nums)
+
+# Sorting with multiple keys
+people = [{'name':'Alice','age':25}, {'name':'Bob','age':30}]
+sorted_people = sorted(people, key=lambda x: (x['age'], x['name']))</code></pre>
+                </div>
+
+                <h3>File Operations</h3>
+                <div class="code-example">
+                                <pre><code class="language-python"># Read file
+with open('file.txt', 'r') as f:
+    content = f.read()
+
+# Write file
+with open('output.txt', 'w') as f:
+    f.write("Hello\nWorld")
+
+# Read lines
+with open('data.csv') as f:
+    lines = [line.strip() for line in f]</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="content-card">
+            <h2 class="section-title">Common Libraries Quick Reference</h2>
+
+
+                <h3>Collections</h3>
+                <div class="code-example">
+                                <pre><code class="language-python">from collections import defaultdict, Counter, deque
+
+# Counter
+counts = Counter('abracadabra')  # {'a':5, 'b':2...}
+
+# Deque (double-ended queue)
+d = deque([1, 2, 3])
+d.appendleft(0)  # [0, 1, 2, 3]
+d.pop()          # Removes 3</code></pre>
+
+                </div>
+
+                <h3>Itertools</h3>
+                <div class="code-example">
+                                <pre><code class="language-python">from itertools import permutations, combinations, product
+
+# Combinations
+list(combinations('ABC', 2))  # [('A','B'), ('A','C'), ('B','C')]
+
+# Cartesian product
+list(product([1,2], ['a','b']))  # [(1,'a'), (1,'b'), (2,'a'), (2,'b')]</code></pre>
+
+              </div>
+
+
+                <h3>Datetime</h3>
+                <div class="code-example">
+                                <pre><code class="language-python">from datetime import datetime, timedelta
+
+# Current time
+now = datetime.now()
+
+# Time delta
+tomorrow = now + timedelta(days=1)
+
+# Formatting
+formatted = now.strftime("%Y-%m-%d %H:%M:%S")</code></pre>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
   </div>
@@ -694,7 +821,7 @@ tasks.test {
                 <h1>1. Don't repeat yourself</h1>
             </div>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-12">
                 <div class="code">
 
                 <pre><code></code></pre>
@@ -703,7 +830,7 @@ tasks.test {
 
             </div>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-12">
                 <div class="code">
 
                 <pre><code></code></pre>

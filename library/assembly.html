@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/ef590a2fdb.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/library.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <!-- and it's easy to individually load additional languages -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+  <link rel="stylesheet" href="css/dracula.css">
+
+  <title>Library</title>
+
+  <style>
+
+    body {
+      background-image: url('assets/blurry_background.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+  </style>
+
+  <style>
+    .card {
+      color: white;
+      margin-bottom: 1.5rem;
+      background-color: #282a36;
+      border-radius: 10px;
+    }
+
+    .card-title {
+      font-weight: bold;
+    }
+
+    .important {
+      color: #d63384;
+      font-weight: bold;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+  </style>
+
+  <style>
+    body {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .content-card {
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      margin-bottom: 30px;
+      transition: 0.3s;
+    }
+
+    .content-card:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+
+    .section-title {
+      border-bottom: 2px solid black;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    .code-example {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-left: 4px solid #0d6efd;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .note {
+      background-color: #fff3cd;
+      padding: 15px;
+      border-left: 4px solid #ffc107;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    .feature-list {
+      margin-bottom: 20px;
+    }
+
+    .feature-list li {
+      margin-bottom: 8px;
+    }
+
+    .comparison-table {
+      margin-bottom: 30px;
+    }
+
+    .comparison-table th {
+
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar sticky-top">
+
+  <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--
+    <form id="nav-search" class="d-flex mt-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Type something.." aria-label="Search">
+        <button class="btn btn-outline-success" type="submit"><strong>Search</strong></button>
+    </form>
+    -->
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+         aria-labelledby="offcanvasNavbarLabel">
+
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><strong>Menu</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="https://moshulika.github.io/library.html"><i
+                    class="fa-solid fa-house"></i> <strong>Home</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/contact"><i class="fa-solid fa-phone"></i>
+              <strong>Contact</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/skills.html"><i
+                    class="fa-solid fa-gears"></i> <strong>Skills</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://moshulika.github.io/portofoliu.html"><i
+                    class="fa-solid fa-book"></i> <strong>Portfolio</strong></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="https://moshulika.github.io/library.html"><i
+                    class="fa-solid fa-code"></i> <strong>Library</strong></a>
+          </li>
+
+        </ul>
+
+
+      </div>
+
+      <div id="offcanvas-logos">
+
+        <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="row" id="socials-row">
+
+    <div class="col-xs-12 col-lg-6 animate__animated animate__fadeIn" id="picture2">
+
+      <img src="assets/eu.jpg">
+      <div id="text">
+
+        <h1>My simple library</h1>
+        <h4>..of useful code</h4>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <br>
+  <br>
+
+
+  <div class="container">
+
+    <div class="row">
+      <h1>Chapters</h1>
+    </div>
+
+    <div class="library-pills">
+      <a href="https://moshulika.github.io/library.html#design" class="library-pill">OOP Design Principles</a>
+      <a href="https://moshulika.github.io/library.html#concepts" class="library-pill">OOP Concepts</a>
+      <a href="https://moshulika.github.io/library.html#exceptions" class="library-pill">Exceptions</a>
+      <a href="multithreading.html#multithreading" class="library-pill">Multithreading</a>
+      <a href="multithreading.html#final" class="library-pill">Final Keyword</a>
+      <a href="strings.html#strings" class="library-pill">Strings</a>
+      <a href="strings.html#regex" class="library-pill">Regex</a>
+      <a href="files.html#io" class="library-pill">I/O</a>
+      <a href="files.html#files" class="library-pill">Files</a>
+      <a href="https://moshulika.github.io/library.html#lambda" class="library-pill">Lambda</a>
+      <a href="jdbc.html" class="library-pill">JDBC</a>
+      <a href="networking.html#networking" class="library-pill">Networking</a>
+      <a href="networking.html#json" class="library-pill">JSON</a>
+      <a href="memory.html#memory" class="library-pill">Java Memory</a>
+      <a href="structures.html" class="library-pill">Java Data Structures</a>
+      <a href="mysql.html" class="library-pill">MySQL</a>
+      <a href="c.html" class="library-pill">C/C++</a>
+      <a href="junit.html" class="library-pill">Unit Testing</a>
+      <a href="linux.html" class="library-pill">Linux</a>
+      <a href="git.html" class="library-pill">Git</a>
+      <a href="maven.html" class="library-pill">Maven/Gradle</a>
+      <a href="rest-api.html" class="library-pill">REST-API</a>
+      <a href="python.html" class="library-pill">Python</a>
+      <a href="matlab.html" class="library-pill">Matlab</a>
+      <a href="assembly.html" class="library-pill">Assembly</a>
+      <a href="bits.html" class="library-pill">Java bit manipulation</a>
+    </div>
+
+    <div class="row category-title" id="multithreading">
+      <h1>x86-64 Assembly & Microcontroller Guide</h1>
+      <p class="lead">Comprehensive reference for x86-64 assembly, microcontroller communication protocols, and Arduino programming</p>
+
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content-card table-responsive">
+            <h2 class="section-title">x86-64 Assembly Fundamentals</h2>
+
+            <h3>Registers</h3>
+            <table class="table register-table table-light">
+              <thead>
+              <tr>
+                <th>Register</th>
+                <th>Bits</th>
+                <th>Purpose</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class="register-name">RAX</td>
+                <td>64</td>
+                <td>Accumulator (return value)</td>
+              </tr>
+              <tr>
+                <td class="register-name">RBX</td>
+                <td>64</td>
+                <td>Base register</td>
+              </tr>
+              <tr>
+                <td class="register-name">RCX</td>
+                <td>64</td>
+                <td>Counter (loop control)</td>
+              </tr>
+              <tr>
+                <td class="register-name">RDX</td>
+                <td>64</td>
+                <td>Data (I/O operations)</td>
+              </tr>
+              <tr>
+                <td class="register-name">RSI</td>
+                <td>64</td>
+                <td>Source index (string operations)</td>
+              </tr>
+              <tr>
+                <td class="register-name">RDI</td>
+                <td>64</td>
+                <td>Destination index (string operations)</td>
+              </tr>
+              <tr>
+                <td class="register-name">RSP</td>
+                <td>64</td>
+                <td>Stack pointer</td>
+              </tr>
+              <tr>
+                <td class="register-name">RBP</td>
+                <td>64</td>
+                <td>Base pointer (stack frames)</td>
+              </tr>
+              <tr>
+                <td class="register-name">R8-R15</td>
+                <td>64</td>
+                <td>Additional general purpose registers</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <div class="note">
+              <h5>Register Naming Conventions</h5>
+              <p>Smaller portions of registers can be accessed:</p>
+              <ul>
+                <li>EAX - Lower 32 bits of RAX</li>
+                <li>AX - Lower 16 bits of RAX</li>
+                <li>AH/AL - High/low 8 bits of AX</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h2 class="section-title">Basic Instructions</h2>
+
+            <h3>Data Movement</h3>
+            <div class="code-example">
+                        <pre><code>mov rax, rbx      ; Copy RBX to RAX
+mov [rdi], rax    ; Store RAX at address in RDI
+mov rax, [rsi]    ; Load RAX from address in RSI
+lea rdi, [rax+4]  ; Load effective address (RAX+4) into RDI</code></pre>
+            </div>
+
+            <h3>Arithmetic Operations</h3>
+            <div class="code-example">
+                        <pre><code>add rax, rbx      ; RAX = RAX + RBX
+sub rcx, 10       ; RCX = RCX - 10
+imul rdx         ; RDX:RAX = RAX * RDX (signed)
+div rbx          ; RAX = quotient, RDX = remainder (unsigned)
+inc rax          ; RAX++
+dec rbx          ; RBX--</code></pre>
+            </div>
+
+            <h3>Control Flow</h3>
+            <div class="code-example">
+                        <pre><code>cmp rax, rbx      ; Compare RAX and RBX
+jmp label        ; Unconditional jump
+je label         ; Jump if equal (ZF=1)
+jne label        ; Jump if not equal (ZF=0)
+jg label         ; Jump if greater (signed)
+ja label         ; Jump if above (unsigned)
+call function    ; Call a function
+ret              ; Return from function</code></pre>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h2 class="section-title">Common Algorithms</h2>
+
+            <h3>String Length</h3>
+            <div class="code-example">
+                        <pre><code>; Input: RDI = string address
+; Output: RAX = length
+strlen:
+    xor rax, rax      ; RAX = 0 (counter)
+.loop:
+    cmp byte [rdi+rax], 0
+    je .done
+    inc rax
+    jmp .loop
+.done:
+    ret</code></pre>
+            </div>
+
+            <h3>Memory Copy</h3>
+            <div class="code-example">
+                        <pre><code>; Input: RDI = dest, RSI = src, RDX = count
+memcpy:
+    mov rcx, rdx      ; RCX = count
+    rep movsb         ; Repeat move byte from [RSI] to [RDI]
+    ret</code></pre>
+            </div>
+
+            <h3>Factorial</h3>
+            <div class="code-example">
+                        <pre><code>; Input: RAX = n
+; Output: RAX = n!
+factorial:
+    cmp rax, 1
+    jle .base_case
+    push rax
+    dec rax
+    call factorial
+    pop rbx
+    imul rax, rbx
+    ret
+.base_case:
+    mov rax, 1
+    ret</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="content-card">
+            <h2 class="section-title">Microcontroller Communication</h2>
+
+            <h3>UART (Serial Communication)</h3>
+            <div class="code-example">
+                        <pre><code class="language-c">// Arduino UART example
+void setup() {
+  Serial.begin(9600); // Initialize UART at 9600 baud
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    char received = Serial.read();
+    Serial.print("Received: ");
+    Serial.println(received);
+  }
+}</code></pre>
+            </div>
+
+            <div class="note">
+              <h5>UART Characteristics</h5>
+              <ul>
+                <li>Asynchronous communication</li>
+                <li>Point-to-point (two devices)</li>
+                <li>Common baud rates: 9600, 19200, 38400, 115200</li>
+                <li>Configurable parameters: baud rate, data bits, parity, stop bits</li>
+                <li>Uses TX (transmit) and RX (receive) lines</li>
+              </ul>
+            </div>
+
+            <h3>I2C (Inter-Integrated Circuit)</h3>
+            <div class="code-example">
+                        <pre><code class="language-c">// Arduino I2C Master
+#include <Wire.h>
+
+void setup() {
+  Wire.begin(); // Join I2C bus as master
+}
+
+void loop() {
+  Wire.beginTransmission(0x68); // Device address
+  Wire.write(0x00); // Register address
+  Wire.endTransmission();
+
+  Wire.requestFrom(0x68, 1); // Request 1 byte
+  if (Wire.available()) {
+    byte data = Wire.read();
+  }
+  delay(100);
+}</code></pre>
+            </div>
+
+            <div class="note">
+              <h5>I2C Characteristics</h5>
+              <ul>
+                <li>Synchronous communication</li>
+                <li>Multi-master, multi-slave</li>
+                <li>Uses SDA (data) and SCL (clock) lines</li>
+                <li>7-bit addressing (up to 128 devices)</li>
+                <li>Standard speeds: 100kHz (standard), 400kHz (fast), 1MHz (fast plus)</li>
+              </ul>
+            </div>
+
+            <h3>SPI (Serial Peripheral Interface)</h3>
+            <div class="code-example">
+                        <pre><code class="language-c">// Arduino SPI Master
+#include <SPI.h>
+
+void setup() {
+  SPI.begin();
+  digitalWrite(SS, HIGH); // Deselect slave
+}
+
+void loop() {
+  digitalWrite(SS, LOW); // Select slave
+  byte received = SPI.transfer(0x55); // Send 0x55, receive byte
+  digitalWrite(SS, HIGH);
+  delay(100);
+}</code></pre>
+            </div>
+
+            <div class="note">
+              <h5>SPI Characteristics</h5>
+              <ul>
+                <li>Synchronous communication</li>
+                <li>Single master, multiple slaves (with chip select)</li>
+                <li>Uses MOSI (master out), MISO (master in), SCLK (clock), SS (slave select)</li>
+                <li>Full duplex (simultaneous send/receive)</li>
+                <li>Higher speed than I2C (up to 10MHz+)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h2 class="section-title">Microcontroller Components</h2>
+
+            <h3>Timers/Counters</h3>
+            <div class="code-example">
+                        <pre><code class="language-c">// Arduino Timer1 example
+#include <TimerOne.h>
+
+void setup() {
+  Timer1.initialize(100000); // 100ms period
+  Timer1.attachInterrupt(timerISR); // Attach ISR
+}
+
+void timerISR() {
+  // Called every 100ms
+}
+
+void loop() {
+  // Main program
+}</code></pre>
+            </div>
+
+            <h3>Analog-to-Digital Converter (ADC)</h3>
+            <div class="code-example">
+                        <pre><code class="language-c">// Arduino ADC example
+void setup() {
+  Serial.begin(9600);
+  analogReference(DEFAULT); // Set reference voltage
+}
+
+void loop() {
+  int sensorValue = analogRead(A0); // Read analog pin
+  float voltage = sensorValue * (5.0 / 1023.0);
+  Serial.println(voltage);
+  delay(100);
+}</code></pre>
+            </div>
+
+            <h3>Pulse Width Modulation (PWM)</h3>
+            <div class="code-example">
+                        <pre><code class="language-c">// Arduino PWM example
+void setup() {
+  pinMode(9, OUTPUT); // PWM pin
+}
+
+void loop() {
+  // Fade LED
+  for (int duty = 0; duty <= 255; duty++) {
+    analogWrite(9, duty);
+    delay(10);
+  }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="content-card">
+            <h2 class="section-title">Arduino Programming Guide</h2>
+
+            <div class="row">
+              <div class="col-md-12">
+                <h3>Basic I/O Operations</h3>
+                <div class="code-example">
+                                <pre><code class="language-c">// Digital I/O
+pinMode(13, OUTPUT);    // Set pin 13 as output
+digitalWrite(13, HIGH); // Set pin 13 high
+int state = digitalRead(2); // Read pin 2
+
+// Analog I/O
+analogWrite(9, 128);    // PWM output (50% duty)
+int value = analogRead(A0); // Read analog pin</code></pre>
+                </div>
+
+                <h3>Interrupts</h3>
+                <div class="code-example">
+                                <pre><code class="language-c">// Attach interrupt to pin 2
+attachInterrupt(digitalPinToInterrupt(2), isr, RISING);
+
+void isr() {
+  // Interrupt service routine
+}
+
+// Detach interrupt
+detachInterrupt(digitalPinToInterrupt(2));</code></pre>
+                </div>
+              </div>
+
+              <div class="col-md-12 table-responsive">
+                <h3>Useful Libraries</h3>
+                <table class="table comparison-table table-light">
+                  <thead>
+                  <tr>
+                    <th>Library</th>
+                    <th>Purpose</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td><code>Servo.h</code></td>
+                    <td>Control servo motors</td>
+                  </tr>
+                  <tr>
+                    <td><code>EEPROM.h</code></td>
+                    <td>Non-volatile memory access</td>
+                  </tr>
+                  <tr>
+                    <td><code>LiquidCrystal.h</code></td>
+                    <td>LCD display control</td>
+                  </tr>
+                  <tr>
+                    <td><code>SD.h</code></td>
+                    <td>SD card reading/writing</td>
+                  </tr>
+                  <tr>
+                    <td><code>WiFi.h</code>/<code>Ethernet.h</code></td>
+                    <td>Network connectivity</td>
+                  </tr>
+                  <tr>
+                    <td><code>RTClib.h</code></td>
+                    <td>Real-time clock functions</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <h3>Serial Communication</h3>
+                <div class="code-example">
+                                <pre><code class="language-c">void setup() {
+  Serial.begin(115200);
+  while (!Serial); // Wait for serial port
+}
+
+void loop() {
+  Serial.println("Hello, world!");
+  if (Serial.available()) {
+    String input = Serial.readString();
+    Serial.print("Echo: ");
+    Serial.println(input);
+  }
+}</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="content-card">
+            <h2 class="section-title">Common Peripheral Interfaces</h2>
+
+                <h3>GPIO Configuration</h3>
+                <div class="code-example">
+                                <pre><code class="language-c">// Set pin modes
+pinMode(LED_PIN, OUTPUT);
+pinMode(BUTTON_PIN, INPUT_PULLUP);
+
+// Read/write example
+digitalWrite(LED_PIN, digitalRead(BUTTON_PIN));</code></pre>
+                </div>
+
+
+
+                <h3>Analog Sensors</h3>
+                <div class="code-example">
+                                <pre><code class="language-c">// Read temperature sensor (LM35)
+float tempC = analogRead(TEMP_PIN) * 0.488;
+
+// Read potentiometer
+int potValue = analogRead(POT_PIN);
+int angle = map(potValue, 0, 1023, 0, 270);</code></pre>
+                </div>
+
+
+
+                <h3>Motor Control</h3>
+                <div class="code-example">
+                                <pre><code class="language-c">// DC motor with L298N
+void setMotorSpeed(int speed) {
+  if (speed > 0) {
+    digitalWrite(IN1, HIGH);
+    digitalWrite(IN2, LOW);
+  } else {
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, HIGH);
+  }
+  analogWrite(ENABLE, abs(speed));
+}</code></pre>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <footer class="container">
+
+    <hr id="before-footer">
+    <div class="row">
+
+      <div class="col footer-text">
+
+        <a href="contact.html">Contact</a>
+
+
+      </div>
+
+      <div class="col footer-icons">
+
+        <a href="http://mc.b-zone.ro/p/discord" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://github.com/Moshulika" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:edwardnanescu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+
+      </div>
+
+    </div>
+
+
+  </footer>
+
+</div>
+
+<style>
+  /* Scroll to top button styles */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .scroll-to-top:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .scroll-to-top:active {
+    transform: translateY(0);
+  }
+
+  .scroll-to-top svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+
+  /* Show the button when user scrolls down */
+  .scroll-to-top.visible {
+    display: flex;
+  }
+</style>
+
+<button class="scroll-to-top" aria-label="Scroll to top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+  </svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+<script>
+  hljs.highlightAll();
+
+</script>
+<script>
+  // Show/hide scroll to top button based on scroll position
+  const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollToTopButton.classList.add('visible');
+    } else {
+      scrollToTopButton.classList.remove('visible');
+    }
+  });
+
+  // Scroll to top when button is clicked
+  scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+<!--
+<div class="code-container">
+
+            <div class="code-description"></div>
+            <div class="code">
+
+                <pre><code></code></pre>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h1>OOP Design principles</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h1>1. Don't repeat yourself</h1>
+            </div>
+
+            <div class="col-xs-12 col-md-12">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-12">
+                <div class="code">
+
+                <pre><code></code></pre>
+
+                </div>
+
+            </div>
+        </div>
+-->
+
+</body>
+</html>

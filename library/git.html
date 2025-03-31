@@ -114,6 +114,12 @@
         .comparison-table th {
 
         }
+
+        .workflow-diagram
+        {
+            width: 100%;
+        }
+
     </style>
 
 </head>
@@ -243,6 +249,11 @@
             <a href="linux.html" class="library-pill">Linux</a>
             <a href="git.html" class="library-pill">Git</a>
             <a href="maven.html" class="library-pill">Maven/Gradle</a>
+            <a href="rest-api.html" class="library-pill">REST-API</a>
+            <a href="python.html" class="library-pill">Python</a>
+            <a href="matlab.html" class="library-pill">Matlab</a>
+            <a href="assembly.html" class="library-pill">Assembly</a>
+            <a href="bits.html" class="library-pill">Java bit manipulation</a>
         </div>
 
         <div class="row category-title" id="multithreading">
@@ -252,10 +263,11 @@
         <div class="container">
 
             <!-- 1. Getting Started -->
-            <div class="content-card">
+            <div class="content-card table-responsive">
+
                 <h2 class="section-title">1. Getting Started</h2>
 
-                <table class="command-table">
+                <table class="command-table table table-light">
                     <tr>
                         <th>Command</th>
                         <th>Description</th>
@@ -283,7 +295,8 @@
                     </tr>
                 </table>
 
-                <div class="note">
+                <br>
+
                     <h4>Initial Setup:</h4>
                     <div class="code-example">
                     <pre><code class="language-bash"># Set your identity
@@ -301,16 +314,16 @@ git config --global color.ui true
 # Set default branch name
 git config --global init.defaultBranch main</code></pre>
                     </div>
-                </div>
+
             </div>
 
             <!-- 2. Basic Workflow -->
-            <div class="content-card">
+            <div class="content-card table-responsive">
                 <h2 class="section-title">2. Basic Workflow</h2>
 
                 <img src="https://git-scm.com/book/en/v2/images/lifecycle.png" alt="Git workflow diagram" class="workflow-diagram">
 
-                <table class="command-table">
+                <table class="command-table table table-light">
                     <tr>
                         <th>Command</th>
                         <th>Description</th>
@@ -348,6 +361,8 @@ git config --global init.defaultBranch main</code></pre>
                     </tr>
                 </table>
 
+                <br>
+
                 <div class="note">
                     <h4>Commit Best Practices:</h4>
                     <ul class="feature-list">
@@ -361,10 +376,10 @@ git config --global init.defaultBranch main</code></pre>
             </div>
 
             <!-- 3. Branching -->
-            <div class="content-card">
+            <div class="content-card table-responsive">
                 <h2 class="section-title">3. Branching</h2>
 
-                <table class="command-table">
+                <table class="command-table table table-light">
                     <tr>
                         <th>Command</th>
                         <th>Description</th>
@@ -402,6 +417,8 @@ git config --global init.defaultBranch main</code></pre>
                     </tr>
                 </table>
 
+                <br>
+
                 <div class="note">
                     <h4>Branching Strategies:</h4>
                     <ul class="feature-list">
@@ -432,10 +449,10 @@ git branch -d feature-x</code></pre>
             </div>
 
             <!-- 4. Remote Repositories -->
-            <div class="content-card">
+            <div class="content-card table-responsive">
                 <h2 class="section-title">4. Remote Repositories</h2>
 
-                <table class="command-table">
+                <table class="command-table table table-light">
                     <tr>
                         <th>Command</th>
                         <th>Description</th>
@@ -468,7 +485,8 @@ git branch -d feature-x</code></pre>
                     </tr>
                 </table>
 
-                <div class="note">
+                <br>
+
                     <h4>Common Remote Workflow:</h4>
                     <div class="code-example">
                     <pre><code class="language-bash"># Fork a repository (on GitHub/GitLab)
@@ -494,15 +512,14 @@ git push origin feature-x
 # To sync with upstream
 git fetch upstream
 git merge upstream/main</code></pre>
-                    </div>
                 </div>
             </div>
 
             <!-- 5. Inspecting History -->
-            <div class="content-card">
+            <div class="content-card table-responsive">
                 <h2 class="section-title">5. Inspecting History</h2>
 
-                <table class="command-table">
+                <table class="command-table table table-light">
                     <tr>
                         <th>Command</th>
                         <th>Description</th>
@@ -535,6 +552,8 @@ git merge upstream/main</code></pre>
                     </tr>
                 </table>
 
+                <br>
+
                 <div class="code-example">
                 <pre><code class="language-bash"># Show compact history with graph
 git log --oneline --graph --all
@@ -555,10 +574,10 @@ git bisect reset      # When done</code></pre>
             </div>
 
             <!-- 6. Undoing Changes -->
-            <div class="content-card">
+            <div class="content-card table-responsive">
                 <h2 class="section-title">6. Undoing Changes</h2>
 
-                <table class="command-table">
+                <table class="command-table table table-light">
                     <tr>
                         <th>Situation</th>
                         <th>Command</th>
@@ -596,6 +615,8 @@ git bisect reset      # When done</code></pre>
                     </tr>
                 </table>
 
+                <br>
+
                 <div class="note">
                     <h4>Reset Types:</h4>
                     <ul class="feature-list">
@@ -622,10 +643,10 @@ git checkout HEAD -- deleted-file.txt</code></pre>
             </div>
 
             <!-- 7. Advanced Git -->
-            <div class="content-card">
+            <div class="content-card table-responsive">
                 <h2 class="section-title">7. Advanced Git</h2>
 
-                <table class="command-table">
+                <table class="command-table table table-light">
                     <tr>
                         <th>Command</th>
                         <th>Description</th>
@@ -658,7 +679,9 @@ git checkout HEAD -- deleted-file.txt</code></pre>
                     </tr>
                 </table>
 
-                <div class="note">
+                <br>
+
+
                     <h4>Interactive Rebase:</h4>
                     <div class="code-example">
                     <pre><code class="language-bash"># Rebase last 3 commits interactively
@@ -673,15 +696,14 @@ git rebase -i HEAD~3
 # After saving, follow prompts to complete rebase</code></pre>
                     </div>
                 </div>
-            </div>
 
             <!-- 8. Git Hooks -->
-            <div class="content-card">
+            <div class="content-card table-responsive">
                 <h2 class="section-title">8. Git Hooks</h2>
 
                 <p>Git hooks are scripts that run automatically before or after Git commands. They live in the <code>.git/hooks</code> directory.</p>
 
-                <table class="command-table">
+                <table class="command-table table table-light">
                     <tr>
                         <th>Hook</th>
                         <th>Trigger</th>
@@ -708,6 +730,8 @@ git rebase -i HEAD~3
                         <td>Install dependencies</td>
                     </tr>
                 </table>
+
+                <br>
 
                 <div class="code-example">
                 <pre><code class="language-bash"># Example pre-commit hook to run ESLint
@@ -764,10 +788,10 @@ exit 0</code></pre>
             </div>
 
             <!-- 10. Git Tools -->
-            <div class="content-card">
+            <div class="content-card table-responsive">
                 <h2 class="section-title">10. Git Tools</h2>
 
-                <table class="command-table">
+                <table class="command-table table table-light">
                     <tr>
                         <th>Tool</th>
                         <th>Description</th>
@@ -799,6 +823,8 @@ exit 0</code></pre>
                         <td>Included with Git</td>
                     </tr>
                 </table>
+
+                <br>
 
                 <div class="note">
                     <h4>Visual Git Clients:</h4>
