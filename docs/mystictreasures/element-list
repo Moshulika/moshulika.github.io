@@ -1,0 +1,14 @@
+com.Moshu
+com.Moshu.Misc
+com.Moshu.Misc.Hooks
+com.Moshu.Misc.Storage
+com.Moshu.TreasureHunt
+com.Moshu.TreasureHunt.Components
+com.Moshu.TreasureHunt.Components.Keepers
+com.Moshu.TreasureHunt.Components.Rewards
+com.Moshu.TreasureHunt.Core
+com.Moshu.TreasureHunt.Core.API
+com.Moshu.TreasureHunt.Core.API.Events
+com.Moshu.TreasureHunt.Core.API.Exceptions
+com.Moshu.TreasureHunt.Core.Interaction
+com.Moshu.TreasureHunt.Handlers
